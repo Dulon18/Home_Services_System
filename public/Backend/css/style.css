@@ -1,6 +1,6 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:ital,wght@0,100;0,300;1,200;1,300;1,600;1,900&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Open+Sans&family=Poppins:ital,wght@0,100;0,300;1,200;1,300;1,600;1,900&display=swap');
-
+ @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:ital,wght@0,100;0,300;1,200;1,300;1,600;1,900&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Open+Sans&family=Poppins:ital,wght@0,100;0,300;1,200;1,300;1,600;1,900&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Roboto&display=swap'); */
 * {
     margin: 0;
     padding: 0;
@@ -11,27 +11,29 @@
 
 body {
     overflow-x: hidden;
+
 }
 
-.container {
-    position: fixed;
+.contain {
+    position:fixed;
     width: 100%;
+    
 }
 
-.nav {
+.sidebar{
     position: fixed;
     width: 300px;
     height: 100%;
     background: #003147;
-    transition: 0.5s;
-    overflow: hidden;
+    transition: 0.2s;
+    
 }
 
-.nav.active {
-    width: 60px;
+.sidebar.active {
+    width: 20px;
 }
 
-.nav ul {
+.sidebar ul {
     position: absolute;
     top: 0;
     left: 0;
@@ -39,26 +41,26 @@ body {
     list-style-type: none;
 }
 
-.nav ul li {
+.sidebar ul li {
     position: relative;
     width: 100%;
     list-style: none;
 }
 
-.nav ul li:hover {
+.sidebar ul li:hover {
     background: #03a9f4;
 
 }
 
-.nav ul li:nth-child(1) {
-    margin-bottom: 20px;
+.sidebar ul li:nth-child(1) {
+    margin-bottom: 40px;
 }
 
-.nav ul li:nth-child(1):hover {
+.sidebar ul li:nth-child(1):hover {
     background: transparent;
 }
 
-.nav ul li a {
+.sidebar ul li a {
     position: relative;
     display: block;
     width: 100%;
@@ -69,7 +71,7 @@ body {
 
 }
 
-.nav ul li a .icon {
+.sidebar ul li a .icon {
     position: relative;
     display: block;
     min-width: 60px;
@@ -78,42 +80,46 @@ body {
     text-align: center;
 }
 
-.nav ul li a .icon .fa {
+.sidebar ul li a .icon .fa {
     color: #fff;
     font-size: 24px;
 }
 
-.nav ul li a .title {
+.sidebar ul li a .title {
     position: relative;
     display: block;
-    padding: 0 10px;
+    padding: 0 5px;
+    height: 60px;
+    line-height: 40px;
+    white-space: normal;
+
+}
+.sidebar ul li a h2{
+
+    position: relative;
+    display: block;
+    min-width: 60px;
     height: 60px;
     line-height: 60px;
-    white-space: nowrap;
-
+    text-align: center;
 }
 
-.nav ul li a span h2 {
+/* .sidebar ul li a span h2 {
     padding-left: 4rem;
-}
+} */
 
 /* header */
-.main {
-
+.main{
     position: absolute;
-     width: calc(100% - 300px);
+    width: calc(100% - 300px);
     left: 300px;
     min-height: 100vh;
     background: #f5f5f5;
-    transition: 0.5s;
-   
-
-
-}
+    transition: 0.2s; }
 
 .main.active {
-    width: calc(100% - 60px);
-    left: 60px;
+    width: calc(100% - 20px);
+    left: 30px;
 }
 
 .main .topbar {
@@ -145,10 +151,10 @@ body {
     font-size: 24px;
 }
 
-.search {
+.main .topbar .search {
     position: relative;
     width: 400px;
-    margin: 0 10px;
+    margin: 0 20px;
 
 }
 
@@ -169,8 +175,8 @@ body {
 
 .search label .fa {
     position: absolute;
-    left: 15px;
-    top: 4px;
+    left: 10px;
+    top: 12px;
 
 }
 
@@ -183,11 +189,11 @@ body {
     overflow: hidden;
     cursor: pointer;
     margin-right: 1rem;
-    left: 300px;
+    left: 100px;
 }
 
 .user img {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
@@ -196,18 +202,18 @@ body {
     object-fit: cover;
 }
 
-.topbar .username {
+.main .topbar .username {
     position: relative;
     display: inline;
     color: #3eb8f0; 
     right: 10px;
 }
 
-.username small {
+.main .topbar .username small {
     color: #999;
 }
 
-.cardbox {
+.main .cardbox {
     position: relative;
     width: 100%;
     padding: 20px;
@@ -216,7 +222,7 @@ body {
     grid-gap: 20px;
 }
 
-.cardbox .card {
+.main .cardbox .card {
     position: relative;
     background: #fff;
     padding: 20px;
@@ -225,12 +231,65 @@ body {
     cursor: pointer;
 }
 
-.cardbox .card .numbers {
+.main .cardbox .card .numbers {
     position: relative;
     font-size: 2em;
     font-weight: 500;
 }
-
-.cardbox .card .cardname {
+.main .cardbox .card .cardname {
     color: #999;
 }
+
+
+/* make responsive */
+
+ @media(max-width:992px)
+{
+    .sidebar{
+        left:-300px;
+
+    }
+    .sidebar.active
+    {
+        left: 0;
+        width:300px;
+    }
+    .main{
+        width: calc(100%-300px);
+        left: 300px;
+    }
+    .cardbox{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media(max-width:480px)
+{ */
+    .cardbox{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .sidebar{
+        width: 100%;
+        left: 0;
+        z-index: 1000;
+    }
+    .sidebar.active{
+        width: 100%;
+        left: 0;
+    }
+    .toggle.active{
+        z-index: 1000;
+        right: 0;
+        left: initial;
+        position: fixed;
+    }
+    .toggle.active::before{
+        color: #fff;
+
+    }
+    .main,
+    .main.active{
+        width: 100%;
+        left: 0;
+    }
+} 

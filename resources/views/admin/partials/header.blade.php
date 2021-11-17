@@ -11,7 +11,7 @@
                     <img src="{{url('Backend/css/b2.jpg')}}" alt="Sorry Not found">
                 </div>
                     <div class="username">
-                        <h4>Dulan</h4>
+                        <h5>Dulan</h5>
                         <small>Super Admin</small>
                     </div>
     </div>

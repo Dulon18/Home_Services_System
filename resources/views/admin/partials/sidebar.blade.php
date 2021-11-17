@@ -1,4 +1,4 @@
- <div class="nav">
+ <div class="sidebar">
             <ul>
                 <li>
                     <a href="">
