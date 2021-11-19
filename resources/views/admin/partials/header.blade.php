@@ -8,11 +8,12 @@
                     </div>
 
                       <div class="user">
-                    <img src="{{url('Backend/css/b2.jpg')}}" alt="Sorry Not found">
-                </div>
-                    <div class="username">
-                        <h5>Dulan</h5>
-                        <small>Super Admin</small>
-                    </div>
-    </div>
+                     <img src="{{url('Backend/img/b2.jpg')}}" alt="Sorry Not found">
+                     <div>
+                          <h6>Dulan</h6>
+                          <small>Admin</small>
+                       </div>
+                    </div></div>
+
+                    
                <!-- header End -->

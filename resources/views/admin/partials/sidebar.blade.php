@@ -7,7 +7,7 @@
                 </li>
 
                 <li>
-                    <a href="/">
+                    <a href="{{route('admin.dashboard')}}">
                     <span class="icon"><i class="fa fa-tachometer" aria-hidden="true"></i></span>
                     <span class="title">Dashboard</span>
                     </a>
