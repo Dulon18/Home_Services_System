@@ -9,7 +9,10 @@ class ServiceProviderController extends Controller
 {
     public function SP_dashboard()
     {
-        return view('admin.pages.SP-list');
+        //data retraiving...
+
+        $providers=Service_provider::all();
+        return view('admin.pages.SP-list',compact('providers'));
     }
 
     public function add()
@@ -29,7 +32,7 @@ class ServiceProviderController extends Controller
             'lname'=>$request->lname,
             'profession'=>$request->profession,
             'address'=>$request->address,
-            
+
 
         ]);
         return redirect()->back();

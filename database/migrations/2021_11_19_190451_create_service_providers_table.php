@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateServiceProvaidersTable extends Migration
+class CreateServiceProvidersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateServiceProvaidersTable extends Migration
      */
     public function up()
     {
-        Schema::create('service_provaiders', function (Blueprint $table) {
+        Schema::create('service_providers', function (Blueprint $table) {
             $table->id();
             $table->string('fname');
             $table->string('lname');
@@ -30,6 +30,6 @@ class CreateServiceProvaidersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('service_provaiders');
+        Schema::dropIfExists('service_providers');
     }
 }

@@ -1,32 +1,35 @@
 @extends('admin.index')
+
 @section('content')
+
 <h5>Service Provider info</h5>
 
 <form  action="{{route('admin.sp.store')}}" method="POST">
-  @csrf
-  <div class="mb-3">
+   @csrf
+   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">First Name</label>
     <input name="fname"  type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
 
-  </div>
+   </div>
 
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Last Name</label>
-    <input name="lname" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+     <div class="mb-3">
+       <label for="exampleInputEmail1" class="form-label">Last Name</label>
+       <input name="lname" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
     
-  </div>
+      </div>
 
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Profession</label>
-    <input name ="profession"  type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Profession</label>
+          <input name ="profession"  type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
     
-  </div>
+        </div>
 
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Address</label>
-    <input name="address" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <div class="mb-3">
+           <label for="exampleInputEmail1" class="form-label">Address</label>
+           <input name="address" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
     
-  </div>
+      </div>
+      
   <!-- <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Email</label>
     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">

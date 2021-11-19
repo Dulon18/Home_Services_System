@@ -24,26 +24,24 @@
       <th scope="col">Last Name</th>
       <th scope="col">Profession</th>
       <th scope="col">Address</th>
-      <th scope="col">Email</th>
+      <!-- <th scope="col">Email</th>
       <th scope="col">PhoneNumber</th>
       <th scope="col">Experience</th>
-      <th scope="col">Salary</th>
+      <th scope="col">Salary</th> -->
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>John</td>
-      <td>Mark</td>
-      <td>Plumber</td>
-      <td>Dhaka</td>
-      <td>pb@gmail.com</td>
-      <td>01624546755</td>
-      <td>2years</td>
-      <td>8000</td>
+    @foreach($providers as $p)
+     <tr>
+         <th>{{$p->id}}</th>
+         <td>{{$p->fname}}</td>
+         <td>{{$p->lname}}</td>
+         <td>{{$p->profession}}</td>
+         <td>{{$p->address}}</td>
+      
       
     </tr>
-    
+    @endforeach
     
   </tbody>
 </table>
