@@ -35,21 +35,42 @@
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="{{route('admin.services')}}">
                     <span class="icon"><i class="fa fa-wrench" aria-hidden="true"></i></span>
                     <span class="title">
                         Services
                     </span>
                     </a>
                 </li>
+
                 <li>
-                    <a href="">
-                    <span  class="icon"><i class="fa fa-cogs" aria-hidden="true"></i></span>
+                    <a href="{{route('admin.category')}}">
+                    <span  class="icon"><i class="fa fa-list"></i></span>
                     <span class="title">
-                       Settings
+                       Category
                     </span>
                     </a>
                 </li>
+
+                <li>
+                    <a href="">
+                    <span  class="icon"><i class="fa fa-book"></i></span>
+                    <span class="title">
+                       Billing
+                    </span>
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="">
+                    <span  class="icon"><i class="fa fa-meh"></i></span>
+                    <span class="title">
+                       Rating
+                    </span>
+                    </a>
+                </li>
+
                 <li>
                     <a href="">
                     <span class="icon"><i class="fa fa-sign-out" aria-hidden="true"></i></span>

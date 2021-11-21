@@ -12,12 +12,12 @@ class ServiceProviderController extends Controller
         //data retraiving...
 
         $providers=Service_provider::all();
-        return view('admin.pages.SP-list',compact('providers'));
+        return view('admin.pages.serviceProvider.SP-list',compact('providers'));
     }
 
     public function add()
     {
-        return view('admin.pages.add_SP');
+        return view('admin.pages.serviceProvider.add_SP');
     }
 
     public function store(Request $request)
@@ -35,6 +35,6 @@ class ServiceProviderController extends Controller
 
 
         ]);
-        return redirect()->back();
+        return redirect()->route('admin.serviceProvider.dashboard');
     }
 }

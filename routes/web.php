@@ -1,6 +1,8 @@
 <?php
 use App\Http\Controllers\Backend\ServiceProviderController;
 use App\Http\Controllers\Backend\AdminController;
+use App\Http\Controllers\Backend\ServiceController;
+use App\Http\Controllers\Backend\CategoryController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,5 +26,18 @@ Route::get('admin/dashboard',[AdminController::class,'dashboard'])->name('admin.
 
 //service provider
 Route::get('admin/serviceProvider',[ServiceProviderController::class,'SP_dashboard'])->name('admin.serviceProvider.dashboard');
-Route::get('admin/add',[ServiceProviderController::class,'add'])->name('admin.serviceProvider.add');
-Route::post('admin/store',[ServiceProviderController::class,'store'])->name('admin.sp.store');
+Route::get('admin/serviceProvider/add',[ServiceProviderController::class,'add'])->name('admin.serviceProvider.add');
+Route::post('admin/sp/store',[ServiceProviderController::class,'store'])->name('admin.sp.store');
+
+//services
+
+ Route::get('admin/services',[ServiceController::class,'services'])->name('admin.services');
+ Route::get('admin/services/add',[ServiceController::class,'add'])->name('admin.services.add');
+ Route::post('admin/services/store',[ServiceController::class,'store'])->name('admin.service.store');
+
+//category
+
+ Route::get('admin/category',[CategoryController::class,'categories'])->name('admin.category');
+ Route::get('admin/add',[CategoryController::class,'add'])->name('admin.add');
+ Route::post('admin/store',[CategoryController::class,'store'])->name('admin.store');
+ 

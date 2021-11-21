@@ -5,15 +5,7 @@
 
 <h1>Service Provider List</h1><br>
 <a href="{{route('admin.serviceProvider.add')}}" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal">Add</a>
-<!-- <div class="modal" id="myModal">
-    <div class="modal-dialog">
-       <div class="modal-content">
-            <div class="modal-header">
-               <h5 class="modal-title">ADD Services provider</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-            </div>
-            <div class="modal-body"> -->
-              
+             
 <br>
 <br>
 <table class="table">
@@ -31,16 +23,15 @@
     </tr>
   </thead>
   <tbody>
-    @foreach($providers as $p)
+    @foreach($providers as $key=>$p)
+
      <tr>
-         <th>{{$p->id}}</th>
+         <th>{{$key+1}}</th>
          <td>{{$p->fname}}</td>
          <td>{{$p->lname}}</td>
          <td>{{$p->profession}}</td>
          <td>{{$p->address}}</td>
-      
-      
-    </tr>
+      </tr>
     @endforeach
     
   </tbody>
