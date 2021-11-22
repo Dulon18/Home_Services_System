@@ -22,6 +22,7 @@
 <body>
     
     <div class="contain">
+        
        @include('admin.partials.sidebar')
         <!-- header start -->
 
@@ -39,6 +40,7 @@
                     </div>
                 </div> -->
             <!-- card end -->
+            <!-- <img src="{{url('Backend/img/ww.jpg')}}" alt=""> -->
   
          </div></div>
       <!-- js code -->

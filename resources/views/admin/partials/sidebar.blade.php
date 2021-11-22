@@ -1,7 +1,7 @@
  <div class="sidebar">
             <ul>
                 <li>
-                    <a href="">
+                    <a href="/">
                     <span  class="title"><h2>Angels Arms</h2></span>
                     </a>
                 </li>

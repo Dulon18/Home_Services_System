@@ -22,6 +22,14 @@ class ServiceController extends Controller
     public function store(Request $request){
         // dd($requesst);
 
+        $request->validate([
+            'name'=>'required',
+            'price'=>'required|numeric',
+            'description'=>'required',
+            'category'=>'required',
+
+        ]);
+
         Service::create([
 
             'name'=>$request->name,
@@ -30,7 +38,7 @@ class ServiceController extends Controller
             'category'=>$request->category,
 
         ]);
-        return redirect()->route('admin.services');
+        return redirect()->back()->with('success','Service Add successfully..');
     }
     
 }

@@ -4,29 +4,39 @@
 
 <h5>Service Provider info</h5>
 
+@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
 <form  action="{{route('admin.sp.store')}}" method="POST">
    @csrf
    <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">First Name</label>
-    <input name="fname"  type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <input required name="fname"  type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
 
    </div>
 
      <div class="mb-3">
        <label for="exampleInputEmail1" class="form-label">Last Name</label>
-       <input name="lname" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+       <input required name="lname" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
     
       </div>
 
-      <div class="mb-3">
+      <div  class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Profession</label>
-          <input name ="profession"  type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <input required name ="profession"  type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
     
         </div>
 
         <div class="mb-3">
            <label for="exampleInputEmail1" class="form-label">Address</label>
-           <input name="address" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+           <input required name="address" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
     
       </div>
       

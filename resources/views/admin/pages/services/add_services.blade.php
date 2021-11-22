@@ -2,21 +2,32 @@
 @section('content')
 <h2>Service Info</h2>
 <br>
+
+@if($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
 <form action="{{route('admin.service.store')}}" method="POST">
   @csrf
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Service name</label>
-    <input name='name' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <input required name='name' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
 
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Price</label>
-    <input name='price' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <input required name='price' type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
   
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Description</label>
-    <input name='description' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <input required name='description' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
 
   <div class="mb-3">
@@ -32,4 +43,8 @@
 
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
+@if(session()->has('success'))
+   <p class="alert alert-success">{{session()->get('success')}}</p>
+@endif
+
 @endsection
