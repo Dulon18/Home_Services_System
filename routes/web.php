@@ -1,8 +1,12 @@
 <?php
 use App\Http\Controllers\Backend\ServiceProviderController;
 use App\Http\Controllers\Backend\AdminController;
+use App\Http\Controllers\Backend\CustomerController;
+use App\Http\Controllers\Backend\BookingController;
 use App\Http\Controllers\Backend\ServiceController;
 use App\Http\Controllers\Backend\CategoryController;
+use App\Http\Controllers\Backend\BillingController;
+use App\Http\Controllers\Backend\RatingController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -40,4 +44,16 @@ Route::post('admin/sp/store',[ServiceProviderController::class,'store'])->name('
  Route::get('admin/category',[CategoryController::class,'categories'])->name('admin.category');
  Route::get('admin/add',[CategoryController::class,'add'])->name('admin.add');
  Route::post('admin/store',[CategoryController::class,'store'])->name('admin.store');
- 
+
+ //booking
+  Route::get('admin/booking',[BookingController::class,'booking'])->name('admin.booking');
+
+//billing
+
+ Route::get('admin/billing',[BillingController::class,'bill'])->name('admin.bill');
+
+ //Customer
+ Route::get('admin/customer',[CustomerController::class,'customer'])->name('admin.customer');
+
+ //Rating
+  Route::get('admin/rating',[RatingController::class,'rating'])->name('admin.rating');

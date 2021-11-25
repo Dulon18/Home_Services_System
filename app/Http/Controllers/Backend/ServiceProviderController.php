@@ -24,14 +24,29 @@ class ServiceProviderController extends Controller
     {
         //dd($request->all())
 
+        $request->validate([
+            'name'=>'required',
+            'profession'=>'required',
+            'address'=>'required',
+            'email'=>'required',
+            'phn'=>'required|numeric',
+            'exp'=>'required',
+            'salary'=>'required|numeric',
+
+        ]);
+        
+
         Service_provider::create([
             //'DB name' =>$request-> form name,
 
 
-            'fname'=>$request->fname,
-            'lname'=>$request->lname,
+            'name'=>$request->name,
             'profession'=>$request->profession,
             'address'=>$request->address,
+            'email'=>$request->email,
+            'phn'=>$request->phn,
+            'exp'=>$request->exp,
+            'salary'=>$request->salary,
 
 
         ]);

@@ -12,14 +12,14 @@
   <thead>
     <tr>
       <th scope="col">ID</th>
-      <th scope="col">First Name</th>
-      <th scope="col">Last Name</th>
+      <th scope="col">Name</th>
       <th scope="col">Profession</th>
       <th scope="col">Address</th>
-      <!-- <th scope="col">Email</th>
+      <th scope="col">Email</th>
       <th scope="col">PhoneNumber</th>
       <th scope="col">Experience</th>
-      <th scope="col">Salary</th> -->
+      <th scope="col">Salary</th>
+      <th scope="col">Image</th>
     </tr>
   </thead>
   <tbody>
@@ -27,10 +27,13 @@
 
      <tr>
          <th>{{$key+1}}</th>
-         <td>{{$p->fname}}</td>
-         <td>{{$p->lname}}</td>
+         <td>{{$p->name}}</td>
          <td>{{$p->profession}}</td>
          <td>{{$p->address}}</td>
+         <td>{{$p->email}}</td>
+         <td>{{$p->phn}}</td>
+         <td>{{$p->exp}}</td>
+         <td>{{$p->salary}}</td>
       </tr>
     @endforeach
     

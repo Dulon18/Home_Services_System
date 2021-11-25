@@ -40,8 +40,7 @@
             @endforeach
       </select>
     </div>
-
-  <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 @if(session()->has('success'))
    <p class="alert alert-success">{{session()->get('success')}}</p>

@@ -1,22 +1,6 @@
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin Pannel</title>
-  <!-- bootstrap file -->
-  <link rel="stylesheet" type="text/css"href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-  <link rel="stylesheet" href="https://fontawesome.com/v5.15/icons?d=gallery&p=2&m=free">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" 
-  integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-  <!-- s -->
-
-  <style>
+@extends('admin.index')
+@section('content')
+<style>
        .modal-header {
            background: #F7941E;
            color: #fff;
@@ -26,12 +10,10 @@
            content: "*";
            color: red;
        }
-   </style>
-</head>
-<body>
-  
+</style>
 <div class="container mt-5">
-
+    <h3>Booking</h3>
+ <br>
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">Add</button>
 <div class="modal" id="myModal">
     <div class="modal-dialog">
@@ -87,12 +69,7 @@
     </div>
 </div>
 </div>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" 
 integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" 
 crossorigin="anonymous"></script>
-
-
-
-</body>
-</html>
+@endsection

@@ -3,6 +3,8 @@
 
 <h2>Category List </h2><br>
 <a href="{{route('admin.add')}}" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal">Add</a>
+<br>
+<br>
 <table class="table">
   <thead>
     <tr>
