@@ -34,6 +34,9 @@
          <td>{{$p->phn}}</td>
          <td>{{$p->exp}}</td>
          <td>{{$p->salary}}</td>
+         <td>
+         <img src="{{url('/uploads/'.$p->image)}}" width="90px" alt="plz..upload">
+         </td>
       </tr>
     @endforeach
     

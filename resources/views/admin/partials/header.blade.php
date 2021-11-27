@@ -99,7 +99,7 @@
               </li>
               <li> <a href="#"><i class="lnr lnr-user"></i>My Profile</a> </li>
               <li> <a href="#"><i class="lnr lnr-cog"></i>Setting</a> </li>
-              <li class="logout"> <a href="#sign-up.html"><i class="fa fa-power-off"></i> Logout</a> </li>
+              <li class="logout"> <a href="#sign-up.html"><i class="fa fa-power-off"></i>Logout</a> </li>
             </ul>
           </li>
         </ul>

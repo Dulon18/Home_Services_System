@@ -13,7 +13,11 @@
     </div>
 @endif
 
-<form action="{{route('admin.service.store')}}" method="POST">
+@if(session()->has('success'))
+   <p class="alert alert-success">{{session()->get('success')}}</p>
+@endif
+
+<form action="{{route('admin.service.store')}}" method="POST" enctype="multipart/form-data">
   @csrf
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Service name</label>
@@ -40,10 +44,13 @@
             @endforeach
       </select>
     </div>
+        <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Image</label>
+        <input name='image' type="file" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      </div>
+
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
-@if(session()->has('success'))
-   <p class="alert alert-success">{{session()->get('success')}}</p>
-@endif
+
 
 @endsection

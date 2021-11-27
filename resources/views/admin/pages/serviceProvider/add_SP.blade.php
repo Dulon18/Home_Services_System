@@ -14,7 +14,7 @@
         </ul>
     </div>
 @endif
-<form  action="{{route('admin.sp.store')}}" method="POST">
+<form  action="{{route('admin.sp.store')}}" method="POST" enctype="multipart/form-data">
    @csrf
    <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Name</label>
@@ -53,7 +53,7 @@
   </div>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Image</label>
-    <input  type="file" class="form-control" id="exampleInputPassword1">
+    <input name='image' type="file" class="form-control" id="exampleInputPassword1">
   </div>
 
   <button type="submit" class="btn btn-primary">Submit</button>

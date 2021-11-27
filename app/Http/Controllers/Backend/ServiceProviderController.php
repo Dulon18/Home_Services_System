@@ -22,23 +22,31 @@ class ServiceProviderController extends Controller
 
     public function store(Request $request)
     {
-        //dd($request->all())
-
-        $request->validate([
+        $filename="";
+        if($request->hasFile('image'))
+        {
+            $file=$request->file('image');
+            $filename=date('Ymdhms').'.'.$file->getclientOriginalExtension();
+            $file->storeAs('/uploads',$filename);
+        }
+        
+        // dd($request->all());
+            $request->validate([
             'name'=>'required',
             'profession'=>'required',
             'address'=>'required',
             'email'=>'required',
-            'phn'=>'required|numeric',
+            'phn'=>'required | numeric | digits:11',
             'exp'=>'required',
             'salary'=>'required|numeric',
 
         ]);
-        
+
+        //dd('ok');
 
         Service_provider::create([
-            //'DB name' =>$request-> form name,
 
+            //'DB name' =>$request-> form name,
 
             'name'=>$request->name,
             'profession'=>$request->profession,
@@ -47,6 +55,7 @@ class ServiceProviderController extends Controller
             'phn'=>$request->phn,
             'exp'=>$request->exp,
             'salary'=>$request->salary,
+            'image'=>$filename,
 
 
         ]);

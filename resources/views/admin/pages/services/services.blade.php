@@ -15,6 +15,7 @@
       <th scope="col">Price</th>
       <th scope="col">Description</th>
       <th scope="col">Category</th>
+      <th scope="col">Image</th>
      
     </tr>
   </thead>
@@ -27,6 +28,9 @@
          <td>{{$service->price}}</td>
          <td>{{$service->description}}</td>
          <td>{{$service->category}}</td>
+         <td>
+           <img src="{{url('/uploads/'.$service->Image)}}" width="100px" alt="plz..upload">
+         </td>
       </tr>
     @endforeach
     

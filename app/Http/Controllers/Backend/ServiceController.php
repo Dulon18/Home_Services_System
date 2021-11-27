@@ -21,12 +21,22 @@ class ServiceController extends Controller
 
     public function store(Request $request){
         // dd($requesst);
+        
+        if ($request->hasFile('image'))
+        {
+            
+            $file=$request->file('image');
+            $filename=date('Ymdhms').'.'.$file->getclientOriginalExtension();
+            $file->storeAs('/uploads',$filename);
+        }
+        //dd('ok');
 
         $request->validate([
             'name'=>'required',
             'price'=>'required|numeric',
             'description'=>'required',
             'category'=>'required',
+
 
         ]);
 
@@ -36,7 +46,8 @@ class ServiceController extends Controller
             'price'=>$request->price,
             'description'=>$request->description,
             'category'=>$request->category,
-
+            'image'=>$filename,
+            
         ]);
         return redirect()->back()->with('success','Service Add successfully..');
     }
