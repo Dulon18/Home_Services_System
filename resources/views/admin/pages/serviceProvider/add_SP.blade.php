@@ -14,6 +14,11 @@
         </ul>
     </div>
 @endif
+
+@if(session()->has('success'))
+   <p class="alert alert-success">{{session()->get('success')}}</p>
+@endif
+
 <form  action="{{route('admin.sp.store')}}" method="POST" enctype="multipart/form-data">
    @csrf
    <div class="mb-3">
@@ -57,5 +62,6 @@
   </div>
 
   <button type="submit" class="btn btn-primary">Submit</button>
+  <a href="{{route('admin.serviceProvider.dashboard')}}" type="button" class="btn btn-danger">Back</a>
 </form>
 @endsection

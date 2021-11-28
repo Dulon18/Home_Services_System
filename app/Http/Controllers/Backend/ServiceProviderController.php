@@ -59,6 +59,6 @@ class ServiceProviderController extends Controller
 
 
         ]);
-        return redirect()->route('admin.serviceProvider.dashboard');
+        return redirect()->back()->with('success','Service Provider info Add successfully....');
     }
 }
