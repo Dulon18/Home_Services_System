@@ -7,7 +7,8 @@
              
 <br>
 <br>
-<table class="table">
+<div class="table-responsive">
+<table class="table table-success table-striped">
   <thead>
     <tr>
       <th scope="col">ID</th>
@@ -36,5 +37,5 @@
     
   </tbody>
 </table>
-
+</div>
  @endsection

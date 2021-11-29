@@ -30,7 +30,9 @@ class ServiceController extends Controller
             $file->storeAs('/uploads',$filename);
         }
         //dd('ok');
-
+ 
+        //serverside validation
+        
         $request->validate([
             'name'=>'required',
             'price'=>'required|numeric',

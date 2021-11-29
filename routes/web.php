@@ -7,6 +7,7 @@ use App\Http\Controllers\Backend\ServiceController;
 use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\BillingController;
 use App\Http\Controllers\Backend\RatingController;
+use App\Http\Controllers\Frontend\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,6 +21,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//Frontend start
+
+Route::get('home',[HomeController::class,'home']);
+
+
+// Frontend end
+
+//Admin start.....
 Route::get('/', function () {
     return view('admin.index');
 });

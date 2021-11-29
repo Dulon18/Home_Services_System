@@ -31,6 +31,10 @@ class ServiceProviderController extends Controller
         }
         
         // dd($request->all());
+
+
+        //serverside validation
+        
             $request->validate([
             'name'=>'required',
             'profession'=>'required',

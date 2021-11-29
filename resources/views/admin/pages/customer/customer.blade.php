@@ -16,6 +16,7 @@
 @endif
 <form  action="{{route('admin.sp.store')}}" method="POST">
    @csrf
+   <div class="table-responsive">
    <table class="table">
   <thead>
     <tr>
@@ -40,4 +41,5 @@
     </tr>
   </tbody>
 </table>
+</div>
 @endsection
