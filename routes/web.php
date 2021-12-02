@@ -1,4 +1,5 @@
 <?php
+
 use App\Http\Controllers\Backend\ServiceProviderController;
 use App\Http\Controllers\Backend\AdminController;
 use App\Http\Controllers\Backend\CustomerController;
@@ -8,6 +9,7 @@ use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\BillingController;
 use App\Http\Controllers\Backend\RatingController;
 use App\Http\Controllers\Frontend\HomeController;
+use App\Http\Controllers\Frontend\CategoriesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,6 +26,7 @@ use Illuminate\Support\Facades\Route;
 //Frontend start
 
 Route::get('home',[HomeController::class,'home']);
+
 
 
 // Frontend end

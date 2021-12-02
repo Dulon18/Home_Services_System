@@ -6,39 +6,34 @@
                     <div class="container">
                         <div class="row">
                             <div class="titles">
-                                <h2>SurfsideMedia <span>Choice</span> of Services</h2>
+                                <h2>Angels Arms <span>Choice</span> of Services</h2>
                                 <i class="fa fa-plane"></i>
                                 <hr class="tall">
                             </div>
-                        </div>
-                       
+                        </div>  
+                        
                         <div class="portfolioContainer" style="margin-top: -50px;">
+
                         @foreach($services as $service)
                             <div class="col-xs-6 col-sm-4 col-md-3 hsgrids"
                                 style="padding-right: 5px;padding-left: 5px;">
-
-                               
                                     <a class="g-list" href="service-details/ac-dry-servicing.html">
                                         <div class="img-hover">
-                                        <img style="width: 250px; height: 250px"  src="{{url('uploads/'.$service->Image)}}"  alt="AC Dry Servicing"
+                                        <img style="width: 250px; height: 200px"  src="{{url('uploads/'.$service->Image)}}"  alt="AC Dry Servicing"
                                                 class="img-responsive">
                                         </div>
                                         <div class="info-gallery">
                                             <h3>{{$service->name}}</h3>
                                             <hr class="separator">
-                                            <p>{{$service->name}}</p>
+                                            <!-- <p>{{$service->name}}</p> -->
                                             <div class="content-btn"><a href="service-details/ac-dry-servicing.html"
                                                     class="btn btn-primary">Book Now</a></div>
                                             <div class="price"><b>From</b>BDT {{$service->price}}</div>
                                         </div>
-                                    </a>
-                                
+                                    </a>     
                             </div>
-                            @endforeach
-                            
-                           
-                        </div>
-                        
+                        @endforeach                           
+                        </div>                        
                     </div>
                 </div>
             </div>
@@ -53,7 +48,6 @@
                                         Book best services at one place.
                                         <span class="line"></span>
                                     </p>
-
                                     <p>Find a wide variety of home services.</p>
                                 </div>
                             </div>
@@ -63,7 +57,7 @@
                                         <a href="servicesbycategory/1.html">
                                             <div class="item-service-line">
                                                 <i class="fa"><img class="icon-img"
-                                                        src="{{url('frontend/images/sercat/service-icon.png')}}"></i>
+                                                        src="{{url('frontend/images/sercat/1.png')}}"></i>
                                                 <h5>AC</h5>
                                             </div>
                                         </a>
@@ -72,7 +66,7 @@
                                         <a href="servicesbycategory/3.html">
                                             <div class="item-service-line">
                                                 <i class="fa"><img class="icon-img"
-                                                        src="{{url('frontend/images/sercat/service-icon.png')}}"></i>
+                                                        src="{{url('frontend/images/sercat/3.png')}}"></i>
                                                 <h5>Plumbing</h5>
                                             </div>
                                         </a>
@@ -81,7 +75,7 @@
                                         <a href="servicesbycategory/4.html">
                                             <div class="item-service-line">
                                                 <i class="fa"><img class="icon-img"
-                                                        src="{{url('frontend/images/sercat/service-icon.png')}}"></i>
+                                                        src="{{url('frontend/images/sercat/4.png')}}"></i>
                                                 <h5>Electrical</h5>
                                             </div>
                                         </a>
@@ -90,7 +84,7 @@
                                         <a href="servicesbycategory/6.html">
                                             <div class="item-service-line">
                                                 <i class="fa"><img class="icon-img"
-                                                        src="{{url('frontend/images/sercat/service-icon.png')}}"></i>
+                                                        src="{{url('frontend/images/sercat/6.png')}}"></i>
                                                 <h5>Home Cleaning</h5>
                                             </div>
                                         </a>
@@ -99,7 +93,7 @@
                                         <a href="servicesbycategory/8.html">
                                             <div class="item-service-line">
                                                 <i class="fa"><img class="icon-img"
-                                                        src="{{url('frontend/images/sercat/service-icon.png')}}"></i>
+                                                        src="{{url('frontend/images/sercat/8.png')}}"></i>
                                                 <h5>Pest Control</h5>
                                             </div>
                                         </a>
@@ -108,7 +102,7 @@
                                         <a href="servicesbycategory/11.html">
                                             <div class="item-service-line">
                                                 <i class="fa"><img class="icon-img"
-                                                        src="{{url('frontend/images/sercat/service-icon.png')}}"></i>
+                                                        src="{{url('frontend/images/sercat/13.png')}}"></i>
                                                 <h5>Computer Repair</h5>
                                             </div>
                                         </a>
@@ -117,7 +111,7 @@
                                         <a href="servicesbycategory/12.html">
                                             <div class="item-service-line">
                                                 <i class="fa"><img class="icon-img"
-                                                        src="{{url('frontend/images/sercat/service-icon.png')}}"></i>
+                                                        src="{{url('frontend/images/sercat/11.png')}}"></i>
                                                 <h5>TV</h5>
                                             </div>
                                         </a>
@@ -126,7 +120,7 @@
                                         <a href="servicesbycategory/13.html">
                                             <div class="item-service-line">
                                                 <i class="fa"><img class="icon-img"
-                                                        src="{{url('frontend/images/sercat/service-icon.png')}}"></i>
+                                                        src="{{url('frontend/images/sercat/12.png')}}"></i>
                                                 <h5>Refrigerator</h5>
                                             </div>
                                         </a>
@@ -152,7 +146,7 @@
                         <div>
                             <a class="g-list" href="service-details/ac-wet-servicing.html">
                                 <div class="img-hover">
-                                    <img src="{{url('frontend/images/services/thumbnails/thumbnail.jpg')}}" alt="" class="img-responsive">
+                                    <img src="{{url('frontend/images/services/thumbnails/service_1.jpg')}}" alt="" class="img-responsive">
                                 </div>
 
                                 <div class="info-gallery">
@@ -161,14 +155,14 @@
                                     <p>AC Wet Servicing</p>
                                     <div class="content-btn"><a href="service-details/ac-wet-servicing.html"
                                             class="btn btn-primary">Book Now</a></div>
-                                    <div class="price"><span>&#36;</span><b>From</b>200</div>
+                                    <div class="price"><b>From</b>BDT 200</div>
                                 </div>
                             </a>
                       </div>
                         <div>
                             <a class="g-list" href="service-details/bedroom-deep-cleaning.html">
                                 <div class="img-hover">
-                                    <img src="{{url('frontend/images/services/thumbnails/thumbnail.jpg')}}" alt="" class="img-responsive">
+                                    <img src="{{url('frontend/images/services/thumbnails/service_9.jpg')}}" alt="" class="img-responsive">
                                 </div>
 
                                 <div class="info-gallery">
@@ -177,14 +171,14 @@
                                     <p>Bedroom Deep Cleaning</p>
                                     <div class="content-btn"><a href="service-details/bedroom-deep-cleaning.html"
                                             class="btn btn-primary">Book Now</a></div>
-                                    <div class="price"><span>&#36;</span><b>From</b>300</div>
+                                    <div class="price"><b>From</b>BDT 3500</div>
                                 </div>
                             </a>
                         </div>
                     <div>
                         <a class="g-list" href="service-details/dining-chair-shampooing.html">
                             <div class="img-hover">
-                                <img src="{{url('frontend/images/services/thumbnails/thumbnail.jpg')}}" alt="" class="img-responsive">
+                                <img src="{{url('frontend/images/services/thumbnails/service_11.jpg')}}" alt="" class="img-responsive">
                             </div>
 
                             <div class="info-gallery">
@@ -193,14 +187,14 @@
                                 <p>Dining Chair Shampooing</p>
                                 <div class="content-btn"><a href="service-details/dining-chair-shampooing.html"
                                         class="btn btn-primary">Book Now</a></div>
-                                <div class="price"><span>&#36;</span><b>From</b>400</div>
+                                <div class="price"><b>From</b>BDT 4000</div>
                             </div>
                         </a>
                     </div>
                     <div>
                         <a class="g-list" href="service-details/carpet-shampooing.html">
                             <div class="img-hover">
-                                <img src="{{url('frontend/images/services/thumbnails/thumbnail.jpg')}}" alt="" class="img-responsive">
+                                <img src="{{url('frontend/images/services/thumbnails/service_19.jpg')}}" alt="" class="img-responsive">
                             </div>
 
                             <div class="info-gallery">
@@ -209,14 +203,14 @@
                                 <p>Carpet Shampooing</p>
                                 <div class="content-btn"><a href="service-details/carpet-shampooing.html"
                                         class="btn btn-primary">Book Now</a></div>
-                                <div class="price"><span>&#36;</span><b>From</b>200</div>
+                                <div class="price"><b>From</b>BDT 2000</div>
                             </div>
                         </a>
                     </div>
                     <div>
                         <a class="g-list" href="service-details/fabric-sofa-shampooing.html">
                             <div class="img-hover">
-                                <img src="{{url('frontend/images/services/thumbnails/thumbnail.jpg')}}" alt="" class="img-responsive">
+                                <img src="{{url('frontend/images/services/thumbnails/service_14.jpg')}}" alt="" class="img-responsive">
                             </div>
 
                             <div class="info-gallery">
@@ -225,7 +219,7 @@
                                 <p>Fabric Sofa Shampooing</p>
                                 <div class="content-btn"><a href="service-details/fabric-sofa-shampooing.html"
                                         class="btn btn-primary">Book Now</a></div>
-                                <div class="price"><span>&#36;</span><b>From</b>211</div>
+                                <div class="price"><b>From</b> BDT 3000</div>
                             </div>
                         </a>
                     </div>

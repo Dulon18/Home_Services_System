@@ -18,11 +18,23 @@ class CategoryController extends Controller
     }
     
     public function store(Request $request){
+        
+        $filename="";
+        if($request->hasFile('image'))
+        {
+            $file=$request->file('image');
+            $filename=date('Ymdhms').'.'.$file->getclientOriginalExtension();
+            $file->storeAs('/uploads',$filename);
+        }
+        //dd('ok');  
+        
+        
+        
         //dd($request->all());
-
         Categories::create([
             'name'=>$request->name,
             'description'=>$request->description,
+            'image'=>$filename,
 
         ]);
         return redirect()->route('admin.category');

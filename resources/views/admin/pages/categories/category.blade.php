@@ -11,6 +11,7 @@
       <th scope="col">ID</th>
       <th scope="col">Name</th>
       <th scope="col">Description</th>
+      <th scope="col">Image</th>
       
     </tr>
   </thead>
@@ -21,6 +22,9 @@
       <th>{{$key+1}}</th>
       <td>{{$category->name}}</td>
       <td>{{$category->description}}</td>
+      <td>
+        <img src="{{url('/uploads/' .$category->image)}}" width="100px" alt="plz..upload">
+      </td>
     </tr>
     @endforeach
   </tbody>

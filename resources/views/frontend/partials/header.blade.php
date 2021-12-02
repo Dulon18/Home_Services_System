@@ -5,9 +5,9 @@
 
                 <ul class="collapse">
                     <li class="title">
-                        <a href="index.php.html"><img src="{{url('frontend/images/logo.png')}}"></a>
+                        <!-- <a href="index.php.html"><img  src="{{url('frontend/images/logo.png')}}"></a> -->
                     </li>
-                    <li> <a href="javascript:void(0);">Air Conditioners</a>
+                    <li> <a  href="javascript:void(0);">Air Conditioners</a>
                         <ul class="drop-down one-column hover-fade">
                             <li><a href="service-details/ac-wet-servicing.html">Wet Servicing</a></li>
                             <li><a href="service-details/ac-dry-servicing.html">Dry Servicing</a></li>
