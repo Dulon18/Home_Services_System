@@ -13,8 +13,6 @@
                             <li><a href="service-details/ac-dry-servicing.html">Dry Servicing</a></li>
                             <li><a href="service-details/ac-installation.html">Installation</a></li>
                             <li><a href="service-details/ac-uninstallation.html">Uninstallation</a></li>
-                            <li><a href="service-details/ac-gas-top-up.html">Gas Top Up</a></li>
-                            <li><a href="service-details/ac-gas-refill.html">Gas Refill</a></li>
                             <li><a href="service-details/ac-repair.html">Repair</a></li>
                         </ul>
                     </li>
@@ -39,15 +37,12 @@
                             <li><a href="servicesbycategory/7.html">Carpentry</a></li>
                             <li><a href="servicesbycategory/3.html">Plumbing </a></li>
                             <li><a href="servicesbycategory/20.html">Painting</a></li>
-                            <li><a href="servicesbycategory/17.html">Movers &amp; Packers</a></li>
                             <li><a href="servicesbycategory/5.html">Shower Filters </a></li>
                         </ul>
                     </li>
                     <li> <a href="#">Home Cleaning</a>
                         <ul class="drop-down one-column hover-fade">
                             <li><a href="service-details/bedroom-deep-cleaning.html">Bedroom Deep Cleaning</a></li>
-                            <li><a href="service-details/overhead-water-storage.html">Overhead Water Storage </a></li>
-                            <li><a href="/service-details/tank-cleaning">Tank Cleaning</a></li>
                             <li><a href="service-details/underground-sump-cleaning.html">Underground Sump Cleaning</a>
                             </li>
                             <li><a href="service-details/dining-chair-shampooing.html">Dining Chair Shampooing </a></li>
@@ -56,9 +51,7 @@
                             <li><a href="service-details/carpet-shampooing.html">Carpet Shampooing </a></li>
                             <li><a href="service-details/fabric-sofa-shampooing.html">Fabric Sofa Shampooing</a></li>
                             <li><a href="service-details/bathroom-deep-cleaning.html">Bathroom Deep Cleaning</a></li>
-                            <li><a href="service-details/floor-scrubbing-polishing.html">Floor Scrubbing &amp; Polishing
-                                </a></li>
-                            <li><a href="service-details/mattress-shampooing.html">Mattress Shampooing </a></li>
+                            <li><a href="service-details/floor-scrubbing-polishing.html">Floor Scrubbing &amp; Polishing</a></li>                   
                             <li><a href="service-details/kitchen-deep-cleaning.html">Kitchen Deep Cleaning </a></li>
                         </ul>
                     </li>
