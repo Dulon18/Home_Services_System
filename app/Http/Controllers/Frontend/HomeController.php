@@ -18,4 +18,18 @@ class HomeController extends Controller
         $categories=Categories::all();
         return view('frontend.pages.category',compact('categories'));
     }
+
+    public function service_details()
+    {
+        return view('frontend.pages.service_details');
+    }
+
+    public function login()
+    {
+        return view('frontend.pages.login');
+    }
+    public function reg()
+    {
+        return view('frontend.pages.registation');
+    }
 }

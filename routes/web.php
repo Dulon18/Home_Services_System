@@ -10,6 +10,7 @@ use App\Http\Controllers\Backend\BillingController;
 use App\Http\Controllers\Backend\RatingController;
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Frontend\CategoriesController;
+use App\Http\Controllers\Frontend\BookController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,7 +26,14 @@ use Illuminate\Support\Facades\Route;
 
 //Frontend start
 
-Route::get('home',[HomeController::class,'home']);
+  Route::get('home',[HomeController::class,'home']);
+  // Route::get('home',[HomeController::class,'category']);
+  Route::get('service_details',[HomeController::class,'service_details']);
+  //Booking
+  Route::get('book',[BookController::class,'booknow']);
+  Route::get('location',[BookController::class,'book']);
+  Route::get('login',[HomeController::class,'login']);
+  Route::get('reg',[HomeController::class,'reg']);
 
 
 
@@ -37,13 +45,13 @@ Route::get('/', function () {
 });
 
 //dashboard
-Route::get('admin/dashboard',[AdminController::class,'dashboard'])->name('admin.dashboard');
+  Route::get('admin/dashboard',[AdminController::class,'dashboard'])->name('admin.dashboard');
 
 
 //service provider
-Route::get('admin/serviceProvider',[ServiceProviderController::class,'SP_dashboard'])->name('admin.serviceProvider.dashboard');
-Route::get('admin/serviceProvider/add',[ServiceProviderController::class,'add'])->name('admin.serviceProvider.add');
-Route::post('admin/sp/store',[ServiceProviderController::class,'store'])->name('admin.sp.store');
+  Route::get('admin/serviceProvider',[ServiceProviderController::class,'SP_dashboard'])->name('admin.serviceProvider.dashboard');
+  Route::get('admin/serviceProvider/add',[ServiceProviderController::class,'add'])->name('admin.serviceProvider.add');
+  Route::post('admin/sp/store',[ServiceProviderController::class,'store'])->name('admin.sp.store');
 
 //services
 
