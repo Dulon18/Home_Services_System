@@ -20,8 +20,8 @@ class HomeController extends Controller
     }
 
     public function service_details()
-    {
-        return view('frontend.pages.service_details');
+    {   
+        return view('frontend.pages.service_details',compact('booking'));
     }
 
     public function login()

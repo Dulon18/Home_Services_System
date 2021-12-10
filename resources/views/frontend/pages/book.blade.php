@@ -2,18 +2,20 @@
 @section('content')
         <div class="section-title-01 honmob">
             <div class="bg_parallax image_01_parallax"></div>
+           
             <div class="opacy_bg_02">
                 <div class="container">
-                    <h1>AC Dry Servicing</h1>
+                    <h1>{{$booking->name}}</h1>
                     <div class="crumbs">
                         <ul>
                             <li><a href="{{url('/home')}}">Home</a></li>
                             <li>/</li>
-                            <li>AC Dry Servicing</li>
+                            <li>{{$booking->name}}</li>
                         </ul>
                     </div>
                 </div>
             </div>
+            
         </div>
         <section class="content-central">
             <div class="semiboxshadow text-center">
@@ -34,12 +36,13 @@
                                                 </div>
                                                 <div class="post-info-wrap">
                                                     <h2 class="post-title"><a href="#" title="Post Format: Standard"
-                                                            rel="bookmark">AC Dry Servicing: AC</a></h2>
+                                                            rel="bookmark">{{$booking->name}}</a></h2>
                                                     <div class="post-meta" style="height: 10px;">
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
+                                      
                                         <div class="col-md-12">
                                             <div id="single-carousel">
                                                 <div class="img-hover">
@@ -48,19 +51,12 @@
                                                 </div>
                                             </div>
                                         </div>
+                                       
                                         <div class="col-md-12">
                                             <div class="post-content">
-                                                <h3>AC Dry Servicing</h3>
-                                                <p>It is a long established fact that a reader will be distracted by the
-                                                    readable content of a page when looking at its layout. The point of
-                                                    using Lorem Ipsum is that it has a more-or-less normal distribution
-                                                    of letters, as opposed to using &#039;Content here, content
-                                                    here&#039;, making it look like readable English. Many desktop
-                                                    publishing packages and web page editors now use Lorem Ipsum as
-                                                    their default model text, and a search for &#039;lorem ipsum&#039;
-                                                    will uncover many web sites still in their infancy. Various versions
-                                                    have evolved over the years, sometimes by accident, sometimes on
-                                                    purpose (injected humour and the like).</p>
+                                                <h3>{{$booking->name}}</h3>
+                                                <p>{{$booking->description}}</p>
+                                        
                                                 <h4>Inclusion</h4>
                                                 <ul class="list-styles">
                                                     <li><i class="fa fa-plus"></i>Etiam pulvinar eros eu felis varius,
@@ -99,6 +95,7 @@
                                                 </ul>
                                             </div>
                                         </div>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -110,7 +107,7 @@
                                             <table class="table">
                                                 <tr>
                                                     <td style="border-top: none;">Price</td>
-                                                    <td style="border-top: none;">BDT 300</td>
+                                                    <td style="border-top: none;">{{$booking->price}}</td>
                                                 </tr>
                                                 <tr>
                                                     <td>Quntity</td>
@@ -122,7 +119,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td>Total</td>
-                                                    <td>BDT  3000</td>
+                                                    <td>BDT {{$booking->price}}</td>
                                                 </tr>
                                             </table>
                                         </div>
@@ -165,7 +162,9 @@
                         </div>
                     </div>
                 </div>
-            </div>            
+            </div>     
+                 
         </section>
+    
 
 @endsection

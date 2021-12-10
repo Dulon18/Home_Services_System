@@ -100,6 +100,7 @@
                     <li class="login-form"> <a href="{{url('/login')}}" title="Login">Login</a></li>
                     <li class="search-bar">
                     </li>
+                    
                 </ul>
             </nav>
         </header>

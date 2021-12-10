@@ -30,7 +30,7 @@ use Illuminate\Support\Facades\Route;
   // Route::get('home',[HomeController::class,'category']);
   Route::get('service_details',[HomeController::class,'service_details']);
   //Booking
-  Route::get('book',[BookController::class,'booknow']);
+  Route::get('book/{id}',[BookController::class,'booknow']);
   Route::get('location',[BookController::class,'book']);
   Route::get('login',[HomeController::class,'login']);
   Route::get('reg',[HomeController::class,'reg']);
