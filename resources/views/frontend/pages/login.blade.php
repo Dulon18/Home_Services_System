@@ -7,7 +7,7 @@
                     <h1>Login</h1>
                     <div class="crumbs">
                         <ul>
-                            <li><a href="{{url('/home')}}">Home</a></li>
+                            <li><a href="{{route('frontend.home')}}">Home</a></li>
                             <li>/</li>
                             <li>Login</li>
                         </ul>
@@ -25,7 +25,8 @@
                             <div class="col-xs-12 col-sm-6 col-md-6 profile1" style="min-height: 300px;">
                                 <div class="thinborder-ontop">
                                     <h3>Login Info</h3>
-                                    <form id="userloginform">                                        
+                                    <form action ="{{route('user.dologin')}}" id="userloginform" method="POST">
+                                        @csrf                                        
                                         <div class="form-group row">
                                             <label for="email" class="col-sm-4 col-form-label text-md-right">E-Mail Address</label>
                                             <div class="col-md-6">

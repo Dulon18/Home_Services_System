@@ -23,8 +23,9 @@
                     <div class="container">
                         <div class="col-xs-12 col-sm-6 col-md-6 col-md-offset-3 profile1" style="padding-bottom:40px;">
                             <div class="thinborder-ontop">
-                                <h3>User Info</h3>
-                                <form id="userregisterationform">                                    
+                                <h3>Customer Info</h3>
+                                <form action="{{route('reg.store')}}" id="userregisterationform" method='POST'>  
+                                    @csrf                                  
                                     <div class="form-group row">
                                         <label for="name" class="col-md-4 col-form-label text-md-right">Name</label>
                                         <div class="col-md-6">
@@ -62,7 +63,7 @@
                                     <div class="form-group row mb-0">
                                         <div class="col-md-10">
                                             <span style="font-size: 14px;">If you have already registered <a
-                                                    href="login.html" title="Login">click here</a> to login</span>
+                                                    href="{{url('/login')}}" title="Login">click here</a> to login</span>
                                             <button type="submit" class="btn btn-primary pull-right">Register</button>
                                         </div>
                                     </div>

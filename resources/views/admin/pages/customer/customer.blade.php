@@ -14,31 +14,31 @@
         </ul>
     </div>
 @endif
-<form  action="{{route('admin.sp.store')}}" method="POST">
-   @csrf
+
    <div class="table-responsive">
    <table class="table">
   <thead>
+    
     <tr>
       <th scope="col">ID</th>
       <th scope="col">Name</th>
-      <th scope="col">Address</th>
       <th scope="col">Email</th>
-      <th scope="col">Password</th>
       <th scope="col">Phone Number</th>
+      <th scope="col">Password</th>
+      
 
     </tr>
   </thead>
   <tbody>
+  @foreach($customers as $key=>$customer)
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Dhaka</td>
-      <td>mark@gmail.com</td>
-      <td>m123Er</td>
-      <td>0123745986</td>
-      
+      <th>{{$key+1}}</th>
+      <td>{{$customer->name}}</td>
+      <td>{{$customer->email}}</td>
+      <td>{{$customer->phone}}</td>
+      <td>{{$customer->password}}</td>  
     </tr>
+    @endforeach
   </tbody>
 </table>
 </div>

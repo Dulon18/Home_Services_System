@@ -53,5 +53,15 @@ class ServiceController extends Controller
         ]);
         return redirect()->back()->with('success','Service Add successfully..');
     }
+    public function service_details($service_id)
+    {
+           $services = Service::find($service_id);
+           return view('admin.pages.services.services_details',compact('services'));
+    }
     
+    public function service_delete($id)
+    {
+       Service::find($id)->delete();
+       return redirect()->back()->with('success','Services Deleted.');
+    }
 }

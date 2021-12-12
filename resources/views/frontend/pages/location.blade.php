@@ -32,37 +32,41 @@
                                     <input type="text" class="form-control" id="autocomplete" name="location"
                                         placeholder="Search Location....">
                                     <div id="map" style="height: 400px;"></div>
+                                    
                                 </div>
+
                                 <div class="col-md-4">
                                     <aside class="addlocation">
-                                        <h4>Your Location<input type="submit" class="btn btn-primary pull-right"
-                                                name="submit" value="Add Location"></h4>
+                                        <h2><b>Your Location</b></h2>
+                                                <p>Expert will arrive at the address given below</p>
                                         <address>
                                             <div class="form-group">
-                                                <label for="streetnumber" class="col-form-label">Street Number:</label>
+                                                <label for="streetnumber" class="col-form-label">House No:</label>
                                                 <input type="text" class="form-control" id="street_number"
-                                                    name="streetnumber">
+                                                    name="house_no">
                                             </div>
                                             <div class="form-group">
-                                                <label for="routes" class="col-form-label">Route:</label>
+                                                <label for="routes" class="col-form-label">Road No:</label>
                                                 <input type="text" class="form-control" id="route" name="routes">
                                             </div>
                                             <div class="form-group">
-                                                <label for="city" class="col-form-label">City:</label>
+                                                <label for="city" class="col-form-label">Block No:</label>
                                                 <input type="text" class="form-control" id="locality" name="city">
                                             </div>
                                             <div class="form-group">
-                                                <label for="state" class="col-form-label">State:</label>
+                                                <label for="state" class="col-form-label">Sector No:</label>
                                                 <input type="text" class="form-control" id="administrative_area_level_1"
                                                     name="state">
                                             </div>
                                             <div class="form-group">
-                                                <label for="country" class="col-form-label">Country:</label>
+                                                <label for="country" class="col-form-label">Area:
+                                                    
+                                                </label>
                                                 <input type="text" class="form-control" id="country" name="country">
                                             </div>
+                                            <br>
                                             <div class="form-group">
-                                                <label for="pincode" class="col-form-label">Pincode:</label>
-                                                <input type="text" class="form-control" id="postal_code" name="pincode">
+                                                <a class="btn btn-primary" href="">Book</a>
                                             </div>
                                         </address>
                                     </aside>

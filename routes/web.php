@@ -11,6 +11,7 @@ use App\Http\Controllers\Backend\RatingController;
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Frontend\CategoriesController;
 use App\Http\Controllers\Frontend\BookController;
+use App\Http\Controllers\Frontend\LoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,14 +27,23 @@ use Illuminate\Support\Facades\Route;
 
 //Frontend start
 
-  Route::get('home',[HomeController::class,'home']);
+  Route::get('home',[HomeController::class,'home'])->name('frontend.home');
   // Route::get('home',[HomeController::class,'category']);
   Route::get('service_details',[HomeController::class,'service_details']);
+
   //Booking
   Route::get('book/{id}',[BookController::class,'booknow']);
   Route::get('location',[BookController::class,'book']);
-  Route::get('login',[HomeController::class,'login']);
-  Route::get('reg',[HomeController::class,'reg']);
+
+  // registration & login
+  
+  Route::get('reg',[LoginController::class,'reg'])->name('customer.reg');
+  Route::post('user/reg/post',[LoginController::class,'regStore'])->name('reg.store');
+  Route::get('customer/login',[LoginController::class,'login'])->name('customer.login');
+  Route::post('user/do/login',[LoginController::class,'doLogin'])->name('user.dologin');
+  Route::get('user/logout',[LoginController::class,'logout'])->name('user.logout');
+
+  
 
 
 
@@ -58,6 +68,8 @@ Route::get('/', function () {
  Route::get('admin/services',[ServiceController::class,'services'])->name('admin.services');
  Route::get('admin/services/add',[ServiceController::class,'add'])->name('admin.services.add');
  Route::post('admin/services/store',[ServiceController::class,'store'])->name('admin.service.store');
+ Route::get('admin/services/view/{service_id}',[ServiceController::class,'service_details'])->name('admin.services.details');
+ Route::get('admin/services/delete/{service_id}',[ServiceController::class,'service_delete'])->name('admin.services.delete');
 
 //category
 

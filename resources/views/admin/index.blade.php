@@ -17,6 +17,7 @@
   <link href="//fonts.googleapis.com/css?family=Nunito:300,400,600,700,800,900&display=swap" rel="stylesheet">
   <!-- icons -->
   <link href="/your-path-to-fontawesome/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
   <script defer src="/your-path-to-fontawesome/js/all.js"></script>
 </head>
 <body class="sidebar-menu-collapsed">

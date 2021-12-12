@@ -96,10 +96,14 @@
                             <li><a href="servicesbycategory/18.html">Home Automation</a></li>
                         </ul>
                     </li>
-                    <li class="login-form"> <a href="{{url('/reg')}}" title="Register">Register</a></li>
-                    <li class="login-form"> <a href="{{url('/login')}}" title="Login">Login</a></li>
-                    <li class="search-bar">
-                    </li>
+
+                    @if(auth()->user())
+                     <li class="login-form"><a href="{{route('user.logout')}}" title="Logout">Logout</a></li>
+                   @else
+                    <li class="login-form"> <a href="{{route('customer.reg')}}" title="Register">Register</a></li>
+                    <li class="login-form"> <a href="{{route('customer.login')}}" title="Login">Login</a></li>
+                    <li class="search-bar"></li>
+                  @endif
                     
                 </ul>
             </nav>

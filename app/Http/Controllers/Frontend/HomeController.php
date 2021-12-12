@@ -24,12 +24,6 @@ class HomeController extends Controller
         return view('frontend.pages.service_details',compact('booking'));
     }
 
-    public function login()
-    {
-        return view('frontend.pages.login');
-    }
-    public function reg()
-    {
-        return view('frontend.pages.registation');
-    }
+   
+   
 }
