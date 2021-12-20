@@ -7,13 +7,19 @@
                 <ul>
                     <li data-transition="slidevertical" data-slotamount="1" data-masterspeed="1000"
                         data-saveperformance="off" data-title="Slide">
-                        <img src="{{url('frontend/assets/img/slide/4.jpg')}}" alt="fullslide1" data-bgposition="center center"
+                        <img src="{{url('frontend/assets/img/slide/8.jpg')}}" alt="fullslide1" data-bgposition="center center"
                             data-kenburns="on" data-duration="6000" data-ease="Linear.easeNone" data-bgfit="130"
                             data-bgfitend="100" data-bgpositionend="right center">
                     </li>
                     <li data-transition="slidehorizontal" data-slotamount="1" data-masterspeed="1000"
                         data-saveperformance="off" data-title="Slide">
-                        <img src="{{url('frontend/assets/img/slide/2.jpg')}}" alt="fullslide1" data-bgposition="top center"
+                        <img src="{{url('frontend/assets/img/slide/4.jpg')}}" alt="fullslide1" data-bgposition="top center"
+                            data-kenburns="on" data-duration="6000" data-ease="Linear.easeNone" data-bgfit="130"
+                            data-bgfitend="100" data-bgpositionend="right center">
+                    </li>
+                    <li data-transition="slidehorizontal" data-slotamount="1" data-masterspeed="1000"
+                        data-saveperformance="off" data-title="Slide">
+                        <img src="{{url('frontend/assets/img/slide/5.jpg')}}" alt="fullslide1" data-bgposition="top center"
                             data-kenburns="on" data-duration="6000" data-ease="Linear.easeNone" data-bgfit="130"
                             data-bgfitend="100" data-bgpositionend="right center">
                     </li>
@@ -21,6 +27,13 @@
                     <li data-transition="slidehorizontal" data-slotamount="1" data-masterspeed="1000"
                         data-saveperformance="off" data-title="Slide">
                         <img src="{{url('frontend/assets/img/slide/1.jpg')}}" alt="fullslide1" data-bgposition="top center"
+                            data-kenburns="on" data-duration="6000" data-ease="Linear.easeNone" data-bgfit="130"
+                            data-bgfitend="100" data-bgpositionend="right center">
+                    </li>
+
+                    <li data-transition="slidehorizontal" data-slotamount="1" data-masterspeed="1000"
+                        data-saveperformance="off" data-title="Slide">
+                        <img src="{{url('frontend/assets/img/slide/6.jpg')}}" alt="fullslide1" data-bgposition="top center"
                             data-kenburns="on" data-duration="6000" data-ease="Linear.easeNone" data-bgfit="130"
                             data-bgfitend="100" data-bgpositionend="right center">
                     </li>

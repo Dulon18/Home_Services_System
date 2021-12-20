@@ -49,43 +49,66 @@ use Illuminate\Support\Facades\Route;
 
 // Frontend end
 
-//Admin start.....
-Route::get('/', function () {
-    return view('admin.index');
-});
+//Backend or Admin Pannel start.....
+
+Route::group(['prefix'=>'admin'],function (){
+// Route::get('/', function () {
+//     return view('admin.index');
+// });
+
+// Login for admin
+
+  Route::get('/login',[AdminController::class,'login'])->name('admin.login');
+  Route::post('/login',[AdminController::class,'doLogin'])->name('admin.doLogin');
+
+
+  Route::group(['middleware'=>'auth'],function (){
+    Route::get('/', function () {
+        return view('admin.pages.home');
+    })->name('home');
+
+// admin logout
+  Route::get('/logout',[AdminController::class,'logout'])->name('admin.logout');
 
 //dashboard
-  Route::get('admin/dashboard',[AdminController::class,'dashboard'])->name('admin.dashboard');
+  Route::get('/dashboard',[AdminController::class,'dashboard'])->name('admin.dashboard');
 
 
 //service provider
-  Route::get('admin/serviceProvider',[ServiceProviderController::class,'SP_dashboard'])->name('admin.serviceProvider.dashboard');
-  Route::get('admin/serviceProvider/add',[ServiceProviderController::class,'add'])->name('admin.serviceProvider.add');
-  Route::post('admin/sp/store',[ServiceProviderController::class,'store'])->name('admin.sp.store');
+  Route::get('/serviceProvider',[ServiceProviderController::class,'SP_dashboard'])->name('admin.serviceProvider.dashboard');
+  Route::get('/serviceProvider/add',[ServiceProviderController::class,'add'])->name('admin.serviceProvider.add');
+  Route::post('/sp/store',[ServiceProviderController::class,'store'])->name('admin.sp.store');
 
 //services
 
- Route::get('admin/services',[ServiceController::class,'services'])->name('admin.services');
- Route::get('admin/services/add',[ServiceController::class,'add'])->name('admin.services.add');
- Route::post('admin/services/store',[ServiceController::class,'store'])->name('admin.service.store');
- Route::get('admin/services/view/{service_id}',[ServiceController::class,'service_details'])->name('admin.services.details');
- Route::get('admin/services/delete/{service_id}',[ServiceController::class,'service_delete'])->name('admin.services.delete');
+ Route::get('/services',[ServiceController::class,'services'])->name('admin.services');
+ Route::get('/services/add',[ServiceController::class,'add'])->name('admin.services.add');
+ Route::post('/services/store',[ServiceController::class,'store'])->name('admin.service.store');
+ Route::get('/services/view/{service_id}',[ServiceController::class,'service_details'])->name('admin.services.details');
+ Route::get('/services/delete/{service_id}',[ServiceController::class,'service_delete'])->name('admin.services.delete');
+ Route::get('/services/edit/{service_id}',[ServiceController::class,'service_edit'])->name('admin.services.edit');
+ Route::put('/services/update/{id}',[ServiceController::class,'service_update'])->name('admin.services.update');
 
-//category
 
- Route::get('admin/category',[CategoryController::class,'categories'])->name('admin.category');
- Route::get('admin/add',[CategoryController::class,'add'])->name('admin.add');
- Route::post('admin/store',[CategoryController::class,'store'])->name('admin.store');
+ //category
+
+ Route::get('/category',[CategoryController::class,'categories'])->name('admin.category');
+ Route::get('/add',[CategoryController::class,'add'])->name('admin.add');
+ Route::post('/store',[CategoryController::class,'store'])->name('admin.store');
 
  //booking
-  Route::get('admin/booking',[BookingController::class,'booking'])->name('admin.booking');
+  Route::get('/booking',[BookingController::class,'booking'])->name('admin.booking');
 
 //billing
 
- Route::get('admin/billing',[BillingController::class,'bill'])->name('admin.bill');
+ Route::get('/billing',[BillingController::class,'bill'])->name('admin.bill');
 
  //Customer
- Route::get('admin/customer',[CustomerController::class,'customer'])->name('admin.customer');
+ Route::get('/customer',[CustomerController::class,'customer'])->name('admin.customer');
 
  //Rating
-  Route::get('admin/rating',[RatingController::class,'rating'])->name('admin.rating');
+  Route::get('/rating',[RatingController::class,'rating'])->name('admin.rating');
+
+
+});
+});

@@ -20,6 +20,7 @@
       <th scope="col">Experience</th>
       <th scope="col">Salary</th>
       <th scope="col">Image</th>
+      <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
@@ -37,7 +38,13 @@
          <td>
          <img src="{{url('/uploads/'.$p->image)}}" width="90px" alt="plz..upload">
          </td>
+         <td>
+           <a href="" class='btn btn-success'><i class="uil uil-eye"></i></a>
+           <a href="" class='btn btn-info'><i class="uil uil-edit"></i></a>
+           <a href="" class='btn btn-danger'><i class="uil uil-trash-alt"></i></a>
+         </td>
       </tr>
+
     @endforeach
     
   </tbody>
