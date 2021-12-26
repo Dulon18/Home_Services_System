@@ -66,5 +66,23 @@ class ServiceProviderController extends Controller
         return redirect()->back()->with('success','Service Provider info Add successfully....');
     }
 
+    public function sprovider_view($id)
+    {
+        //dd($id);
+        $Sprovider=Service_provider::find($id);
+        return view('admin.pages.serviceProvider.sprovider_view',compact('Sprovider'));
+    }
+
+    public function sprovider_edit($id)
+    {
+        //dd("ok");
+        $provider=Service_provider::find($id);
+        if($provider)
+        {
+        return view('admin.pages.serviceProvider.s_provider_edit',compact('provider'));
+        }
+    }
+
+
     
 }

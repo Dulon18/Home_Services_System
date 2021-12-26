@@ -39,10 +39,11 @@
          <img src="{{url('/uploads/'.$p->image)}}" width="90px" alt="plz..upload">
          </td>
          <td>
-           <a href="" class='btn btn-success'><i class="uil uil-eye"></i></a>
-           <a href="" class='btn btn-info'><i class="uil uil-edit"></i></a>
+           <a href="{{route('admin.sprovider.view',$p->id)}}" class='btn btn-success'><i class="uil uil-eye"></i></a>
+           <a href="{{route('admin.sprovider.edit',$p->id)}}" class='btn btn-info'><i class="uil uil-edit"></i></a>
            <a href="" class='btn btn-danger'><i class="uil uil-trash-alt"></i></a>
          </td>
+         
       </tr>
 
     @endforeach

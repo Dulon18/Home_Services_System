@@ -5,6 +5,7 @@ use App\Models\Service;
 use App\Models\Categories;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class ServiceController extends Controller
 {
@@ -84,14 +85,27 @@ class ServiceController extends Controller
           //dd($request->all());
            //dd($service_id);
            $service=Service::find($service_id);
+           $store='/uploads'.$service->image;
+           if ($request->hasFile('image'))
+           {
+            //    if(File::exits($service))
+            //    {
+            //        File::delete($service);
+            //    }
+            $image_name=date('Ymdhis') .'.'. $request->file('image')->getClientOriginalExtension();
+            $request->file('image')->storeAs('/uploads',$image_name);
+              
+           }
            if($service){
                $service->update([
                 'name'=>$request->name,
                 'price'=>$request->price,
                 'description'=>$request->description,
                 'category'=>$request->category,
+                'image'=>$image_name,
 
                ]);
+              
              return redirect()->back()->with('success','Service update successfully..');
            }
 

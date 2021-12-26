@@ -46,10 +46,11 @@
             @endforeach
       </select>
     </div>
-        <!-- <div class="mb-3">
+        <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Image</label>
         <input name='image' type="file" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-      </div> -->
+        <img style="border-radius: 4px;" width="200px;" src=" {{url('/uploads/'.$service->Image)}}" alt="product">
+      </div>
 
     <button type="submit" class="btn btn-primary">Save</button>
    <a href="{{route('admin.services')}}" type="button" class="btn btn-danger">Back</a>

@@ -51,11 +51,9 @@ use Illuminate\Support\Facades\Route;
 
 //Backend or Admin Pannel start.....
 
-Route::group(['prefix'=>'admin'],function (){
-// Route::get('/', function () {
-//     return view('admin.index');
-// });
+Route::group(['prefix'=>'/'],function (){
 
+  
 // Login for admin
 
   Route::get('/login',[AdminController::class,'login'])->name('admin.login');
@@ -78,6 +76,9 @@ Route::group(['prefix'=>'admin'],function (){
   Route::get('/serviceProvider',[ServiceProviderController::class,'SP_dashboard'])->name('admin.serviceProvider.dashboard');
   Route::get('/serviceProvider/add',[ServiceProviderController::class,'add'])->name('admin.serviceProvider.add');
   Route::post('/sp/store',[ServiceProviderController::class,'store'])->name('admin.sp.store');
+  Route::get('/s_provider/view/{sp_id}',[ServiceProviderController::class,'sprovider_view'])->name('admin.sprovider.view');
+  Route::get('/s_provider/edit/{sp_id}',[ServiceProviderController::class,'sprovider_edit'])->name('admin.sprovider.edit');
+
 
 //services
 

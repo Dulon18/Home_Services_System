@@ -46,17 +46,20 @@
                             <li><a href="service-details/ac-repair.html">Repair</a></li>
                         </ul>
                     </li>
+                   
                     <li> <a href="javascript:void(0);">All Categories</a>
                         <ul class="drop-down one-column hover-fade">
                             <li><a href="service-details/ac-wet-servicing.html">AC Repair</a></li>
-                            <li><a href="service-details/ac-dry-servicing.html">Beauty & Salon</a></li>
+                            <!-- <li><a href="service-details/ac-dry-servicing.html">Beauty & Salon</a></li>
                             <li><a href="service-details/ac-installation.html">Installation</a></li>
                             <li><a href="service-details/ac-uninstallation.html">Uninstallation</a></li>
                             <li><a href="service-details/ac-gas-top-up.html">Gas Top Up</a></li>
                             <li><a href="service-details/ac-gas-refill.html">Gas Refill</a></li>
-                            <li><a href="service-details/ac-repair.html">Repair</a></li>
+                            <li><a href="service-details/ac-repair.html">Repair</a></li> -->
                         </ul>
+                       
                     </li>
+                    
                     <!-- <li> <a href="#">Appliances</a>
                         <ul class="drop-down one-column hover-fade">
                             <li><a href="servicesbycategory/11.html">Computer Repair</a></li>
