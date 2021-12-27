@@ -5,7 +5,8 @@ use App\Models\Service;
 use App\Models\Categories;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\File;
+
+
 
 class ServiceController extends Controller
 {
@@ -24,7 +25,7 @@ class ServiceController extends Controller
         public function store(Request $request)
         {
             // dd($requesst);
-            
+            $filename=null;
             if ($request->hasFile('image'))
             {
                 
@@ -85,24 +86,34 @@ class ServiceController extends Controller
           //dd($request->all());
            //dd($service_id);
            $service=Service::find($service_id);
-           $store='/uploads'.$service->image;
+
+//        Product::where('column','value')->udpate([
+//            'column'=>'request form field name'
+//        ]);
+
+
+            
+           $service_image = $service->Image;
+           $service_image = $service->Image;
+           // step 1: check image exist in this request.
+           
            if ($request->hasFile('image'))
            {
-            //    if(File::exits($service))
-            //    {
-            //        File::delete($service);
-            //    }
-            $image_name=date('Ymdhis') .'.'. $request->file('image')->getClientOriginalExtension();
-            $request->file('image')->storeAs('/uploads',$image_name);
+            // step 2: generate file name
+            $service_image = date('Ymdhms').'.'.$request->file('image')->getClientOriginalExtension();
+            //step 3 : store into project directory
+            $request->file('image')->storeAs('/uploads',$service_image);
+
               
            }
            if($service){
+
                $service->update([
                 'name'=>$request->name,
                 'price'=>$request->price,
                 'description'=>$request->description,
                 'category'=>$request->category,
-                'image'=>$image_name,
+                'image'=>$service_image,
 
                ]);
               

@@ -6,7 +6,7 @@
 <br>
 <br>
 <div class="table-responsive">
-<table class="table table-success table-striped">
+<table class="table ">
   <thead>
     <tr>
       <th scope="col">ID</th>
@@ -22,7 +22,7 @@
   <tbody>
     @foreach($services as $key=>$service)
 
-     <tr>
+     <tr class="mb-2">
          <th>{{$key+1}}</th>
          <td>{{$service->name}}</td>
          <td>{{$service->price}}</td>

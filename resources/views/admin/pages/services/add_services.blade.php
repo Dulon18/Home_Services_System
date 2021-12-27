@@ -19,22 +19,22 @@
 
 <form action="{{route('admin.service.store')}}" method="POST" enctype="multipart/form-data">
   @csrf
-  <div class="mb-3">
+  <div class="mb-2">
     <label for="exampleInputEmail1" class="form-label">Service name</label>
     <input required name='name' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
 
-  <div class="mb-3">
+  <div class="mb-2">
     <label for="exampleInputEmail1" class="form-label">Price</label>
     <input required name='price' type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
   
-  <div class="mb-3">
+  <div class="mb-2">
     <label for="exampleInputEmail1" class="form-label">Description</label>
     <input required name='description' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
 
-  <div class="mb-3">
+  <div class="mb-2">
       <label for="disabledSelect" class="form-label">Add Category</label>
       <select name='category' id="disabledSelect" class="form-select">
           @foreach ($categories as $category)
@@ -44,7 +44,7 @@
             @endforeach
       </select>
     </div>
-        <div class="mb-3">
+        <div class="mb-2">
         <label for="exampleInputEmail1" class="form-label">Image</label>
         <input name='image' type="file" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
       </div>

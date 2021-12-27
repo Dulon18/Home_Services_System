@@ -121,7 +121,7 @@
                     <li class="login-form"> <a href="{{route('customer.login')}}" title="Login">Login</a></li>
                     <li class="search-bar"></li>
                   @endif
-                    
+                  
                 </ul>
             </nav>
         </header>
