@@ -11,9 +11,21 @@ use Illuminate\Http\Request;
 class ServiceController extends Controller
 {
         public function services()
-        {
+        {   
+            //searching......
+            $key=null;
+            if(request()->search){
+                $key=request()->search; //here search came to form name 
+                $services = Service::with('category')
+                ->where('name','LIKE','%'.$key.'%')
+                ->orwhere('price','LIKE','%'.$key.'%')
+                ->orwhere('category','LIKE','%'.$key.'%')
+                ->get();
+                return view('admin.pages.services.search',compact('services','key'));
+            } // searching end...
+
             $services=Service::with('category')->get();
-            return view('admin.pages.services.services',compact('services'));
+            return view('admin.pages.services.services',compact('services','key'));
 
         }
         public function add()
@@ -83,17 +95,15 @@ class ServiceController extends Controller
 
         public function service_update(Request $request,$service_id)
         {
-          //dd($request->all());
-           //dd($service_id);
+                //dd($request->all());
+                //dd($service_id);
+
            $service=Service::find($service_id);
 
-//        Product::where('column','value')->udpate([
-//            'column'=>'request form field name'
-//        ]);
-
-
-            
-           $service_image = $service->Image;
+                //  Product::where('column','value')->udpate([
+                //  'column'=>'request form field name'
+                //  ]);
+ 
            $service_image = $service->Image;
            // step 1: check image exist in this request.
            

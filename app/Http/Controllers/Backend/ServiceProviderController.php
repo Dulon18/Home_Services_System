@@ -9,6 +9,19 @@ class ServiceProviderController extends Controller
 {
     public function SP_dashboard()
     {
+        //searching start..
+        $key=null;
+        if(request()->search){
+            $key=request()->search; //here search came to form name 
+            $providers = Service_provider::with('sevices')
+            ->where('name','LIKE','%'.$key.'%')
+            ->orwhere('profession','LIKE','%'.$key.'%')
+            ->orwhere('exp','LIKE','%'.$key.'%')
+            ->get();
+            return view('admin.pages.serviceProvider.search',compact('$providers','key'));
+        } // searching end...
+        //end
+         
         //data retraiving...
 
         $providers=Service_provider::all();
