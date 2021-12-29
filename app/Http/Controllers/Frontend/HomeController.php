@@ -23,7 +23,11 @@ class HomeController extends Controller
     {   
         return view('frontend.pages.service_details',compact('booking'));
     }
-
+    
+    public function profile()
+    {
+        return view('frontend.pages.profile');
+    }
    
    
 }
