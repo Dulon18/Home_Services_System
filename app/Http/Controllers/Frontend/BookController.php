@@ -10,7 +10,7 @@ class BookController extends Controller
 {
     public function booknow($id)
     {   
-        $booking=Service::find($id);
+        $booking = Service::find($id);
         return view('frontend.pages.book',compact('booking'));
     }
     

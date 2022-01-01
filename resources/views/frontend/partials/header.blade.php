@@ -114,7 +114,7 @@
                     </li> -->
 
                     @if(auth()->user())
-                     <li class="login-form"><a href="#" title="Logout">My Account</a>
+                     <li class="login-form"><a href="#" title="Logout"> {{auth()->user()->name}}</a>
                         <ul class="drop-down one-column hover-fade">
                             <li class="login-form"><a href="{{route('home.profile')}}">Profile</a></li>
                             <li class="login-form"><a href="{{route('user.logout')}}" title="Logout">Logout</a></li>    

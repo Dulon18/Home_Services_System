@@ -61,7 +61,7 @@ Route::group(['prefix'=>'/'],function (){
   Route::post('/login',[AdminController::class,'doLogin'])->name('admin.doLogin');
 
 
-  Route::group(['middleware'=>'auth'],function (){
+  Route::group(['middleware'=>['auth','admin']],function (){
     Route::get('/', function () {
         return view('admin.pages.home');
     })->name('home');
