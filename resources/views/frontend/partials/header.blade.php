@@ -112,15 +112,29 @@
                             <li><a href="servicesbycategory/18.html">Home Automation</a></li>
                         </ul>
                     </li> -->
-
                     @if(auth()->user())
-                     <li class="login-form"><a href="#" title="Logout"> {{auth()->user()->name}}</a>
-                        <ul class="drop-down one-column hover-fade">
-                            <li class="login-form"><a href="{{route('home.profile')}}">Profile</a></li>
-                            <li class="login-form"><a href="{{route('user.logout')}}" title="Logout">Logout</a></li>    
-                        </ul>
-                    </li>
-                     
+                            @if(auth()->user()->role =='admin')
+                            <li class="login-form"><a href="#" title="Logout">Admin</a>
+                                <ul class="drop-down one-column hover-fade">
+                                    <li class="login-form"><a href="{{route('admin.dashboard')}}">Dashboard</a></li>
+                                    <li class="login-form"><a href="{{route('user.logout')}}" title="Logout">Logout</a></li>    
+                                </ul>
+                            </li>
+                            @elseif(auth()->user()->role =='sprovider')
+                            <li class="login-form"><a href="#" title="Logout"> {{auth()->user()->name}}</a>
+                                <ul class="drop-down one-column hover-fade">
+                                    <li class="login-form"><a href="{{route('home.profile')}}">Profile</a></li>
+                                    <li class="login-form"><a href="{{route('user.logout')}}" title="Logout">Logout</a></li>    
+                                </ul>
+                            </li>
+                            @else
+                            <li class="login-form"><a href="#" title="Logout"> {{auth()->user()->name}}</a>
+                                <ul class="drop-down one-column hover-fade">
+                                    <li class="login-form"><a href="{{route('userprofile')}}">Profile</a></li>
+                                    <li class="login-form"><a href="{{route('user.logout')}}" title="Logout">Logout</a></li>    
+                                </ul>
+                            </li> 
+                        @endif
                    @else
                     <li class="login-form"> <a href="{{route('customer.reg')}}" title="Register">Register</a></li>
                     <li class="login-form"> <a href="{{route('customer.login')}}" title="Login">Login</a></li>

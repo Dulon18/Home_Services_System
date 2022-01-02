@@ -31,6 +31,7 @@ use Illuminate\Support\Facades\Route;
   // Route::get('home',[HomeController::class,'category']);
   Route::get('service_details',[HomeController::class,'service_details']);
   Route::get('profile',[HomeController::class,'profile'])->name('home.profile');
+  Route::get('userprofile',[HomeController::class,'userprofile'])->name('userprofile');
 
   //Booking
   Route::get('book/{id}',[BookController::class,'booknow']);

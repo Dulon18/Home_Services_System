@@ -16,7 +16,7 @@
 @if(session()->has('success'))
    <p class="alert alert-success">{{session()->get('success')}}</p>
 @endif
-
+5
 <form action="{{route('admin.service.store')}}" method="POST" enctype="multipart/form-data">
   @csrf
   <div class="mb-2">
