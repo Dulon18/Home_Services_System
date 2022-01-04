@@ -1,6 +1,6 @@
 @extends('frontend.master')
 @section('content')
-<!-- <div class="section-title-01 honmob">
+<div class="section-title-01 honmob">
             <div class="bg_parallax image_01_parallax"></div>
             <div class="opacy_bg_02">
                 <div class="container">
@@ -85,9 +85,9 @@
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div>
  <!-- invoice     -->
- <head>
+ <!-- <head>
  <style>
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
@@ -239,15 +239,15 @@ input.card {
                             <p class="ps-3 textmuted fw-bold h6 mb-0">
                                 Expert will arrive at your given address within 5:00 PM</p>
                             <p class="h1 fw-bold d-flex"> <span class=" fas fa-dollar-sign textmuted pe-1 h6 align-text-top mt-1"></span>2-4pm | <span class="textmuted">Date</span> Edit</p>
-                            <!-- <p class="ms-3 px-2 bg-green">+10% since last month</p> -->
+                           
                         </div>
                         
-                        <!-- <div class="col-md-4">
+                        <div class="col-md-4">
                             <p class="p-blue"> <span class="fas fa-circle pe-2"></span>Pending </p>
                             <p class="fw-bold mb-3"><span class="fas fa-dollar-sign pe-1"></span>1254 <span class="textmuted">.50</span> </p>
                             <p class="p-org"><span class="fas fa-circle pe-2"></span>On drafts</p>
                             <p class="fw-bold"><span class="fas fa-dollar-sign pe-1"></span>00<span class="textmuted">.00</span></p>
-                        </div> -->
+                        </div>
                     </div>
                 </div>
                 <div class="col-12 px-0 mb-4">
@@ -334,5 +334,5 @@ input.card {
             </div>
         </div>
     </div>
-</div>
+</div> -->
 @endsection

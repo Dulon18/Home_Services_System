@@ -27,26 +27,32 @@ use Illuminate\Support\Facades\Route;
 
 //Frontend start
 
-  Route::get('home',[HomeController::class,'home'])->name('frontend.home');
-  // Route::get('home',[HomeController::class,'category']);
-  Route::get('service_details',[HomeController::class,'service_details']);
-  Route::get('profile',[HomeController::class,'profile'])->name('home.profile');
-  Route::get('userprofile',[HomeController::class,'userprofile'])->name('userprofile');
+Route::get('home',[HomeController::class,'home'])->name('frontend.home');
+// Route::get('home',[HomeController::class,'category']);
+Route::get('service_details',[HomeController::class,'service_details']);
+Route::get('profile',[HomeController::class,'profile'])->name('home.profile');
+Route::get('profile/edit/{id}',[HomeController::class,'profile_edit'])->name('home.profile.edit');
+Route::get('userprofile',[HomeController::class,'userprofile'])->name('userprofile');
 
-  //Booking
-  Route::get('book/{id}',[BookController::class,'booknow']);
-  Route::get('location',[BookController::class,'book']);
 
-  // registration & login
-  
-  Route::get('reg',[LoginController::class,'reg'])->name('customer.reg');
-  Route::post('user/reg/post',[LoginController::class,'regStore'])->name('reg.store');
-  Route::get('customer/login',[LoginController::class,'login'])->name('customer.login');
-  Route::post('user/do/login',[LoginController::class,'doLogin'])->name('user.dologin');
-  Route::get('user/logout',[LoginController::class,'logout'])->name('user.logout');
+//Booking
+Route::get('book/{id}',[BookController::class,'booknow']);
+Route::get('location',[BookController::class,'book']);
 
-  
+// registration & login
 
+Route::get('reg',[LoginController::class,'reg'])->name('customer.reg');
+Route::post('user/reg/post',[LoginController::class,'regStore'])->name('reg.store');
+Route::get('customer/login',[LoginController::class,'login'])->name('customer.login');
+Route::post('user/do/login',[LoginController::class,'doLogin'])->name('user.dologin');
+
+
+Route::group(['middleware'=>['auth','user']],function (){
+  Route::get('/', function () {
+      return view('frontend.pages.home');
+  })->name('customer.reg');
+});
+Route::get('user/logout',[LoginController::class,'logout'])->name('user.logout');
 
 
 // Frontend end
@@ -66,6 +72,7 @@ Route::group(['prefix'=>'/'],function (){
     Route::get('/', function () {
         return view('admin.pages.home');
     })->name('home');
+  
 
 // admin logout
   Route::get('/logout',[AdminController::class,'logout'])->name('admin.logout');

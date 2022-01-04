@@ -1,6 +1,7 @@
 <!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+
 @extends('frontend.master')
 @section('content')
 <style type="text/css">
@@ -79,7 +80,7 @@ body{
                   <div class="d-flex flex-column align-items-center text-center">
                     <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
                     <div class="mt-3">
-                      <h4>John Doe</h4>
+                      <h4>{{auth()->user()->name}}</h4>
                       <p class="text-secondary mb-1">Full Stack Developer</p>
                       <p class="text-muted font-size-sm">Bay Area, San Francisco, CA</p>
                       <!-- <button class="btn btn-primary">Follow</button>
@@ -88,7 +89,7 @@ body{
                   </div>
                 </div>
               </div>
-              <div class="card mt-3">
+              <!-- <div class="card mt-3">
                 <ul class="list-group list-group-flush">
 
                  
@@ -102,7 +103,7 @@ body{
                   </li>
                  
                 </ul>
-              </div>
+              </div> -->
             </div>
           
             <div class="col-md-8">
@@ -111,11 +112,11 @@ body{
                   <div class="row">
                   
                     <div class="col-sm-3">
-                    @foreach($profile as $pro)
+                  
                       <h6 class="mb-0">Full Name</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      {{$pro->name}}
+                    {{auth()->user()->name}}
                     </div>
                   </div>
                   <hr>
@@ -124,27 +125,27 @@ body{
                       <h6 class="mb-0">Email</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                    {{$pro->email}}
+                    {{auth()->user()->email}}
                     </div>
                   </div>
-                  <hr>
+                  <!-- <hr>
                   <div class="row">
                     <div class="col-sm-3">
                       <h6 class="mb-0">Phone</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                    {{$pro->phn}}
+                    {{auth()->user()->phn}}
                     </div>
-                  </div>
-                  <hr>
+                  </div> -->
+                  <!-- <hr>
                   <div class="row">
                     <div class="col-sm-3">
                       <h6 class="mb-0">Address</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                    {{$pro->address}}
+                    {{auth()->user()->address}}
                     </div>
-                  </div>
+                  </div> -->
                   <hr>
                   <div class="row">
                     <div class="col-sm-12">
@@ -153,7 +154,7 @@ body{
                   </div>
                 </div>
               </div>
-              @endforeach
+              
 
               <!-- <div class="row gutters-sm">
                 <div class="col-sm-6 mb-3">

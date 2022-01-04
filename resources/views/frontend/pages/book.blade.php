@@ -127,11 +127,11 @@
                                         </div>
                                         <div class="panel-footer">
                                             <form>  
-                                                                                          
+                                                                   
                                                 <!-- <input type="submit" class="btn btn-primary" name="submit"
                                                     value=" Book Now"> -->
                                                     <a href="{{url('/location')}}" class="btn btn-primary">Book Now</a>
-                                                    
+                                            
                                             </form>
                                         </div>
                                     </div>
