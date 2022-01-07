@@ -12,7 +12,17 @@ class HomeController extends Controller
 {
     public function home(){
 
-        $services=Service::all();
+        $key=null;
+        if(request()->search){
+            $key=request()->search;
+            $services = Service::with('category')
+                ->where('name','LIKE','%'.$key.'%')
+                ->orWhere('price','LIKE','%'.$key.'%')
+                ->get();
+            return view('frontend.pages.home',compact('services','key'));
+        }
+
+        $services=Service::with('category')->get()();
         return view('frontend.pages.home',compact('services'));
     }
 

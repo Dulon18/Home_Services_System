@@ -47,8 +47,8 @@
                     <p class="lead">Book a service at very affordable price, </p>
                 </div>
                 <div class="filter-header">
-                    <form id="sform" action="searchservices" method="post">                        
-                        <input type="text" id="q" name="q" required="required" placeholder="What Services do you want?"
+                    <form id="sform" action="{{route('frontend.home')}}" method="get">                        
+                        <input type="text" id="q" name="search" required="required" placeholder="What Services do you want?"
                             class="input-large typeahead" autocomplete="off">
                         <input type="submit" name="submit" value="Search">
                     </form>

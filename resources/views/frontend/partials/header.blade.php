@@ -33,8 +33,9 @@
                     <!-- <li class="title">
                         <a href="index.php.html"><img src="images/logo.png"></a>
                         <a href="{{route('frontend.home')}}">
-                            <img style="width:100px height:80px" src="{{url('frontend/images/logo2.png')}}"></a>
+                            <img style="width:10px height:50px" src="{{url('frontend/images/logo2.png')}}"></a>
                     </li> -->
+                    
                     <li> <a href="javascript:void(0);">All Services</a>
                         <ul class="drop-down one-column hover-fade">
                             <li><a href="service-details/ac-wet-servicing.html">Wet Servicing</a></li>
