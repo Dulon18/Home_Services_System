@@ -19,11 +19,11 @@ class HomeController extends Controller
                 ->where('name','LIKE','%'.$key.'%')
                 ->orWhere('price','LIKE','%'.$key.'%')
                 ->get();
-            return view('frontend.pages.home',compact('services','key'));
+            return view('frontend.pages.searching',compact('services','key'));
         }
 
-        $services=Service::with('category')->get()();
-        return view('frontend.pages.home',compact('services'));
+        $services=Service::all();
+        return view('frontend.pages.home',compact('services','key'));
     }
 
     public function category(){

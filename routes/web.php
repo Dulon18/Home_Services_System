@@ -55,7 +55,7 @@ Route::group(['middleware'=>['auth','user']],function (){
 Route::get('user/logout',[LoginController::class,'logout'])->name('user.logout');
 
 //Searching..
-Route::get('user/search',[HomeController::class,'search'])->name('home.search');
+Route::get('user/search',[HomeController::class,'searching'])->name('home.search');
 
 // Frontend end
 
