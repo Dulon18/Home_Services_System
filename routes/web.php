@@ -3,6 +3,7 @@
 use App\Http\Controllers\Backend\ServiceProviderController;
 use App\Http\Controllers\Backend\AdminController;
 use App\Http\Controllers\Backend\CustomerController;
+use App\Http\Controllers\Backend\ApplianceController;
 use App\Http\Controllers\Backend\BookingController;
 use App\Http\Controllers\Backend\ServiceController;
 use App\Http\Controllers\Backend\CategoryController;
@@ -100,6 +101,13 @@ Route::group(['prefix'=>'/'],function (){
  Route::get('/services/delete/{service_id}',[ServiceController::class,'service_delete'])->name('admin.services.delete');
  Route::get('/services/edit/{service_id}',[ServiceController::class,'service_edit'])->name('admin.services.edit');
  Route::put('/services/update/{id}',[ServiceController::class,'service_update'])->name('admin.services.update');
+
+
+
+ //Appliance Services
+ 
+ Route::get('/Appliance Services',[ApplianceController::class,'applianceServices'])->name('admin.applianceService');
+ Route::post('/appliancService/store',[ApplianceController::class,'store'])->name('admin.applianceService.store');
 
 
  //category

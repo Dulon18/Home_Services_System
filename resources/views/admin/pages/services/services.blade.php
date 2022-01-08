@@ -1,14 +1,14 @@
 @extends('admin.index')
 @section('content')
 <h1>Service List</h1><br>
-<a href="{{route('admin.services.add')}}" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal">Add</a>
+<a href="{{route('admin.services.add')}}" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#myModal">Add</a>
              
 <br>
 <br>
 <div class="table-responsive">
 <table class="table ">
   <thead>
-    <tr>
+    <tr class="table-secondary">
       <th scope="col">ID</th>
       <th scope="col">Service Name</th>
       <th scope="col">Price</th>

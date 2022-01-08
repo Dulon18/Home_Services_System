@@ -23,6 +23,7 @@
       </a>
       <ul class="sub-menu-list">
       <li><a href="{{route('admin.services')}}">Services</a> </li>
+      <li><a href="{{route('admin.applianceService')}}"> Appliance Services</a> </li>
         <li><a href="{{route('admin.category')}}">Categories</a> </li>
       </ul>
     </li>
