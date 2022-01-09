@@ -27,9 +27,16 @@ class CategoryController extends Controller
             $file->storeAs('/uploads',$filename);
         }
         //dd('ok');  
-        
-        
-        
+         //serverside validation
+            
+         $request->validate([
+            'name'=>'required | unique:categories,name',
+            'description'=>'required',
+            
+
+
+        ]);
+
         //dd($request->all());
         Categories::create([
             'name'=>$request->name,
@@ -37,7 +44,7 @@ class CategoryController extends Controller
             'image'=>$filename,
 
         ]);
-        return redirect()->route('admin.category');
+        return redirect()->route('admin.category')->with('success','Service Add successfully..');
     }
 
 }

@@ -129,9 +129,12 @@
                                             <form>  
                                                                    
                                                 <!-- <input type="submit" class="btn btn-primary" name="submit"
-                                                    value=" Book Now"> -->
+                                                    value=" Book Now"0> -->
+                                                    @if(!empty(auth()->user()) )
                                                     <a href="{{url('/location')}}" class="btn btn-primary">Book Now</a>
-                                            
+                                                    @else
+                                                    <a href="{{route('customer.login')}}" class="btn btn-primary">Book Now</a>
+                                                    @endif
                                             </form>
                                         </div>
                                     </div>

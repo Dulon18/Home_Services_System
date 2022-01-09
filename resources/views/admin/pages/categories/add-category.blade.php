@@ -2,7 +2,19 @@
 @section('content')
 <h2>Category Info</h2>
 <br>
+@if($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
 
+@if(session()->has('success'))
+   <p class="alert alert-success">{{session()->get('success')}}</p>
+@endif
 
 <form action="{{route('admin.store')}}" method="POST" enctype="multipart/form-data">
   @csrf

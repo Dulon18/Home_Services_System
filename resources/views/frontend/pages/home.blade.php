@@ -278,7 +278,7 @@
                                     <h3>{{$aps->name}}</h3>
                                     <hr class="separator">
                                     <p>{{$aps->name}}</p>
-                                    <div class="content-btn"><a href="/book/{{$aps->id}}"
+                                    <div class="content-btn"><a href="/booking/{{$aps->id}}"
                                             class="btn btn-primary">Book Now</a></div>
                                     <div class="price"><b>From</b>BDT {{$aps->price}}</div>
                                 </div>
