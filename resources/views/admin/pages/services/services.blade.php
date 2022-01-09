@@ -1,7 +1,7 @@
 @extends('admin.index')
 @section('content')
 <h1>Service List</h1><br>
-<a href="{{route('admin.services.add')}}" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#myModal">Add</a>
+<a href="{{route('admin.services.add')}}" class="btn btn-secondary" >Add</a>
              
 <br>
 <br>

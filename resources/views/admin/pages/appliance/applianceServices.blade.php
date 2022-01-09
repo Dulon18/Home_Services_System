@@ -85,14 +85,20 @@
   <tbody>
     @foreach($applianc_services as $key=>$ap)
     <tr class="table-secondary">
-      <th  scope="row">{{$key+1}}</th>
+      <th scope="row">{{$key+1}}</th>
       <td>{{$ap->name}}</td>
       <td>{{$ap->price}}</td>
       <td>{{$ap->description}}</td>
       <td>{{$ap->category}}</td>
       <td>
            <img src="{{url('/uploads/'.$ap->image)}}" width="100px" alt="plz..upload">
-         </td>
+        </td>
+
+      <td> 
+        <a class='btn btn-primary btn-sm' href="#"><i class="uil uil-eye"></i></a>
+        <a class='btn btn-info btn-sm' href="#"><i class="uil uil-edit"></i></a>
+        <a class='btn btn-danger btn-sm' href="#"><i class="uil uil-trash-alt"></i></a>
+      </td>
     </tr>
    @endforeach
   </tbody>

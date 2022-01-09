@@ -2,6 +2,8 @@
 @section('content')
 <h2>Category Info</h2>
 <br>
+
+
 <form action="{{route('admin.store')}}" method="POST" enctype="multipart/form-data">
   @csrf
   <div class="mb-3">

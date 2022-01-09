@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Frontend;
 use App\Models\Service;
+use App\Models\ApplianceService;
 use App\Models\User;
 use App\Models\Service_provider;
 use App\Models\Categories;
@@ -23,7 +24,9 @@ class HomeController extends Controller
         }
 
         $services=Service::all();
-        return view('frontend.pages.home',compact('services','key'));
+        $applianc_services = ApplianceService::all();
+
+        return view('frontend.pages.home',compact('services','applianc_services'));
     }
 
     public function category(){

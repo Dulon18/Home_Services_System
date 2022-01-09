@@ -9,6 +9,7 @@
                             </div>
                         </div>
                         <div class="portfolioContainer" style="margin-top: -50px;">
+                        
                         @foreach($services as $service)
                             <div class="col-xs-6 col-sm-4 col-md-3 hsgrids"
                                 style="padding-right: 5px;padding-left: 5px;">
@@ -27,7 +28,7 @@
                                         </div>
                                     </a>     
                             </div>
-                        @endforeach 
+                          @endforeach 
                         </div>
                     </div>
                 </div>

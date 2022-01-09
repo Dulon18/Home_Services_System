@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Backend;
-use App\Models\ApplianceServices;
+use App\Models\ApplianceService;
 use App\Models\Categories;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -9,7 +9,9 @@ use Illuminate\Http\Request;
 class ApplianceController extends Controller
 {
     public function applianceServices()
-    {   $applianc_services=ApplianceServices::all();
+    {   
+        
+        $applianc_services = ApplianceService::all();
         $categories=Categories::all();
         return view('admin.pages.appliance.applianceServices',compact('categories','applianc_services'));
     }
@@ -38,7 +40,7 @@ class ApplianceController extends Controller
 
         ]);
         //dd($request);
-        ApplianceServices::create([
+        ApplianceService::create([
 
             'name'=>$request->name,
             'price'=>$request->price,

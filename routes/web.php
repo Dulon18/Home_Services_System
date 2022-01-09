@@ -38,6 +38,7 @@ Route::get('userprofile',[HomeController::class,'userprofile'])->name('userprofi
 
 //Booking
 Route::get('book/{id}',[BookController::class,'booknow']);
+Route::get('book/{id}',[BookController::class,'bookAppliance']);
 Route::get('location',[BookController::class,'book']);
 
 // registration & login

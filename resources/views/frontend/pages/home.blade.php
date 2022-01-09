@@ -267,153 +267,28 @@
                     </div>
                   </div>
                    <div id="boxes-carousel">
+                       @foreach($applianc_services as $aps)
                         <div>
                             <a class="g-list" href="service-details/ac-wet-servicing.html">
                                 <div class="img-hover">
-                                    <img src="{{url('frontend/images/services/thumbnails/service_1.jpg')}}" alt="" class="img-responsive">
+                                <img style="width: 450px; height: 250px"  src="{{url('/uploads/'.$aps->image)}}" alt="plz..upload">
                                 </div>
 
                                 <div class="info-gallery">
-                                    <h3>AC Wet Servicing</h3>
+                                    <h3>{{$aps->name}}</h3>
                                     <hr class="separator">
-                                    <p>AC Wet Servicing</p>
-                                    <div class="content-btn"><a href="service-details/ac-wet-servicing.html"
+                                    <p>{{$aps->name}}</p>
+                                    <div class="content-btn"><a href="/book/{{$aps->id}}"
                                             class="btn btn-primary">Book Now</a></div>
-                                    <div class="price"><b>From</b>BDT 200</div>
+                                    <div class="price"><b>From</b>BDT {{$aps->price}}</div>
                                 </div>
                             </a>
                       </div>
-                        <div>
-                            <a class="g-list" href="service-details/bedroom-deep-cleaning.html">
-                                <div class="img-hover">
-                                    <img src="{{url('frontend/images/services/thumbnails/service_9.jpg')}}" alt="" class="img-responsive">
-                                </div>
+                      @endforeach
 
-                                <div class="info-gallery">
-                                    <h3>Bedroom Deep Cleaning</h3>
-                                    <hr class="separator">
-                                    <p>Bedroom Deep Cleaning</p>
-                                    <div class="content-btn"><a href="service-details/bedroom-deep-cleaning.html"
-                                            class="btn btn-primary">Book Now</a></div>
-                                    <div class="price"><b>From</b>BDT 3500</div>
-                                </div>
-                            </a>
-                        </div>
-                    <div>
-                        <a class="g-list" href="service-details/dining-chair-shampooing.html">
-                            <div class="img-hover">
-                                <img src="{{url('frontend/images/services/thumbnails/service_11.jpg')}}" alt="" class="img-responsive">
-                            </div>
-
-                            <div class="info-gallery">
-                                <h3>Dining Chair Shampooing</h3>
-                                <hr class="separator">
-                                <p>Dining Chair Shampooing</p>
-                                <div class="content-btn"><a href="service-details/dining-chair-shampooing.html"
-                                        class="btn btn-primary">Book Now</a></div>
-                                <div class="price"><b>From</b>BDT 4000</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div>
-                        <a class="g-list" href="service-details/carpet-shampooing.html">
-                            <div class="img-hover">
-                                <img src="{{url('frontend/images/services/thumbnails/service_19.jpg')}}" alt="" class="img-responsive">
-                            </div>
-
-                            <div class="info-gallery">
-                                <h3>Carpet Shampooing</h3>
-                                <hr class="separator">
-                                <p>Carpet Shampooing</p>
-                                <div class="content-btn"><a href="service-details/carpet-shampooing.html"
-                                        class="btn btn-primary">Book Now</a></div>
-                                <div class="price"><b>From</b>BDT 2000</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div>
-                        <a class="g-list" href="service-details/fabric-sofa-shampooing.html">
-                            <div class="img-hover">
-                                <img src="{{url('frontend/images/services/thumbnails/service_14.jpg')}}" alt="" class="img-responsive">
-                            </div>
-
-                            <div class="info-gallery">
-                                <h3>Fabric Sofa Shampooing</h3>
-                                <hr class="separator">
-                                <p>Fabric Sofa Shampooing</p>
-                                <div class="content-btn"><a href="service-details/fabric-sofa-shampooing.html"
-                                        class="btn btn-primary">Book Now</a></div>
-                                <div class="price"><b>From</b> BDT 3000</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div>
-                        <a class="g-list" href="service-details/bathroom-deep-cleaning.html">
-                            <div class="img-hover">
-                                <img src="{{url('frontend/images/services/thumbnails/thumbnail.jpg')}}" alt="" class="img-responsive">
-                            </div>
-
-                            <div class="info-gallery">
-                                <h3>Bathroom Deep Cleaning</h3>
-                                <hr class="separator">
-                                <p>Bathroom Deep Cleaning</p>
-                                <div class="content-btn"><a href="service-details/bathroom-deep-cleaning.html"
-                                        class="btn btn-primary">Book Now</a></div>
-                                <div class="price"><span>&#36;</span><b>From</b>233</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div>
-                        <a class="g-list" href="service-details/floor-scrubbing-polishing.html">
-                            <div class="img-hover">
-                                <img src="{{url('frontend/images/services/thumbnails/thumbnail.jpg')}}" alt="" class="img-responsive">
-                            </div>
-
-                            <div class="info-gallery">
-                                <h3>Floor Scrubbing &amp; Polishing</h3>
-                                <hr class="separator">
-                                <p>Floor Scrubbing &amp; Polishing</p>
-                                <div class="content-btn"><a href="service-details/floor-scrubbing-polishing.html"
-                                        class="btn btn-primary">Book Now</a></div>
-                                <div class="price"><span>&#36;</span><b>From</b>411</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div>
-                        <a class="g-list" href="service-details/mattress-shampooing.html">
-                            <div class="img-hover">
-                                <img src="images/services/thumbnails/thumbnail.jpg" alt="" class="img-responsive">
-                            </div>
-
-                            <div class="info-gallery">
-                                <h3>Mattress Shampooing</h3>
-                                <hr class="separator">
-                                <p>Mattress Shampooing</p>
-                                <div class="content-btn"><a href="service-details/mattress-shampooing.html"
-                                        class="btn btn-primary">Book Now</a></div>
-                                <div class="price"><span>&#36;</span><b>From</b>222</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div>
-                        <a class="g-list" href="service-details/kitchen-deep-cleaning.html">
-                            <div class="img-hover">
-                                <img src="images/services/thumbnails/thumbnail.jpg" alt="" class="img-responsive">
-                            </div>
-
-                            <div class="info-gallery">
-                                <h3>Kitchen Deep Cleaning</h3>
-                                <hr class="separator">
-                                <p>Kitchen Deep Cleaning</p>
-                                <div class="content-btn"><a href="service-details/kitchen-deep-cleaning.html"
-                                        class="btn btn-primary">Book Now</a></div>
-                                <div class="price"><span>&#36;</span><b>From</b>111</div>
-                            </div>
-                        </a>
-                    </div>
+                   
                 </div>
-
-    </div>
+</div>
 </section>     
        
    
