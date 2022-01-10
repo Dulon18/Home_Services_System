@@ -34,6 +34,7 @@ Route::get('service_details',[HomeController::class,'service_details']);
 Route::get('profile',[HomeController::class,'profile'])->name('home.profile');
 Route::get('profile/edit/{id}',[HomeController::class,'profile_edit'])->name('home.profile.edit');
 Route::get('userprofile',[HomeController::class,'userprofile'])->name('userprofile');
+Route::get('allService',[HomeController::class,'allService'])->name('home.allService');
 
 
 //Booking
@@ -54,12 +55,23 @@ Route::group(['middleware'=>['auth','user']],function (){
       return view('frontend.pages.home');
   })->name('customer.reg');
 });
+
+// Cart...
+  Route::group(['middleware'=>'web_auth'],function(){
+  Route::get('add-to-cart/{id}',[BookController::class,'addTocart'])->name('cart.add');
+  Route::get('get-cart',[BookController::class,'getCart'])->name('cart.get');
+  Route::get('clear-cart',[BookController::class,'clearCart'])->name('cart.clear');
+
+});
+
+
 Route::get('user/logout',[LoginController::class,'logout'])->name('user.logout');
 
 //Searching..
 Route::get('user/search',[HomeController::class,'searching'])->name('home.search');
 
 // Frontend end
+
 
 //Backend or Admin Pannel start.....
 

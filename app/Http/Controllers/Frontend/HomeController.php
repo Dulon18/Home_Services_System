@@ -52,5 +52,10 @@ class HomeController extends Controller
         //  return view('frontend.pages.userProfile',compact('userprofile'));
         return view('frontend.pages.userProfile');
     }
+
+    public function allService()
+    {
+        return view('frontend.pages.allservice');
+    }
    
 }

@@ -152,6 +152,7 @@
                                             <!-- <p>{{$service->name}}</p> -->
                                             <div class="content-btn"><a href="/book/{{$service->id}}"
                                                     class="btn btn-primary">Book Now</a></div>
+                                                    
                                             <div class="price"><b>From</b>BDT {{$service->price}}</div>
                                         </div>
                                     </a>     

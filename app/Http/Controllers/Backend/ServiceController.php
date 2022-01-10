@@ -66,7 +66,7 @@ class ServiceController extends Controller
                 'category'=>$request->category,
                 'image'=>$filename,
                 
-            ]);
+            ]); 
             return redirect()->back()->with('success','Service Add successfully..');
         }
 

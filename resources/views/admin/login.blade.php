@@ -85,19 +85,19 @@
 <link rel="stylesheet" href="{{url('Backend/css/login.css')}}" />
 
 
-<title>Login #3</title>
+<title>Login</title>
 <script>(function(w,d){!function(e,t,r,a,s){e[r]=e[r]||{},e[r].executed=[],e.zaraz={deferred:[]};var n=t.getElementsByTagName("title")[0];e[r].c=t.cookie,n&&(e[r].t=t.getElementsByTagName("title")[0].text),e[r].w=e.screen.width,e[r].h=e.screen.height,e[r].j=e.innerHeight,e[r].e=e.innerWidth,e[r].l=e.location.href,e[r].r=t.referrer,e[r].k=e.screen.colorDepth,e[r].n=t.characterSet,e[r].o=(new Date).getTimezoneOffset(),//
 e[s]=e[s]||[],e.zaraz._preTrack=[],e.zaraz.track=(t,r)=>e.zaraz._preTrack.push([t,r]),e[s].push({"zaraz.start":(new Date).getTime()});var i=t.getElementsByTagName(a)[0],o=t.createElement(a);o.defer=!0,o.src="/cdn-cgi/zaraz/s.js?"+new URLSearchParams(e[r]).toString(),i.parentNode.insertBefore(o,i)}(w,d,"zarazData","script","dataLayer");})(window,document);</script></head>
 <body>
 <div class="half">
-<div class="bg order-1 order-md-2" style="background-image:{{url('Backend/assets/images/b2.jpg')}}"></div>
+<div class="bg order-1 order-md-2" style="background-image:h2.png;"></div>
 <div class="contents order-2 order-md-1">
 <div class="container">
 <div class="row align-items-center justify-content-center">
 <div class="col-md-6">
 <div class="form-block">
 <div class="text-center mb-5">
-<h3>Login to <strong>System</strong></h3>
+<h3>Login To <strong>Get The Best Service</strong></h3>
 
 </div>
 <form action="{{route('admin.doLogin')}}" method="post">

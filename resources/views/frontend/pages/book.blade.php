@@ -132,6 +132,7 @@
                                                     value=" Book Now"0> -->
                                                     @if(!empty(auth()->user()) )
                                                     <a href="{{url('/location')}}" class="btn btn-primary">Book Now</a>
+                                                    <a href="{{route('cart.add',$booking->id)}}" class="btn btn-primary">Add to cart</a>
                                                     @else
                                                     <a href="{{route('customer.login')}}" class="btn btn-primary">Book Now</a>
                                                     @endif
