@@ -1,6 +1,6 @@
-@extends('frontend.master')
+ @extends('frontend.master')
 @section('content')
-<div class="section-title-01 honmob">
+<!-- <div class="section-title-01 honmob">
             <div class="bg_parallax image_01_parallax"></div>
             <div class="opacy_bg_02">
                 <div class="container">
@@ -85,9 +85,9 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>  -->
  <!-- invoice     -->
- <!-- <head>
+ <head>
  <style>
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
@@ -237,24 +237,35 @@ input.card {
                         <div class="col-md-8 ps-0 ">
                         <p class="h1 fw-bold d-flex"> <span class=" fas fa-dollar-sign textmuted pe-1 h6 align-text-top mt-1"></span>Schedule</p>
                             <p class="ps-3 textmuted fw-bold h6 mb-0">
-                                Expert will arrive at your given address within 5:00 PM</p>
-                            <p class="h1 fw-bold d-flex"> <span class=" fas fa-dollar-sign textmuted pe-1 h6 align-text-top mt-1"></span>2-4pm | <span class="textmuted">Date</span> Edit</p>
+                                Expert will arrive at your given address within 5:00 PM
+                                    <!-- Example single danger button -->
+                                    <div class="btn-group">
+                                    <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Action
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li><a class="dropdown-item" href="#">Separated link</a></li>
+                                    </ul>
+                                    </div>
+                            
+                            </p>
+
+                            <!-- <p class="h1 fw-bold d-flex"> <span class=" fas fa-dollar-sign textmuted pe-1 h6 align-text-top mt-1"></span>2-4pm | <span class="textmuted">Date</span> Edit</p> -->
                            
                         </div>
                         
-                        <div class="col-md-4">
-                            <p class="p-blue"> <span class="fas fa-circle pe-2"></span>Pending </p>
-                            <p class="fw-bold mb-3"><span class="fas fa-dollar-sign pe-1"></span>1254 <span class="textmuted">.50</span> </p>
-                            <p class="p-org"><span class="fas fa-circle pe-2"></span>On drafts</p>
-                            <p class="fw-bold"><span class="fas fa-dollar-sign pe-1"></span>00<span class="textmuted">.00</span></p>
-                        </div>
+                        
                     </div>
                 </div>
                 <div class="col-12 px-0 mb-4">
                     <div class="box-right">
                         <div class="d-flex pb-2">
-                            <p class="fw-bold h7"><span class="textmuted">quickpay.to/</span>Publicnote</p>
-                            <p class="ms-auto p-blue"><span class=" bg btn btn-primary fas fa-pencil-alt me-3"></span> <span class=" bg btn btn-primary far fa-clone"></span> </p>
+                        <p class="h1 fw-bold d-flex"> <span class=" fas fa-dollar-sign textmuted pe-1 h6 align-text-top mt-1"></span>Contact Person</p>
+                        <p class="p-blue"> <span class="fas fa-circle pe-2"></span>Expert will contact with the following person</p>
                         </div>
                         <div class="bg-blue p-2">
                             <P class="h8 textmuted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum recusandae dolorem voluptas nemo, modi eos minus nesciunt. <p class="p-blue bg btn btn-primary h8">LEARN MORE</p>
@@ -287,7 +298,8 @@ input.card {
                 </div>
             </div>
         </div>
-        <div class="col-md-5 col-12 ps-md-5 p-0 ">
+
+        <div class="col-md-5 col-12 ps-md-5 p-3 ">
             <div class="box-left">
                 <p class="textmuted h8">Invoice</p>
                 <p class="fw-bold h7">Alex Parkinson</p>
@@ -334,5 +346,5 @@ input.card {
             </div>
         </div>
     </div>
-</div> -->
+</div>
 @endsection

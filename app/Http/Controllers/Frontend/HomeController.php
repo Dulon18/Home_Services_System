@@ -24,9 +24,10 @@ class HomeController extends Controller
         }
 
         $services=Service::all();
+        $categories=Categories::all();
         $applianc_services = ApplianceService::all();
 
-        return view('frontend.pages.home',compact('services','applianc_services'));
+        return view('frontend.pages.home',compact('services','applianc_services','categories'));
     }
 
     public function category(){

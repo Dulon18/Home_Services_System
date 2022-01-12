@@ -4,7 +4,7 @@
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">#</th>
+      <th scope="col">No.</th>
       <th scope="col">Image</th>
       <th scope="col">Service Name</th>
       <th scope="col">Price</th>
@@ -15,8 +15,6 @@
   <tbody>
     <tr>
     @if($carts)
-      
-
      @php
      $i=1;
      @endphp
@@ -38,4 +36,5 @@
   
 </table>
 <a class="btn btn-danger" href="{{route('cart.clear')}}">Clear</a>
+<a class="btn btn-info" href="">CheckOut</a>
 @endsection

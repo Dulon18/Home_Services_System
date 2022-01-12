@@ -90,7 +90,7 @@
 e[s]=e[s]||[],e.zaraz._preTrack=[],e.zaraz.track=(t,r)=>e.zaraz._preTrack.push([t,r]),e[s].push({"zaraz.start":(new Date).getTime()});var i=t.getElementsByTagName(a)[0],o=t.createElement(a);o.defer=!0,o.src="/cdn-cgi/zaraz/s.js?"+new URLSearchParams(e[r]).toString(),i.parentNode.insertBefore(o,i)}(w,d,"zarazData","script","dataLayer");})(window,document);</script></head>
 <body>
 <div class="half">
-<div class="bg order-1 order-md-2" style="background-image:h2.png;"></div>
+<div class="bg order-1 order-md-2" style="background-image:url('Backend/assets/images/b3.jpg');"></div>
 <div class="contents order-2 order-md-1">
 <div class="container">
 <div class="row align-items-center justify-content-center">

@@ -65,60 +65,14 @@
                     <div class="row">
                         <div class="col-md-12">
                             <ul id="sponsors" class="tooltip-hover">
-                            <li data-toggle="tooltip" title="" data-original-title="AC"> <a
-                                        href="servicesbycategory/1.html"><img src="{{url('frontend/images/sercat/1.png')}}"
-                                            alt="AC"></a></li>
-                                <li data-toggle="tooltip" title="" data-original-title="Beauty"> <a
-                                        href="servicesbycategory/2.html"><img src="{{url('frontend/images/sercat/2.png')}}"
-                                            alt="Beauty"></a></li>
-                                <li data-toggle="tooltip" title="" data-original-title="Plumbing"> <a
-                                        href="servicesbycategory/3.html"><img src="{{url('frontend/images/sercat/3.png')}}"
-                                            alt="Plumbing"></a></li>
-                                <li data-toggle="tooltip" title="" data-original-title="Electrical"> <a
-                                        href="servicesbycategory/4.html"><img  src="{{url('frontend/images/sercat/4.png')}}"
-                                            alt="Electrical"></a></li>
-                                <li data-toggle="tooltip" title="" data-original-title="Shower Filter"> <a
-                                        href="servicesbycategory/5.html"><img src="{{url('frontend/images/sercat/5.png')}}"
-                                            alt="Shower Filter"></a></li>
-                                <li data-toggle="tooltip" title="" data-original-title="Home Cleaning"> <a
-                                        href="servicesbycategory/6.html"><img src="{{url('frontend/images/sercat/6.png')}}"
-                                            alt="Home Cleaning"></a></li>
-                                <li data-toggle="tooltip" title="" data-original-title="Carpentry"> <a
-                                        href="servicesbycategory/7.html"><img src="{{url('frontend/images/sercat/7.png')}}"
-                                            alt="Carpentry"></a></li>
-                                <li data-toggle="tooltip" title="" data-original-title="Pest Control"> <a
-                                        href="servicesbycategory/8.html"><img src="{{url('frontend/images/sercat/8.png')}}"
-                                            alt="Pest Control"></a></li>
-                                <li data-toggle="tooltip" title="" data-original-title="Chimney Hob"> <a
-                                        href="servicesbycategory/9.html"><img src="{{url('frontend/images/sercat/9.png')}}"
-                                            alt="Chimney Hob"></a></li>
-                                <li data-toggle="tooltip" title="" data-original-title="Water Purifier"> <a
-                                        href="servicesbycategory/10.html"><img src="{{url('frontend/images/sercat/17.png')}}"
-                                            alt="Water Purifier"></a></li>
-                                <li data-toggle="tooltip" title="" data-original-title="Computer Repair"> <a
-                                        href="servicesbycategory/11.html"><img src="{{url('frontend/images/sercat/10.png')}}"
-                                            alt="Computer Repair"></a></li>
-                                <li data-toggle="tooltip" title="" data-original-title="TV"> <a
-                                        href="servicesbycategory/12.html"><img src="{{url('frontend/images/sercat/11.png')}}"
-                                            alt="TV"></a></li>
-                                <li data-toggle="tooltip" title="" data-original-title="Refrigerator"> <a
-                                        href="servicesbycategory/13.html"><img src="{{url('frontend/images/sercat/12.png')}}"
-                                            alt="Refrigerator"></a></li>
-                                <li data-toggle="tooltip" title="" data-original-title="Geyser"> <a
-                                        href="servicesbycategory/14.html"><img src="{{url('frontend/images/sercat/20.png')}}"
-                                            alt="Geyser"></a></li>
-                                <li data-toggle="tooltip" title="" data-original-title="Car"> <a
-                                        href="servicesbycategory/15.html"><img src="{{url('frontend/images/sercat/14.png')}}"
-                                            alt="Car"></a></li>
-                                <li data-toggle="tooltip" title="" data-original-title="Document"> <a
-                                        href="servicesbycategory/16.html"><img src="{{url('frontend/images/sercat/22.png')}}"
-                                            alt="Document"></a></li>
-                                <li data-toggle="tooltip" title="" data-original-title="Movers &amp; Packers"> <a
-                                        href="servicesbycategory/17.html"><img src="{{url('frontend/images/sercat/15.png')}}"
-                                            alt="Movers &amp; Packers"></a></li>
-                                <li data-toggle="tooltip" title="" data-original-title="Home Automation"> <a
-                                        href="servicesbycategory/18.html"><img src="{{url('frontend/images/sercat/16.png')}}"
-                                            alt="Home Automation"></a></li>
+                            @foreach($categories as $c)
+                                <li data-toggle="tooltip" title="" data-original-title={{$c->name}}> <a
+                                        href="servicesbycategory/1.html">
+                                        <img src="{{url('uploads/'.$c->image)}}"
+                                            alt="AC"></a>
+                                            <p> {{$c->name}}</p>
+                                        </li>
+                               @endforeach
                             </ul>
                         </div>
                     </div>
