@@ -37,26 +37,19 @@
                     </li> -->
                     
                     <li> <a href="#">All Services</a>
-                        <!-- <ul class="drop-down one-column hover-fade">
-                            <li><a href="service-details/ac-wet-servicing.html">Wet Servicing</a></li>
-                            <li><a href="service-details/ac-dry-servicing.html">Dry Servicing</a></li>
-                            <li><a href="service-details/ac-installation.html">Installation</a></li>
-                            <li><a href="service-details/ac-uninstallation.html">Uninstallation</a></li>
-                            <li><a href="service-details/ac-gas-top-up.html">Gas Top Up</a></li>
-                            <li><a href="service-details/ac-gas-refill.html">Gas Refill</a></li>
-                            <li><a href="service-details/ac-repair.html">Repair</a></li>
-                        </ul> -->
+                        <ul class="drop-down one-column hover-fade">
+                            @foreach($categories as $c)
+                            <li><a href="#">{{$c->name}}</a></li>
+                            @endforeach
+                        </ul>
                     </li>
                    
                     <li> <a href="javascript:void(0);">All Categories</a>
                         <ul class="drop-down one-column hover-fade">
-                            <li><a href="service-details/ac-wet-servicing.html">AC Repair</a></li>
-                            <li><a href="service-details/ac-dry-servicing.html">Beauty & Salon</a></li>
-                            <li><a href="service-details/ac-installation.html">Installation</a></li>
-                            <li><a href="service-details/ac-uninstallation.html">Uninstallation</a></li>
-                            <li><a href="service-details/ac-gas-top-up.html">Gas Top Up</a></li>
-                            <li><a href="service-details/ac-gas-refill.html">Gas Refill</a></li>
-                            <li><a href="service-details/ac-repair.html">Repair</a></li>
+                         @foreach($categories as $c)
+                            <li><a href="#">{{$c->name}}</a></li>
+                            @endforeach
+                            
                         </ul>
                        
                     </li>

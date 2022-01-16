@@ -32,8 +32,10 @@ class HomeController extends Controller
 
     public function services($id)
     {
-      $service=Service::where('category_id',$id)->get();
-      return view('frontend.pages.service',compact('service'));
+        $categories=Categories::all();
+        $service=Service::where('category_id',$id)->get();
+     //   dd($service);
+       return view('frontend.pages.service',compact('service','categories'));
     }
 
     
@@ -46,7 +48,8 @@ class HomeController extends Controller
     public function profile()
     {
         $profile=Service_provider::all();
-        return view('frontend.pages.profile',compact('profile'));
+        $categories=Categories::all();
+        return view('frontend.pages.profile',compact('profile','categories'));
     }
 
     public function userprofile()

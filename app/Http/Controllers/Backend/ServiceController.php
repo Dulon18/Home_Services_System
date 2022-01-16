@@ -36,7 +36,7 @@ class ServiceController extends Controller
 
         public function store(Request $request)
         {
-            // dd($request);
+            // dd($request->all());
             $filename=null;
             if ($request->hasFile('image'))
             {
@@ -63,7 +63,7 @@ class ServiceController extends Controller
                 'name'=>$request->name,
                 'price'=>$request->price,
                 'description'=>$request->description,
-                'category'=>$request->category,
+                'category_id'=>$request->category,
                 'image'=>$filename,
                 
             ]); 
