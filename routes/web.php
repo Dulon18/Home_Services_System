@@ -29,13 +29,16 @@ use Illuminate\Support\Facades\Route;
 //Frontend start
 
 Route::get('home',[HomeController::class,'home'])->name('frontend.home');
-// Route::get('home',[HomeController::class,'category']);
+
 Route::get('service_details',[HomeController::class,'service_details']);
 Route::get('profile',[HomeController::class,'profile'])->name('home.profile');
 Route::get('profile/edit/{id}',[HomeController::class,'profile_edit'])->name('home.profile.edit');
 Route::get('userprofile',[HomeController::class,'userprofile'])->name('userprofile');
 Route::get('allService',[HomeController::class,'allService'])->name('home.allService');
+Route::get('category/{id}',[HomeController::class,'services'])->name('home.category.services');
 
+//category
+Route::get('category',[CategoriesController::class,'category'])->name('home.category');
 
 //Booking
 Route::get('book/{id}',[BookController::class,'booknow']);

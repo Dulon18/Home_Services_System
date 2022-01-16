@@ -67,7 +67,7 @@
                             <ul id="sponsors" class="tooltip-hover">
                             @foreach($categories as $c)
                                 <li data-toggle="tooltip" title="" data-original-title={{$c->name}}> <a
-                                        href="servicesbycategory/1.html">
+                                        href="{{route('home.category.services',$c->id)}}">
                                         <img src="{{url('uploads/'.$c->image)}}"
                                             alt="AC"></a>
                                             <p> {{$c->name}}</p>

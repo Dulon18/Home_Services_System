@@ -30,10 +30,13 @@ class HomeController extends Controller
         return view('frontend.pages.home',compact('services','applianc_services','categories'));
     }
 
-    public function category(){
-        $categories=Categories::all();
-        return view('frontend.pages.category',compact('categories'));
+    public function services($id)
+    {
+      $service=Service::where('category_id',$id)->get();
+      return view('frontend.pages.service',compact('service'));
     }
+
+    
 
     public function service_details()
     {   

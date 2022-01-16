@@ -1,40 +1,31 @@
 @extends('frontend.master')
 @section('content')
-<div class="content_info">
-                <div class="bg-dark color-white border-top">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-4 ">
-                                <div class="services-lines-info">
-                                    <h2>WELCOME TO DIVERSIFIED</h2>
-                                    <p class="lead">
-                                        Book best services at one place.
-                                        <span class="line"></span>
-                                    </p>
+<section class="content-central">
+            <div class="content_info content_resalt">
+                <div class="container" style="margin-top: 40px;">
+                    <div class="row">
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <ul id="sponsors" class="tooltip-hover">
+                            @foreach($categories as $c)
+                                <li data-toggle="tooltip" title="" data-original-title={{$c->name}}> <a
+                                        href="servicesbycategory/1.html">
+                                        <img src="{{url('uploads/'.$c->image)}}"
+                                            alt={{$c->name}}></a>
+                                            
+                                        </li>
 
-                                    <p>Find a wide variety of home services.</p>
-                                </div>
-                            </div>
-                            @foreach($categories as $category)
-                            <div class="col-md-8">
-                                <ul class="services-lines">
-                                    <li>
-                                        <a href="#">
-                                            <div class="item-service-line">
-                                                <i class="fa">
-                                                    <img style="width: 250px; height: 200px"  src="{{url('uploads/'.$category->image)}}"  alt="AC Dry Servicing"
-                                                class="img-responsive"></i>
-                                                <h5>{{$category->name}}</h5>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    
-                                </ul>
-                            </div>
-                            @endforeach
+                                        <td>
+                    <a href="{{route('home.category.services',$c->id)}}" class="btn btn-info">View</a>
+                </td>
+                               @endforeach
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            <div>
+</section>
 @endsection

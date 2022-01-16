@@ -36,7 +36,7 @@
                             <img style="width:10px height:50px" src="{{url('frontend/images/logo2.png')}}"></a>
                     </li> -->
                     
-                    <li> <a href="{{route('home.allService')}}">All Services</a>
+                    <li> <a href="#">All Services</a>
                         <!-- <ul class="drop-down one-column hover-fade">
                             <li><a href="service-details/ac-wet-servicing.html">Wet Servicing</a></li>
                             <li><a href="service-details/ac-dry-servicing.html">Dry Servicing</a></li>
@@ -73,7 +73,7 @@
                                 </ul>
                             </li>
                             @elseif(auth()->user()->role =='sprovider')
-                            <li class="login-form"><a href="#" title="Logout"> {{auth()->user()->name}}</a>
+                            <li class="login-form"><a href="#" title="Logout">Service Provider | {{auth()->user()->name}}</a>
                                 <ul class="drop-down one-column hover-fade">
                                     <li class="login-form"><a href="{{route('home.profile')}}">Profile</a></li>
                                     <li class="login-form"><a href="{{route('user.logout')}}" title="Logout">Logout</a></li>    

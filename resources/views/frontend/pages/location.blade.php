@@ -87,7 +87,7 @@
             </div>
         </div>  -->
  <!-- invoice     -->
- <head>
+ 
  <style>
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
@@ -226,9 +226,9 @@ input.card {
     }
 }
 </style>
-</head>
 
- <div class="container2">
+
+ <div class="container">
     <div class="row m-0">
         <div class="col-md-7 col-12">
             <div class="row">
@@ -239,69 +239,100 @@ input.card {
                             <p class="ps-3 textmuted fw-bold h6 mb-0">
                                 Expert will arrive at your given address within 5:00 PM
                                     <!-- Example single danger button -->
-                                    <div class="btn-group">
-                                    <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Action
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Action</a></li>
-                                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                        <li><hr class="dropdown-divider"></li>
-                                        <li><a class="dropdown-item" href="#">Separated link</a></li>
-                                    </ul>
+                                    <div class="mb-2">
+                                        <input required name='date' type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        <br>
+        
+                                   
                                     </div>
-                            
+                                 <select class="form-select" aria-label="Default select example">
+                                    <option selected>Select Time</option>
+                                    <option value="1">9am-10am</option>
+                                    <option value="2">11am-12pm</option>
+                                    <option value="3">2pm-3pm</option>
+                                    <option value="4">5pm-6pm</option>
+                                    <option value="5">6pm-7pm</option>
+                                </select>
+                                    
                             </p>
 
                             <!-- <p class="h1 fw-bold d-flex"> <span class=" fas fa-dollar-sign textmuted pe-1 h6 align-text-top mt-1"></span>2-4pm | <span class="textmuted">Date</span> Edit</p> -->
                            
-                        </div>
-                        
-                        
+                        </div>     
                     </div>
                 </div>
                 <div class="col-12 px-0 mb-4">
                     <div class="box-right">
                         <div class="d-flex pb-2">
                         <p class="h1 fw-bold d-flex"> <span class=" fas fa-dollar-sign textmuted pe-1 h6 align-text-top mt-1"></span>Contact Person</p>
-                        <p class="p-blue"> <span class="fas fa-circle pe-2"></span>Expert will contact with the following person</p>
+                        <p class="p-blue">Expert will contact with the following person</p>
                         </div>
+                        <form class="row gx-3 gy-2 align-items-center">
+                            <div class="col-sm-3">
+                                <label class="visually-hidden" for="specificSizeInputName">Name</label>
+                                <input type="text" class="form-control" id="specificSizeInputName" placeholder="Jane Doe">
+                            </div>
+                            <div class="col-sm-3">
+                                <label class="visually-hidden" for="specificSizeInputGroupUsername">Phone</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="specificSizeInputGroupUsername" placeholder="01624570988">
+                                </div>
+                            </div>
+                        </form>
                         <div class="bg-blue p-2">
-                            <P class="h8 textmuted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum recusandae dolorem voluptas nemo, modi eos minus nesciunt. <p class="p-blue bg btn btn-primary h8">LEARN MORE</p>
-                            </P>
+                            
                         </div>
                     </div>
                 </div>
                 <div class="col-12 px-0">
                     <div class="box-right">
                         <div class="d-flex mb-2">
-                            <p class="fw-bold">Create new invoice</p>
-                            <p class="ms-auto textmuted"><span class="fas fa-times"></span></p>
-                        </div>
-                        <div class="d-flex mb-2">
-                            <p class="h7">#AL2545</p>
-                            <p class="ms-auto bg btn btn-primary p-blue h8"><span class="far fa-clone pe-2"></span>COPY PAYMENT LINK </p>
-                        </div>
-                        <div class="row">
-                            <div class="col-12 mb-2">
-                                <p class="textmuted h8">Project / Description</p> <input class="form-control" type="text" placeholder="Legal Consulting">
-                            </div>
-                            <div class="col-6">
-                                <p class="textmuted h8">Issused on</p> <input class="form-control" type="text" placeholder="Oct 25, 2020">
-                            </div>
-                            <div class="col-6">
-                                <p class="textmuted h8">Due on</p> <input class="form-control" type="text" placeholder="Oct 25, 2020">
-                            </div>
-                        </div>
+                            <h1 class="fw-bold">Address</h1>
+                           
+                            <form class="row g-3">
+  <div class="col-md-4">
+    <label for="validationDefault01" class="form-label">House No.</label>
+    <input type="text" class="form-control" id="validationDefault01" value="Mark" required>
+  </div>
+  <div class="col-md-4">
+    <label for="validationDefault02" class="form-label">Road No. / Name</label>
+    <input type="text" class="form-control" id="validationDefault02" value="Otto" required>
+  </div>
+   
+  <div class="col-md-4">
+    <label for="validationDefault03" class="form-label">Area</label>
+    <input type="text" class="form-control" id="validationDefault03" required>
+    
+  </div>
+
+  <div class="col-md-4">
+  <br>
+    <label for="validationDefault05" class="form-label">Block No.</label>
+    <input type="text" class="form-control" id="validationDefault05" required>
+  </div>
+  <div class="col-md-4">
+  <br>
+    <label for="validationDefault05" class="form-label">Sector No.</label>
+    <input type="text" class="form-control" id="validationDefault05" required>
+  </div>
+  
+  <div class="col-md-5"><br>
+    <button class="btn btn-primary" type="submit">Save</button>
+  </div>
+</form>
+</div>
+                       
+                       
+                            
+                    
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="col-md-5 col-12 ps-md-5 p-3 ">
-            <div class="box-left">
-                <p class="textmuted h8">Invoice</p>
+            <div >
+                <p class="textmuted h1">Order Summary</p>
                 <p class="fw-bold h7">Alex Parkinson</p>
                 <p class="textmuted h8">3897 Hickroy St, salt Lake city</p>
                 <p class="textmuted h8 mb-2">Utah, United States 84104</p>
