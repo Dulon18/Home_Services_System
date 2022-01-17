@@ -13,6 +13,7 @@ use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Frontend\CategoriesController;
 use App\Http\Controllers\Frontend\BookController;
 use App\Http\Controllers\Frontend\LoginController;
+use App\Http\Controllers\Frontend\PaymentController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -44,6 +45,10 @@ Route::get('category',[CategoriesController::class,'category'])->name('home.cate
 Route::get('book/{id}',[BookController::class,'booknow']);
 Route::get('booking/{id}',[BookController::class,'bookAppliance']);
 Route::get('location',[BookController::class,'book']);
+
+//payment
+
+Route::get('payment',[PaymentController::class,'payment'])->name('home.payment');
 
 // registration & login
 

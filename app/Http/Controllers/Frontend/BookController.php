@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Frontend;
 use App\Models\Service;
+use App\Models\Categories;
 use App\Models\ApplianceService;
 
 use App\Http\Controllers\Controller;
@@ -12,8 +13,9 @@ class BookController extends Controller
     public function booknow($id)
     {   
         $booking = Service::find($id);
+        $categories=Categories::all();
         
-        return view('frontend.pages.book',compact('booking'));
+        return view('frontend.pages.book',compact('booking','categories'));
     }
     public function bookAppliance($id)
     {   
@@ -25,7 +27,8 @@ class BookController extends Controller
 
     public function book()
     {
-        return view('frontend.pages.location');
+        $categories=Categories::all();
+        return view('frontend.pages.location',compact('categories'));
     }
 
     public function getCart()

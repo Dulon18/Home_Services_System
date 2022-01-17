@@ -36,5 +36,5 @@
   
 </table>
 <a class="btn btn-danger" href="{{route('cart.clear')}}">Clear</a>
-<a class="btn btn-info" href="">CheckOut</a>
+<a class="btn btn-info" href="{{route('home.payment')}}">CheckOut</a>
 @endsection

@@ -14,11 +14,14 @@
     <link href="{{url('frontend/assets/css/theme-responsive.css')}}" rel="stylesheet" media="screen">
     <link href="{{url('frontend/assets/css/dtb/jquery.dataTables.min.css')}}" rel="stylesheet" media="screen">
     <link href="{{url('frontend/assets/css/select2.min.css')}}" rel="stylesheet" media="screen">
-    <link href="{{url('frontend/assets/css/toastr.min.css')}}" rel="stylesheet" media="screen">        
+    <link href="{{url('frontend/assets/css/toastr.min.css')}}" rel="stylesheet" media="screen"> 
+    <!-- CSS only -->
+
     <script type="text/javascript" src="{{url('frontend/assets/js/jquery.js')}}"></script>
     <script type="text/javascript" src="{{url('frontend/assets/js/jquery-ui.1.10.4.min.js')}}"></script>
     <script type="text/javascript" src="{{url('frontend/assets/js/toastr.min.js')}}"></script>
     <script type="text/javascript" src="{{url('frontend/assets/js/modernizr.js')}}"></script>
+    
 </head>
 <body>
     @include('frontend.partials.header')
@@ -47,6 +50,7 @@
     <script type="text/javascript" src="{{url('frontend/assets/js/validation-rule.js')}}"></script>
     <script type="text/javascript" src="{{url('frontend/assets/js/bootstrap3-typeahead.min.js')}}"></script>
     <script type="text/javascript" src="{{url('frontend/assets/js/main.js')}}"></script>
+
     <script type="text/javascript">
         jQuery(document).ready(function () {
             jQuery('.tp-banner').show().revolution({

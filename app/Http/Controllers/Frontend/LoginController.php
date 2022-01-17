@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Frontend;
 use App\Models\User;
+use App\Models\Categories;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -10,7 +11,8 @@ class LoginController extends Controller
 {
     public function reg()
     {
-        return view('frontend.pages.registation');
+        $categories=Categories::all();
+        return view('frontend.pages.registation',compact('categories'));
     }
 
     public function regStore(Request $request){
@@ -27,7 +29,8 @@ class LoginController extends Controller
 
     public function login()
     {
-        return view('frontend.pages.login');
+        $categories=Categories::all();
+        return view('frontend.pages.login',compact('categories'));
     }
 
     public function doLogin(Request $request)

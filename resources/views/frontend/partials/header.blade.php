@@ -35,19 +35,15 @@
                         <a href="{{route('frontend.home')}}">
                             <img style="width:10px height:50px" src="{{url('frontend/images/logo2.png')}}"></a>
                     </li> -->
-                    
-                    <li> <a href="#">All Services</a>
-                        <ul class="drop-down one-column hover-fade">
-                            @foreach($categories as $c)
-                            <li><a href="#">{{$c->name}}</a></li>
-                            @endforeach
-                        </ul>
+                    <li>
+                        <a href="{{route('frontend.home')}}">Home</a>
                     </li>
+                    
                    
                     <li> <a href="javascript:void(0);">All Categories</a>
                         <ul class="drop-down one-column hover-fade">
                          @foreach($categories as $c)
-                            <li><a href="#">{{$c->name}}</a></li>
+                            <li><a href="{{route('home.category.services',$c->id)}}">{{$c->name}}</a></li>
                             @endforeach
                             
                         </ul>

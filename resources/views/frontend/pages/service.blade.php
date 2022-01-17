@@ -1,42 +1,38 @@
 @extends('frontend.master')
 @section('content')
-<h1>Service List</h1><br>
-            
-<br>
-<br>
-<div class="table-responsive">
-<table class="table ">
-  <thead>
-    <tr class="table-secondary">
-      <th scope="col">ID</th>
-      <th scope="col">Service Name</th>
-      <th scope="col">Price</th>
-      <th scope="col">Description</th>
-      <th scope="col">Image</th>
-      <th scope="col">Action</th>
-      
-     
-    </tr>
-  </thead>
-  <tbody>
-    @foreach($service as $key=>$s)
-
-     <tr class="mb-2">
-         <th>{{$key+1}}</th>
-         <td>{{$s->name}}</td>
-         <td>{{$s->price}}</td>
-         <td>{{$s->description}}</td>
-         <td>
-           <img src="{{url('/uploads/'.$s->Image)}}" width="100px" alt="plz..upload">
-         </td>
-         <td>
-            <a href="{{route('home.category.services',$s->id)}}" class="btn btn-info">View</a>
-         </td>
-         
-      </tr>
-    @endforeach
-    
-  </tbody>
-</table>
-</div>
+<div class="content_info">
+                <div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="titles">
+                                <h2>Angels Arms <span></span> of Services</h2>
+                                <i class="fa fa-plane"></i>
+                                <hr class="tall">
+                            </div>
+                        </div>
+                        <div class="portfolioContainer" style="margin-top: -50px;">
+                        @foreach($service as $s)
+                            <div class="col-xs-6 col-sm-4 col-md-3 hsgrids"
+                                style="padding-right: 5px;padding-left: 5px;">
+                                    <a class="g-list" href="service-details/ac-dry-servicing.html">
+                                        <div class="img-hover">
+                                        <img style="width: 250px; height: 200px"  src="{{url('uploads/'.$s->Image)}}"  alt="AC Dry Servicing"
+                                                class="img-responsive">
+                                        </div>
+                                        <div class="info-gallery">
+                                            <h3>{{$s->name}}</h3>
+                                            <hr class="separator">
+                                      
+                                            <div class="content-btn"><a href="/book/{{$s->id}}"
+                                                    class="btn btn-primary">Book Now</a></div>
+                                                    
+                                            <div class="price"><b>From</b>BDT {{$s->price}}</div>
+                                        </div>
+                                    </a>     
+                            </div>
+                        @endforeach 
+                        </div>
+                    </div>
+                </div>
+            </div>
  @endsection
