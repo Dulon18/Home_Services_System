@@ -112,7 +112,9 @@
                                                     <td style="border-top: none;">{{$booking->price}}</td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Quntity</td>
+                                                    <td>Quntity
+                                                        
+                                                    </td>
                                                     <td>1</td>
                                                 </tr>
                                                 <tr>

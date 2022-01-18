@@ -27,7 +27,7 @@
          <td>{{$service->name}}</td>
          <td>{{$service->price}}</td>
          <td>{{$service->description}}</td>
-         <td>{{$service->category}}</td>
+         <td>{{$service->category->name}}</td>
          <td>
            <img src="{{url('/uploads/'.$service->Image)}}" width="100px" alt="plz..upload">
          </td>

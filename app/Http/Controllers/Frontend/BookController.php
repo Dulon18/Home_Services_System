@@ -19,9 +19,9 @@ class BookController extends Controller
     }
     public function bookAppliance($id)
     {   
-       
+        $categories=Categories::all();
         $appliance=ApplianceService::find($id);
-        return view('frontend.pages.applianceBooking',compact('appliance'));
+        return view('frontend.pages.applianceBooking',compact('appliance','categories'));
     }
 
 
@@ -32,9 +32,10 @@ class BookController extends Controller
     }
 
     public function getCart()
-    {
+    {   
+        $categories=Categories::all();
         $carts= session()->get('cart');
-        return view('frontend.pages.cart',compact('carts'));
+        return view('frontend.pages.cart',compact('carts','categories'));
 
     }
     public function clearCart()

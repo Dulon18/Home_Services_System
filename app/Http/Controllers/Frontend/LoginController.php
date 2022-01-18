@@ -16,13 +16,18 @@ class LoginController extends Controller
     }
 
     public function regStore(Request $request){
-        //dd($request->all());
+        // dd($request->all());
+
+        $registeras = $request['role'] === 'sprovider' ? 'sprovider':'user';
+        // dd($registeras);
+        // dd();
 
         User::create([
             'name'=>$request->name,
             'email'=>$request->email,
             'phone'=>$request->phone,
-            'password'=>bcrypt($request->password),            
+            'password'=>bcrypt($request->password), 
+            'role'=>$registeras     
         ]);
         return redirect()->route('customer.login');
     }

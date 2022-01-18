@@ -14,13 +14,14 @@ class HomeController extends Controller
     public function home(){
 
         $key=null;
+        $categories=Categories::all();
         if(request()->search){
             $key=request()->search;
             $services = Service::with('category')
                 ->where('name','LIKE','%'.$key.'%')
                 ->orWhere('price','LIKE','%'.$key.'%')
                 ->get();
-            return view('frontend.pages.searching',compact('services','key'));
+            return view('frontend.pages.searching',compact('services','key','categories'));
         }
 
         $services=Service::all();
@@ -57,7 +58,8 @@ class HomeController extends Controller
         //dd($uid);
         //  $userprofile=User::find($uid);
         //  return view('frontend.pages.userProfile',compact('userprofile'));
-        return view('frontend.pages.userProfile');
+        $categories=Categories::all();
+        return view('frontend.pages.userProfile',compact('categories'));
     }
 
     public function allService()

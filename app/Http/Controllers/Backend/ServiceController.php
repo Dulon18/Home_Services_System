@@ -13,6 +13,7 @@ class ServiceController extends Controller
         public function services()
         {   
             //searching......
+            $categories = Categories::all();
             $key=null;
             if(request()->search){
                 $key=request()->search; //here search came to form name 
@@ -21,11 +22,12 @@ class ServiceController extends Controller
                 ->orwhere('price','LIKE','%'.$key.'%')
                 ->orwhere('category','LIKE','%'.$key.'%')
                 ->get();
-                return view('admin.pages.services.search',compact('services','key'));
+                return view('admin.pages.services.search',compact('services','key','categories'));
             } // searching end...
 
+            $categories = Categories::all();
             $services=Service::with('category')->get();
-            return view('admin.pages.services.services',compact('services','key'));
+            return view('admin.pages.services.services',compact('services','key','categories'));
 
         }
         public function add()
@@ -73,7 +75,8 @@ class ServiceController extends Controller
         public function service_details($service_id)
         {
             $services = Service::find($service_id);
-            return view('admin.pages.services.services_details',compact('services'));
+            $categories =Categories::all();
+            return view('admin.pages.services.services_details',compact('services','categories'));
         }
         
         public function service_delete($id)
@@ -86,7 +89,7 @@ class ServiceController extends Controller
         {
             //dd($id);
             $service=Service::find($id);
-            $categories = Categories::all();
+            $categories =Categories::all();
             if($service)
             {
             return view('admin.pages.services.service_edit',compact('service','categories'));

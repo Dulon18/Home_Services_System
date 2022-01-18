@@ -8,7 +8,8 @@ use Illuminate\Http\Request;
 class BookingController extends Controller
 {
     public function booking(){
-
+    
+        
         return view('admin.pages.booking.booking');
     }
     

@@ -60,6 +60,16 @@
                                             <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required="">
                                         </div>
                                     </div>
+                                    <div class="form-group row">
+                                        <label for="password-confirm"
+                                            class="col-md-4 col-form-label text-md-right">Ragister as</label>
+                                        <div class="col-md-6">
+                                        <select id="password-confirm" type="password" class="form-control" name="role" required="">
+                                                <option value="user">Customer</option>
+                                                <option value="sprovider">Service Provider</option>
+                                            </select>
+                                        </div>
+                                    </div>
                                     <div class="form-group row mb-0">
                                         <div class="col-md-10">
                                             <span style="font-size: 14px;">If you have already registered <a
