@@ -79,6 +79,24 @@ class ServiceProviderController extends Controller
         return redirect()->back()->with('success','Service Provider info Add successfully....');
     }
 
+    //change status..
+    public function change_status($id)
+    {
+        $status=Service_provider::Select('status')->where('id',$id)->first();
+
+        if($status->status==1)
+        {
+            $status=0;
+        }
+        else{
+            $status=1;
+        }
+        
+        Service_provider::where('id',$id)->update(['status'=>$status]);
+
+        return redirect()->back()->with('success','Status change successfully....');
+    }
+
     public function sprovider_view($id)
     {
         //dd($id);
@@ -95,6 +113,45 @@ class ServiceProviderController extends Controller
         return view('admin.pages.serviceProvider.s_provider_edit',compact('provider'));
         }
     }
+
+    public function sprovider_update(Request $request,$service_id)
+    {
+        $sprovider=Service_provider::find($service_id);
+        $provider_image = $sprovider->image;
+
+        if($request->hasFile('image'))
+        {
+            
+            $provider_image = date('Ymdhms').'.'.$request->file('image')->getClientOriginalExtension();
+            $request->file('image')->storeAs('/uploads',$provider_image);
+        }
+
+        if($sprovider)
+        {
+            $sprovider->update([
+
+                //'DB name' =>$request-> form name,
+    
+                'name'=>$request->name,
+                'profession'=>$request->profession,
+                'address'=>$request->address,
+                'email'=>$request->email,
+                'phn'=>$request->phn,
+                'exp'=>$request->exp,
+                'salary'=>$request->salary,
+                'image'=>$provider_image 
+    
+    
+            ]);
+            return redirect()->back()->with('success','Service update successfully..');
+        }
+    }
+
+    public function sprovider_delete($id)
+        {
+        Service_provider::find($id)->delete();
+        return redirect()->back()->with('success','Services Deleted.');
+        }
 
 
     

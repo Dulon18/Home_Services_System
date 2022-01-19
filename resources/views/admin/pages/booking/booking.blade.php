@@ -6,10 +6,16 @@
   <thead>
     <tr>
       <th scope="col">ID</th>
-      <th scope="col">Name</th>
-      <th scope="col">Service</th>
-      <th scope="col">Location</th>
-      <th scope="col">Quantity</th>
+      <th scope="col">Service Name</th>
+      <th scope="col">House No.</th>
+      <th scope="col">Road No.</th>
+      <th scope="col">Block No</th>
+      <th scope="col">Sector No</th>
+      <th scope="col">Area</th>
+      <th scope="col">Time</th>
+      <th scope="col">Date</th>
+      <th scope="col">Action</th>
+
 
     </tr>
   </thead>
@@ -17,9 +23,17 @@
     <tr>
       <th scope="row">1</th>
       <td>Mark</td>
-      <td>AC installation</td>
-      <td>Tongi</td>
-      <td>1</td>
+      <td>Mark</td>
+      <td>Mark</td>
+      <td>Mark</td>
+      <td>Mark</td>
+      <td>Mark</td>
+      <td>Mark</td>
+      <td>Mark</td>
+      <td>
+        <a type="button" class="btn btn-info" href="">Assign</a>
+      </td>
+      
 
     </tr>
     

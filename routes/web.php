@@ -111,6 +111,11 @@ Route::group(['prefix'=>'/'],function (){
   Route::post('/sp/store',[ServiceProviderController::class,'store'])->name('admin.sp.store');
   Route::get('/s_provider/view/{sp_id}',[ServiceProviderController::class,'sprovider_view'])->name('admin.sprovider.view');
   Route::get('/s_provider/edit/{sp_id}',[ServiceProviderController::class,'sprovider_edit'])->name('admin.sprovider.edit');
+  Route::put('/s_provider/update/{sp_id}',[ServiceProviderController::class,'sprovider_update'])->name('admin.sprovider.update');
+  Route::get('/s_provider/delete/{sp_id}',[ServiceProviderController::class,'sprovider_delete'])->name('admin.sprovider.delete');
+
+  Route::get('/change_status/{id}',[ServiceProviderController::class,'change_status'])->name('admin.sprovider.status');
+
 
 
 //services

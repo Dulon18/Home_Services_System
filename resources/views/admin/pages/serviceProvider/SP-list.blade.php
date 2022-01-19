@@ -20,6 +20,7 @@
       <th scope="col">Experience</th>
       <th scope="col">Salary</th>
       <th scope="col">Image</th>
+      <th scope="col">Status</th>
       <th scope="col">Action</th>
     </tr>
   </thead>
@@ -39,9 +40,17 @@
          <img src="{{url('/uploads/'.$p->image)}}" width="90px" alt="plz..upload">
          </td>
          <td>
-           <a href="{{route('admin.sprovider.view',$p->id)}}" class='btn btn-success'><i class="uil uil-eye"></i></a>
+           @if($p->status==1)
+           <a type="button" href="{{route('admin.sprovider.status',$p->id)}}" onclick="return confirm('Are you sure??')" class='btn btn-success'>Active</a>
+           @else
+           <a type="button" href="{{route('admin.sprovider.status',$p->id)}}" class='btn btn-danger'>Inactive</a>
+           @endif
+         </td>
+         <td>
+           
+           <a href="{{route('admin.sprovider.view',$p->id)}}" class='btn btn-primary'><i class="uil uil-eye"></i></a>
            <a href="{{route('admin.sprovider.edit',$p->id)}}" class='btn btn-info'><i class="uil uil-edit"></i></a>
-           <a href="" class='btn btn-danger'><i class="uil uil-trash-alt"></i></a>
+           <a href="{{route('admin.sprovider.delete',$p->id)}}"class='btn btn-danger' onclick="return confirm('Are you sure to delete??')"><i class="uil uil-trash-alt"></i></a>
          </td>
          
       </tr>

@@ -151,7 +151,12 @@ input::-webkit-inner-spin-button {
                     </div>
                     <div class="row mt-2">
                         <div class="col-md-6">
-                            <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control" required="required"> <span>Area</span> </div>
+                            <div class="inputbox mt-3 mr-2"> 
+                                <input type="text" name="name" class="form-control" required="required"> 
+                            <span>Area</span> 
+                            
+                        
+                        </div>
                         </div>
                         <div class="col-md-6">
                             <div class="inputbox mt-3 mr-2"> <input type="text" name="name" class="form-control" required="required"> <span>Block No.</span> </div>

@@ -34,7 +34,7 @@
          <td> 
           <a class='btn btn-primary btn-sm' href="{{route('admin.services.details',$service->id)}}"><i class="uil uil-eye"></i></a>
           <a class='btn btn-info btn-sm' href="{{route('admin.services.edit',$service->id)}}"><i class="uil uil-edit"></i></a>
-          <a class='btn btn-danger btn-sm' href="{{route('admin.services.delete',$service->id)}}"><i class="uil uil-trash-alt"></i></a>
+          <a class='btn btn-danger btn-sm' href="{{route('admin.services.delete',$service->id)}}" onclick="return confirm('Are you sure to Delete??')"><i class="uil uil-trash-alt"></i></a>
          </td>
       </tr>
     @endforeach

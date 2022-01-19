@@ -23,6 +23,7 @@ class CreateServiceProvidersTable extends Migration
             $table->string('exp');
             $table->double('salary');
             $table->string('image');
+            $table->binary('status')->default(1);
             $table->timestamps();
         });
     }

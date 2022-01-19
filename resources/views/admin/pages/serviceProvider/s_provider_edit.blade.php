@@ -19,8 +19,9 @@
    <p class="alert alert-success">{{session()->get('success')}}</p>
 @endif
 
-<form  action="{{route('admin.sp.store')}}" method="POST" enctype="multipart/form-data">
+<form  action="{{route('admin.sprovider.update',$provider->id)}}" method="POST" enctype="multipart/form-data">
    @csrf
+   @method('PUT')
    <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Name</label>
         <input value="{{$provider->name}}" required name="name"  type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -59,6 +60,7 @@
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Image</label>
     <input name='image' type="file" class="form-control" id="exampleInputPassword1">
+    <img style="border-radius: 4px;" width="200px;" src=" {{url('/uploads/'.$provider->image)}}" alt="Plz ..upload">
   </div>
 
   <button type="submit" class="btn btn-primary">Save</button>
