@@ -177,4 +177,3 @@ input::-webkit-inner-spin-button {
     </div>
 </div>
 @endsection
-

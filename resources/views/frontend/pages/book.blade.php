@@ -58,42 +58,61 @@
                                             <div class="post-content">
                                                 <h3>{{$booking->name}}</h3>
                                                 <p>{{$booking->description}}</p>
-                                        
-                                                <h4>Inclusion</h4>
-                                                <ul class="list-styles">
-                                                    <li><i class="fa fa-plus"></i>Etiam pulvinar eros eu felis varius,
-                                                        nec eleifend risus faucibus.</li>
-                                                    <li><i class="fa fa-plus"></i>Donec gravida sem vel nibh feugiat
-                                                        tincidunt.</li>
-                                                    <li><i class="fa fa-plus"></i>Ut at dui id turpis gravida ultricies
-                                                        id interdum enim.</li>
-                                                    <li><i class="fa fa-plus"></i>Donec posuere velit non sem viverra
-                                                        rutrum.</li>
-                                                    <li><i class="fa fa-plus"></i>In sodales risus ac felis aliquam
-                                                        finibus.</li>
-                                                    <li><i class="fa fa-plus"></i>Fusce sed lorem non massa tristique
-                                                        commodo.</li>
-                                                    <li><i class="fa fa-plus"></i>Cras efficitur dolor commodo urna
-                                                        pulvinar aliquam.</li>
+
+                                                <h4><b>Service Features:</b></h4>
+                                                <ul>
+                                                <li>Well-trained Workmen.</li>
+                                                <li>7 Days Service Warranty</li>
+                                                <li>Doorstep service</li>
+                                                <li>Safety Assurance</li>
                                                 </ul>
-                                                <h4>Exclusion</h4>
+                                                <br>
+                                                
+                                                <h4><b>Pricing:</b></h4>
+                                                <ul>
+                                                <li>Only Service Charge</li>
+                                                <li>Visiting Charges is BDT 100 if no service is availed</li>
+                                                </ul><br>
+
+                                                <h4><b>Payment:</b></h4>
+                                                <p>After service completion, customer will pay through Credit card or Cash on Delivery.</p>
+
+
+                                                 <br>
+                                                <h4><b>Inclusion</b></h4>
                                                 <ul class="list-styles">
-                                                    <li><i class="fa fa-minus"></i>Suspendisse mattis erat non erat
-                                                        blandit luctus id vitae ligula.</li>
-                                                    <li><i class="fa fa-minus"></i>Quisque vestibulum arcu non odio
-                                                        aliquet, sed laoreet turpis fringilla.</li>
-                                                    <li><i class="fa fa-minus"></i>Vestibulum ac velit vel lectus
-                                                        blandit pulvinar sed convallis odio.</li>
-                                                    <li><i class="fa fa-minus"></i>Aenean non ante feugiat nisi tempus
-                                                        facilisis.</li>
-                                                    <li><i class="fa fa-minus"></i>Sed ac eros non nulla pharetra
-                                                        consequat.</li>
-                                                    <li><i class="fa fa-minus"></i>Nulla maximus nibh in facilisis
-                                                        placerat.</li>
-                                                    <li><i class="fa fa-minus"></i>Morbi id velit id libero blandit
-                                                        luctus.</li>
-                                                    <li><i class="fa fa-minus"></i>Sed hendrerit ex non lacus ultricies
-                                                        porttitor.</li>
+                                                    <li><i class="fa fa-one">1</i>
+                                                    Well-trained service Provider
+                                                        </li>
+                                                        <li><i class="fa fa-one">2</i>
+                                                        Safety Assurance
+
+                                                        </li>
+                                                </ul>
+                                                <h4><b>Exclusion</b></h4>
+                                                <ul class="list-styles">
+                                                    <li><i class="fa fa-minus"></i>Excludes all components and parts (if used)</li>
+                                                        <li><i class="fa fa-minus"></i>Excludes Transportation cost (if applied)</li>
+                                                </ul>
+
+                                                <h3><b>How To Order</b></h3>
+                                                <ul class="list-styles">
+                                                <li>
+                                                    <i class="fa fas-one">1</i>
+                                                    <b>Select Service</b>
+                                                    <p>From the category, select the service you are looking for.</p>
+                                                </li>
+
+                                                <li>
+                                                    <i class="fa fas-one">2</i>
+                                                    <b>Book Your Schedule</b>
+                                                    <p>Select your convenient time slot.</p>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fas-one">3</i>
+                                                    <b>Place Order</b>
+                                                    <p>Confirm your order by clicking ‘Place order’</p>
+                                                </li>
                                                 </ul>
                                             </div>
                                         </div>

@@ -21,7 +21,7 @@
         @foreach($carts as $key=>$data)
             <th scope="row">{{$i++}}</th>
             
-          <td>
+          <td class="cart-image">
             <img src="{{url('/uploads/'.$data['image'])}}" width="100px" alt="plz..upload">
           </td>
             

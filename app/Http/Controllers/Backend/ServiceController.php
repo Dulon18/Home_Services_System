@@ -102,6 +102,7 @@ class ServiceController extends Controller
                 //dd($service_id);
 
            $service=Service::find($service_id);
+           $categories =Categories::all();
 
                 //  Product::where('column','value')->udpate([
                 //  'column'=>'request form field name'
@@ -125,7 +126,7 @@ class ServiceController extends Controller
                 'name'=>$request->name,
                 'price'=>$request->price,
                 'description'=>$request->description,
-                'category'=>$request->category,
+                'category_id'=>$request->category,
                 'image'=>$service_image,
 
                ]);

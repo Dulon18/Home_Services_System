@@ -41,7 +41,7 @@
       <select value="{{$service->category}}" name='category' id="disabledSelect" class="form-select">
           @foreach ($categories as $category)
                 
-           <option value="{{$category->name}}">{{$category->name}}</option> 
+           <option value="{{$category->id}}">{{$category->name}}</option> 
                 
           @endforeach
       </select>

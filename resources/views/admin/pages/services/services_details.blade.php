@@ -10,7 +10,7 @@
 <p>Services Name: {{$services->name}}</p>
 <p>Services Price: <h4><span style="color: orange">BDT {{$services->price}}</span></h4></p>
 <p>Services Details: {{$services->description}}</p>
-<p>Services Category: {{$services->category}}</p>
+<p>Services Category: {{$services->category->name}}</p>
 
 </div>
 
