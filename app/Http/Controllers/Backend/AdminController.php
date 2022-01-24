@@ -43,5 +43,11 @@ class AdminController extends Controller
         return redirect()->route('admin.login')->with('message','Logging out.');
     }
 
+    // public function barchart()
+    // {
+    //     $user = User::select(DB:raw("COUNT(*) as count")->
+
+    // }
+
   
 }

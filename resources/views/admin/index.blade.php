@@ -7,11 +7,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <title>Admin Pannel</title>
+
+  <!--dataTable pagination -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.4/css/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/fixedheader/3.2.1/css/fixedHeader.bootstrap5.min.css">
+    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css">
    <!-- bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" 
-  integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
   <!-- Template CSS -->
-  <link rel="stylesheet" href="{{url('Backend/assets/css/style-starter.css')}}">
+    <link rel="stylesheet" href="{{url('Backend/assets/css/style-starter.css')}}">
 
   <!-- google fonts -->
   <link href="//fonts.googleapis.com/css?family=Nunito:300,400,600,700,800,900&display=swap" rel="stylesheet">
@@ -123,13 +128,13 @@
 <script src="{{url('Backend/assets/js/jquery-1.10.2.min.js')}}"></script>
 
 <!-- chart js -->
-<!-- <script src="assets/js/Chart.min.js"></script>
-<script src="assets/js/utils.js"></script> -->
+<script src="{{url('Backend/assets/js/Chart.min.js')}}"></script>
+<script src="{{url('Backend/assets/js/utils.js')}}"></script>
 <!-- //chart js -->
 
 <!-- Different scripts of charts.  Ex.Barchart, Linechart -->
-<!-- <script src="assets/js/bar.js"></script>
-<script src="assets/js/linechart.js"></script> -->
+<script src="{{('Backend/assets/js/bar.js')}}"></script>
+<!-- <script src="{{('Backend/assets/js/linechart.js')}}"></script> -->
 <!-- //Different scripts of charts.  Ex.Barchart, Linechart -->
 
 
@@ -174,6 +179,14 @@
 <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" 
 integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" 
 crossorigin="anonymous"></script> -->
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.4/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/fixedheader/3.2.1/js/dataTables.fixedHeader.min.js"></script>
+
+<!-- pie chart -->
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
 </body>
 

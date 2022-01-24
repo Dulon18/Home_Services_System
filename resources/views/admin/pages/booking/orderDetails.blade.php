@@ -1,38 +1,48 @@
 @extends('admin.index')
 @section('content')
-<table class="table">
-  <thead>
-      
-    <tr>
-      <th scope="col">ID</th>
-      <th scope="col">Order ID</th>
-      <th scope="col">Service ID</th>
-      <th scope="col">Service Name</th>
-      <th scope="col">Unit Price</th>
-      <th scope="col">Quantity</th>
-      <th scope="col">Total Price</th>
-      <th scope="col">Status</th>
-    </tr>
-  </thead>
-  <tbody>
-  @foreach($order_details as $key=>$od)
-    <tr>
-      <th scope="row">{{$key+1}}</th>
-      <td>{{$od->order->id}}</td>
-      <td>{{$od->service->id}}</td>
-      <td>{{$od->service->name}}</td>
-      <td>{{$od->service->price}}</td>
-      <td>{{$od->quantity}}</td>
-      <td>{{$od->order->total_price}}</td>
-      <td>
-          <a type="button" href="" class='btn btn-success'>Approve</a>
-      </td>
-    </tr>
-  @endforeach
-  </tbody>
-</table>
+<table id="example" class="table table-striped" style="width:100%">
 
-<div>
-            {!! $order_details->links() !!}
-        </div>
+<table id="example" class="table table-striped" style="width:100%">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Order ID</th>
+                <th>Service ID</th>
+                <th>Service Name</th>
+                <th>Unit Price</th>
+                <th>Quantity</th>
+                <th>Total Price</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
+                <td>Edinburgh</td>
+                <td>61</td>
+                <td>2011/04/25</td>
+                <td>$320,800</td>
+            </tr>
+           
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+            </tr>
+        </tfoot>
+    </table>
+
+<script>
+  $(document).ready(function() {
+    var table = $('#example').DataTable( {
+        fixedHeader: true
+    } );
+} );
+</script>
 @endsection

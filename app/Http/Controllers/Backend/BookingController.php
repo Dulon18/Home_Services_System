@@ -29,7 +29,7 @@ class BookingController extends Controller
     }
     public function orderDetails()
     {
-        $order_details=Order_details::with('user','service','order')->paginate(8);
+        $order_details=Order_details::with('user','service','order')->get();
         
         return view('admin.pages.booking.orderDetails',compact('order_details'));
     }

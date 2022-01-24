@@ -159,3 +159,11 @@ $(function () {
       }
    });
 });
+
+// data Table ...pagination
+
+$(document).ready(function() {
+   var table = $('#example').DataTable( {
+       fixedHeader: true
+   } );
+} );
