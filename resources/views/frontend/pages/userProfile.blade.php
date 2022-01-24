@@ -143,7 +143,7 @@ h6 {
                     <div class="row m-l-0 m-r-0">
                         <div class="col-sm-4 bg-c-lite-green user-profile">
                             <div class="card-block text-center text-white">
-                                <div class="m-b-25"> <img src="https://img.icons8.com/bubbles/100/000000/user.png" class="img-radius" alt="User-Profile-Image"> </div>
+                                <div class="m-b-25"> <img style="border-radius: 4px;" width="200px;"   src="{{url('frontend/assets/img/p2.jpg')}}" class="img-radius" alt="User-Profile-Image"> </div>
                                 <h6 class="f-w-600">{{auth()->user()->name}}</h6>
                                 <p>Customer</p> <i class=" mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"></i>
                             </div>

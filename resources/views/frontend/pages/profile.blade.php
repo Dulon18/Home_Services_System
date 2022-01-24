@@ -81,8 +81,8 @@ body{
                     <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
                     <div class="mt-3">
                       <h4>{{auth()->user()->name}}</h4>
-                      <p class="text-secondary mb-1">Full Stack Developer</p>
-                      <p class="text-muted font-size-sm">Bay Area, San Francisco, CA</p>
+                      <p class="text-secondary mb-1">{{auth()->user()->role}}</p>
+                      <p class="text-muted font-size-sm">Uttara, Dhaka</p>
                       <!-- <button class="btn btn-primary">Follow</button>
                       <button class="btn btn-outline-primary">Message</button> -->
                     </div>
@@ -128,15 +128,15 @@ body{
                     {{auth()->user()->email}}
                     </div>
                   </div>
-                  <!-- <hr>
+                  <hr>
                   <div class="row">
                     <div class="col-sm-3">
                       <h6 class="mb-0">Phone</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                    {{auth()->user()->phn}}
+                    0{{auth()->user()->phone}}
                     </div>
-                  </div> -->
+                  </div>
                   <!-- <hr>
                   <div class="row">
                     <div class="col-sm-3">

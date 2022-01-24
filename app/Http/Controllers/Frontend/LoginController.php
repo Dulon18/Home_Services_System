@@ -6,6 +6,11 @@ use App\Models\Categories;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Mail;
+use Sentinel;
+use Reminder;
+
+
 
 class LoginController extends Controller
 {
@@ -42,16 +47,20 @@ class LoginController extends Controller
     {
         //dd($request->all());
         $user=$request->except('_token');   
-
+        
           //dd($user);
 
         if(Auth::attempt($user))
             {
-                return redirect()->route('frontend.home');
+                return redirect()->route('frontend.home')->with('success','Logging Successfully..');
             }
         else
-        return redirect()->route('customer.login');
+        return redirect()->route('customer.login')->with('error','Invalid credintial..');
     }
+    
+
+
+
 
     public function logout()
     { 

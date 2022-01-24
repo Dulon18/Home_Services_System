@@ -1,5 +1,11 @@
 @extends('frontend.master')
 @section('content')
+@if(session()->has('success'))
+   <p class="alert alert-success">{{session()->get('success')}}</p>
+@endif
+@if(session()->has('error'))
+   <p class="alert alert-danger">{{session()->get('error')}}</p>
+@endif
 <h1>Chart Details</h1>
 <table class="table">
   <thead>
@@ -28,7 +34,7 @@
             <td>{{$data['name']}}</td>
             <td>{{$data['price']}}</td>
             <td>{{$data['quantity']}}</td>
-            <td>{{$data['price'] * $data['quantity']}}</td>
+            <td>{{$data['price']*$data['quantity']}}</td>
             </tr>
         @endforeach
      @endif
@@ -36,5 +42,5 @@
   
 </table>
 <a class="btn btn-danger" href="{{route('cart.clear')}}">Clear</a>
-<a class="btn btn-info" href="{{route('home.payment')}}">CheckOut</a>
+<a class="btn btn-info" href="{{route('cart-checkout')}}">Purchase Order</a>
 @endsection

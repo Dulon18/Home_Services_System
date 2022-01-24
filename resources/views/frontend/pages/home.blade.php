@@ -1,5 +1,11 @@
 @extends('frontend.master')
 @section('content')
+
+
+@if(session()->has('success'))
+   <p class="alert alert-success">{{session()->get('success')}}</p>
+@endif
+
 <div id="layout">
         
         <section class="tp-banner-container">
@@ -133,7 +139,7 @@
                             <div class="col-md-8">
                                 <ul class="services-lines">
                                     <li>
-                                        <a href="servicesbycategory/1.html">
+                                        <a href="#">
                                             <div class="item-service-line">
                                                 <i class="fa"><img class="icon-img"
                                                         src="{{url('frontend/images/sercat/1.png')}}"></i>

@@ -14,7 +14,10 @@ use App\Http\Controllers\Frontend\CategoriesController;
 use App\Http\Controllers\Frontend\BookController;
 use App\Http\Controllers\Frontend\LoginController;
 use App\Http\Controllers\Frontend\PaymentController;
+use App\Http\Controllers\ForgotPasswordController;
+use App\Http\Controllers\ResetPasswordController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Mail;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,7 +47,12 @@ Route::get('category',[CategoriesController::class,'category'])->name('home.cate
 //Booking
 Route::get('book/{id}',[BookController::class,'booknow']);
 Route::get('booking/{id}',[BookController::class,'bookAppliance']);
-Route::get('location',[BookController::class,'book']);
+Route::get('booking_item',[BookController::class,'booking_list'])->name('admin.booking.list');
+// Route::get('order',[BookController::class,'orderInfo'])->name('home.order');
+// Route::post('order/orderinfo',[BookController::class,'storeOrders'])->name('Orderinfo');
+Route::get('order/cancel/{id}',[BookController::class,'orderCancel'])->name('admin.order.cancel');
+
+
 
 //payment
 
@@ -56,6 +64,16 @@ Route::get('reg',[LoginController::class,'reg'])->name('customer.reg');
 Route::post('user/reg/post',[LoginController::class,'regStore'])->name('reg.store');
 Route::get('customer/login',[LoginController::class,'login'])->name('customer.login');
 Route::post('user/do/login',[LoginController::class,'doLogin'])->name('user.dologin');
+
+//forget passwoard
+Route::get('forgot-passward',[ForgotPasswordController::class,'forgotPass'])->name('home.forgotpasswoard');
+Route::post('passwoard',[ForgotPasswordController::class,'postEmail'])->name('home.passwoard');
+
+//resetpassword
+
+ Route::get('reset-password/{token}',[ResetPasswordController::class,'getPassword']);
+Route::post('updatePasswoard/',[ResetPasswordController::class,'updatePassword'])->name('home.updatePassword');
+
 
 
 Route::group(['middleware'=>['auth','user']],function (){
@@ -69,6 +87,7 @@ Route::group(['middleware'=>['auth','user']],function (){
   Route::get('add-to-cart/{id}',[BookController::class,'addTocart'])->name('cart.add');
   Route::get('get-cart',[BookController::class,'getCart'])->name('cart.get');
   Route::get('clear-cart',[BookController::class,'clearCart'])->name('cart.clear');
+  Route::get('checkout',[Bookcontroller::class,'checkout'])->name('cart-checkout');
 
 });
 
@@ -94,8 +113,8 @@ Route::group(['prefix'=>'/'],function (){
 
   Route::group(['middleware'=>['auth','admin']],function (){
     Route::get('/', function () {
-        return view('admin.pages.home');
-    })->name('home');
+        return view('admin.pages.dashboard.AD_dashboard');
+    })->name('admin.dashboard');
   
 
 // admin logout
@@ -103,6 +122,7 @@ Route::group(['prefix'=>'/'],function (){
 
 //dashboard
   Route::get('/dashboard',[AdminController::class,'dashboard'])->name('admin.dashboard');
+  
 
 
 //service provider
@@ -144,6 +164,8 @@ Route::group(['prefix'=>'/'],function (){
 
  //booking
   Route::get('/booking',[BookingController::class,'booking'])->name('admin.booking');
+  Route::get('/order',[BookingController::class,'order'])->name('admin.order');
+  Route::get('/orderDetails',[BookingController::class,'orderDetails'])->name('admin.orderDetails');
 
 //billing
 

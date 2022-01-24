@@ -1,5 +1,21 @@
 @extends('frontend.master')
 @section('content')
+
+@if($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
+@if(session()->has('success'))
+   <p class="alert alert-success">{{session()->get('success')}}</p>
+@endif
+
+
         <div class="section-title-01 honmob">
             <div class="bg_parallax image_01_parallax">
                 
@@ -36,6 +52,14 @@
                                                     style="margin-top: -10px;">
                                                     <i class="fa fa-image"></i>
                                                 </div>
+                                                <div class="col-md-12">
+                                              <div id="single-carousel">
+                                                <div class="img-hover">
+                                                    <img src="{{url('uploads/'.$booking->image)}}" alt=""
+                                                        class="img-responsive">
+                                                </div>
+                                            </div>
+                                        </div>
                                                 <div class="post-info-wrap">
                                                     <h2 class="post-title"><a href="#" title="Post Format: Standard"
                                                             rel="bookmark">{{$booking->name}}</a></h2>
@@ -156,6 +180,7 @@
                                                     <a href="{{route('cart.add',$booking->id)}}" class="btn btn-primary">Add to cart</a>
                                                     @else
                                                     <a href="{{route('customer.login')}}" class="btn btn-primary">Book Now</a>
+                                                    
                                                     @endif
                                             </form>
                                         </div>

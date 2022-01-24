@@ -13,14 +13,14 @@ class ServiceController extends Controller
         public function services()
         {   
             //searching......
-            $categories = Categories::all();
+            $categories =Categories::all();
             $key=null;
             if(request()->search){
                 $key=request()->search; //here search came to form name 
                 $services = Service::with('category')
                 ->where('name','LIKE','%'.$key.'%')
                 ->orwhere('price','LIKE','%'.$key.'%')
-                ->orwhere('category','LIKE','%'.$key.'%')
+                ->orwhere('category_id','LIKE','%'.$key.'%')
                 ->get();
                 return view('admin.pages.services.search',compact('services','key','categories'));
             } // searching end...
