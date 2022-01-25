@@ -16,6 +16,7 @@ use App\Http\Controllers\Frontend\LoginController;
 use App\Http\Controllers\Frontend\PaymentController;
 use App\Http\Controllers\ForgotPasswordController;
 use App\Http\Controllers\ResetPasswordController;
+use App\Http\Controllers\ChartController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Mail;
 
@@ -122,6 +123,7 @@ Route::group(['prefix'=>'/'],function (){
 
 //dashboard
   Route::get('/dashboard',[AdminController::class,'dashboard'])->name('admin.dashboard');
+  Route::get('/dashboard/chart',[ChartController::class,'pieChart']);
   
 
 

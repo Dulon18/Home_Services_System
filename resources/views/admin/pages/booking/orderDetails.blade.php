@@ -1,6 +1,6 @@
 @extends('admin.index')
 @section('content')
-<table id="example" class="table table-striped" style="width:100%">
+
 
 <table id="example" class="table table-striped" style="width:100%">
         <thead>
@@ -16,25 +16,30 @@
             </tr>
         </thead>
         <tbody>
+            @foreach($order_details as $key=>$od)
             <tr>
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
-                <td>Edinburgh</td>
-                <td>61</td>
-                <td>2011/04/25</td>
-                <td>$320,800</td>
+                <td>{{$key+1}}</td>
+                <td>{{$od->order->id}}</td>
+                <td>{{$od->service->id}}</td>
+                <td>{{$od->service->name}}</td>
+                <td>{{$od->service->price}}</td>
+                <td>{{$od->quantity}}</td>
+                <td>{{$od->total_price}}</td>
+                <td>
+                   <a href="#" class="btn btn-success">Assign</a>
+                </td>
             </tr>
-           
+           @endforeach
         </tbody>
         <tfoot>
-            <tr>
+            <!-- <tr>
                 <th>Name</th>
                 <th>Position</th>
                 <th>Office</th>
                 <th>Age</th>
                 <th>Start date</th>
                 <th>Salary</th>
-            </tr>
+            </tr> -->
         </tfoot>
     </table>
 

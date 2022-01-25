@@ -8,15 +8,18 @@ use App\Models\Service_provider;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class AdminController extends Controller
 {
     public function  dashboard(){
 
+        // total count in dashboard
         $count['service']=Service::all()->count();
         $count['order']=Order::all()->count();
         $count['user']=User::all()->count();
         $count['sp']=Service_provider::all()->count();
+
 
      return view('admin.pages.dashboard.AD_dashboard',compact('count'));
     }
@@ -43,11 +46,7 @@ class AdminController extends Controller
         return redirect()->route('admin.login')->with('message','Logging out.');
     }
 
-    // public function barchart()
-    // {
-    //     $user = User::select(DB:raw("COUNT(*) as count")->
-
-    // }
+ 
 
   
 }
