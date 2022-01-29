@@ -45,13 +45,14 @@ Route::get('category/{id}',[HomeController::class,'services'])->name('home.categ
 //category
 Route::get('category',[CategoriesController::class,'category'])->name('home.category');
 
-//Booking
+//Frontend Booking
 Route::get('book/{id}',[BookController::class,'booknow']);
 Route::get('booking/{id}',[BookController::class,'bookAppliance']);
 Route::get('booking_item',[BookController::class,'booking_list'])->name('admin.booking.list');
-// Route::get('order',[BookController::class,'orderInfo'])->name('home.order');
-// Route::post('order/orderinfo',[BookController::class,'storeOrders'])->name('Orderinfo');
+//Route::get('orderpage',[BookController::class,'orderInfo'])->name('home.orderpage');
+Route::post('order/orderinfo',[BookController::class,'storeOrders'])->name('StoreOrderinfo');
 Route::get('order/cancel/{id}',[BookController::class,'orderCancel'])->name('admin.order.cancel');
+Route::get('orderform',[BookController::class,'orderInfo'])->name('home.orderform');
 
 
 

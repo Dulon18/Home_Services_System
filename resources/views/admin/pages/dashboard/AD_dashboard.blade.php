@@ -157,12 +157,12 @@
                               var data = google.visualization.arrayToDataTable([
                                 ['Task', 'Hours per Day'],
                                 
-                                <?php echo $chartdata?>
-                                // ['Work',     11],
-                                // ['Eat',      2],
-                                // ['Commute',  2],
-                                // ['Watch TV', 2],
-                                // ['Sleep',    7]
+                               
+                                ['Work',     11],
+                                ['Eat',      2],
+                                ['Commute',  2],
+                                ['Watch TV', 2],
+                                ['Sleep',    7]
                                 
                               ]);
 

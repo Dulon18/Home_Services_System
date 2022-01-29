@@ -42,5 +42,5 @@
   
 </table>
 <a class="btn btn-danger" href="{{route('cart.clear')}}">Clear</a>
-<a class="btn btn-info" href="{{route('cart-checkout')}}">Purchase Order</a>
+<a class="btn btn-info" href="{{route('home.orderform')}}">Purchase Order</a>
 @endsection

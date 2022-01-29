@@ -46,45 +46,45 @@ class BookController extends Controller
         // $orders=Booking::with('user')->get();
         $carts=session()->get('cart');
         
-        return view('frontend.pages.order',compact('carts','categories'));
+        return view('frontend.pages.orderForm',compact('carts','categories'));
 
 
     }
     public function storeOrders(Request $request)
     {
         $categories=Categories::all();
-        // $orders=Booking::with('user')->get();
-        // $carts=session()->get('cart');
+        $orders=Booking::with('user')->get();
+        $carts=session()->get('cart');
         // return view('frontend.pages.order',compact('carts','categories'));
 
 
-        // for($i=0;$i<count($request->quantity);$i++){
-        //     $datasave=[
-        //         'order_number'=>$request->ordernumber,
-        //         'user_id'=>$request->userid,
-        //         'serviceid'=>$request->serviceId[$i],
-        //         'quantity'=>$request->quantity[$i],
-        //         'price'=>$request->price,
-        //         'total_price'=>$request->price,
-        //     ];
-        //     \DB::table('bookings')->insert($datasave);
+        for($i=0;$i<count($request->quantity);$i++){
+            $datasave=[
+                'order_number'=>$request->ordernumber,
+                'user_id'=>$request->userid,
+                'serviceid'=>$request->serviceId[$i],
+                'quantity'=>$request->quantity[$i],
+                'price'=>$request->price,
+                'total_price'=>$request->totalprice,
+            ];
+            \DB::table('bookings')->insert($datasave);
 
-        // }
+        }
 
-        //  Booking_Detail::create([
+         Booking_Detail::create([
 
-        //     //'DB name' =>$request-> form name,
+            //'DB name' =>$request-> form name,
 
-        //     'orderId'=>$request->ordernumber,
-        //     'Area'=>$request->area,
-        //     'Sector'=>$request->sector,
-        //     'address'=>$request->addrees,
-        //     'requestDate'=>$request->requestdate,
+            'orderId'=>$request->ordernumber,
+            'Area'=>$request->area,
+            'Sector'=>$request->sector,
+            'address'=>$request->addrees,
+            'requestDate'=>$request->requestdate,
 
-        // ]);
+        ]);
 
-
-        // $order= rand(100000,999999);  
+        session()->forget('cart');
+        
         // return view('frontend.pages.order',compact('datasave'));
         return redirect()->back()->with('success','Service Add successfully..');
 
@@ -138,13 +138,13 @@ class BookController extends Controller
                 //     'sub_total'=>$cart['quantity'] * $cart['price'] ,
                 // ]);
 
-                Order_details::create([
-                    'order_id'=>$book->id,
-                    'service_id'=>$cart['id'],
-                    'unit_price'=>$cart['price'],
-                    'quantity'=>$cart['quantity'],
-                    'sub_total'=>$cart['quantity'] * $cart['price'] ,
-                ]);
+                // Order_details::create([
+                //     'order_id'=>$book->id,
+                //     'service_id'=>$cart['id'],
+                //     'unit_price'=>$cart['price'],
+                //     'quantity'=>$cart['quantity'],
+                //     'sub_total'=>$cart['quantity'] * $cart['price'] ,
+                // ]);
 
 
 
