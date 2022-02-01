@@ -21,9 +21,10 @@ class LoginController extends Controller
     }
 
     public function regStore(Request $request){
-        // dd($request->all());
+        //dd($request);
 
         $registeras = $request['role'] === 'sprovider' ? 'sprovider':'user';
+        
         // dd($registeras);
         // dd();
 
@@ -32,7 +33,33 @@ class LoginController extends Controller
             'email'=>$request->email,
             'phone'=>$request->phone,
             'password'=>bcrypt($request->password), 
-            'role'=>$registeras     
+            'role'=>$registeras,
+            
+
+        ]);
+        return redirect()->route('customer.login');
+    }
+
+      //getting provider registration form
+            public function providerRegistration()
+            {
+                $categories=Categories::all();
+                return view('frontend.pages.providerRegister',compact('categories'));
+            }
+            
+ 
+    //Service provider post method
+    public function providerStore(Request $request){
+        //dd($request);
+
+        User::create([
+            'name'=>$request->name,
+            'email'=>$request->email,
+            'phone'=>$request->phone,
+            'password'=>bcrypt($request->password), 
+            'role'=>$request->role,
+            
+              
         ]);
         return redirect()->route('customer.login');
     }

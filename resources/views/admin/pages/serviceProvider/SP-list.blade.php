@@ -14,31 +14,21 @@
       <th scope="col">ID</th>
       <th scope="col">Name</th>
       <th scope="col">Profession</th>
-      <th scope="col">Address</th>
       <th scope="col">Email</th>
       <th scope="col">PhoneNumber</th>
-      <th scope="col">Experience</th>
-      <th scope="col">Salary</th>
-      <th scope="col">Image</th>
       <th scope="col">Status</th>
       <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
-    @foreach($providers as $key=>$p)
+    @foreach($providersDetails as $key=>$p)
 
      <tr>
          <th>{{$key+1}}</th>
          <td>{{$p->name}}</td>
          <td>{{$p->profession}}</td>
-         <td>{{$p->address}}</td>
          <td>{{$p->email}}</td>
-         <td>{{$p->phn}}</td>
-         <td>{{$p->exp}}</td>
-         <td>{{$p->salary}}</td>
-         <td>
-         <img src="{{url('/uploads/'.$p->image)}}" width="90px" alt="plz..upload">
-         </td>
+         <td>{{$p->phone}}</td>
          <td>
            @if($p->status==1)
            <a type="button" href="{{route('admin.sprovider.status',$p->id)}}" onclick="return confirm('Are you sure??')" class='btn btn-success'>Active</a>

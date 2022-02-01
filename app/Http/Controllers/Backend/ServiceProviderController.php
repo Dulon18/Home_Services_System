@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Backend;
 use App\Models\Service_provider;
+use App\Models\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -25,7 +26,9 @@ class ServiceProviderController extends Controller
         //data retraiving...
 
         $providers=Service_provider::all();
-        return view('admin.pages.serviceProvider.SP-list',compact('providers'));
+        $providersDetails=User::where('role','sprovider')->get();
+        
+        return view('admin.pages.serviceProvider.SP-list',compact('providers','providersDetails'));
     }
 
     public function add()

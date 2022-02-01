@@ -76,6 +76,8 @@ class BookController extends Controller
             //'DB name' =>$request-> form name,
 
             'orderId'=>$request->ordernumber,
+            'customer_id'=>$request->userid,
+            'total_price'=>$request->totalprice,
             'Area'=>$request->area,
             'Sector'=>$request->sector,
             'address'=>$request->addrees,
@@ -86,14 +88,14 @@ class BookController extends Controller
         session()->forget('cart');
         
         // return view('frontend.pages.order',compact('datasave'));
-        return redirect()->back()->with('success','Service Add successfully..');
+        return redirect()->back()->with('success','Service Booked successfully..');
 
     }
 
     public function orderCancel($id)
     {
         //find the data
-       $order=Order::find($id);
+       $order=Booking::find($id);
        $order->update([
            'status'=>'cancel'
        ]);
@@ -167,7 +169,7 @@ class BookController extends Controller
         $service=Service::find($id);       
          if(!$service)
         {
-            return redirect()->back()->with('error','No product found.');
+            return redirect()->back()->with('error','No service found.');
         }
 
         $cartExist=session()->get('cart');

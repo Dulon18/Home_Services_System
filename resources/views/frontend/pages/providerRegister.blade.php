@@ -23,8 +23,8 @@
                     <div class="container">
                         <div class="col-xs-12 col-sm-6 col-md-6 col-md-offset-3 profile1" style="padding-bottom:40px;">
                             <div class="thinborder-ontop">
-                                <h3>Customer Info</h3>
-                                <form action="{{route('reg.store')}}" id="userregisterationform" method='POST'>  
+                                <h3>Provider Info</h3>
+                                <form action="{{route('provider.store')}}" id="userregisterationform" method='POST'>  
                                     @csrf                                  
                                     <div class="form-group row">
                                         <label for="name" class="col-md-4 col-form-label text-md-right">Name</label>
@@ -60,18 +60,29 @@
                                             <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required="">
                                         </div>
                                     </div>
-
+                                    <div class="form-group row">
+                                     <input hidden type="text" name="role" id="" value="sprovider">
+                                        
+                                        
+                                    </div>
                                     <div class="form-group row">
                                         <label for="password-confirm"
-                                            class="col-md-4 col-form-label text-md-right">Ragister as</label>
-                                        <div class="col-md-6">
-                                        <select id="password-confirm" type="password" class="form-control" name="role" required="">
-                                                <option value="user">Customer</option>
-                                                <!-- <option value="sprovider">Service Provider</option> -->
+                                            class="col-md-4 col-form-label text-md-right">Profession</label>
+                                            <div class="col-md-6">
+                                            <select hidden name="profession" class="form-control" aria-label="Default select example">
+                                                    <option selected > Select Profession</option>
+                                                    <option value="1">Electrician </option>
+                                                    <option value="2">Cleaner </option>
+                                                    <option value="3">Plumber </option>
+                                                    <option value="4">TV Mechanics </option>
+                                                    <option value="5">Car Mechanics</option>
+                                                    <option value="6">shifter</option>
+                                                    <option value="7">Makeup Artist</option>
                                             </select>
                                         </div>
                                     </div>
                                     
+
                                     <div class="form-group row mb-0">
                                         <div class="col-md-10">
                                             <span style="font-size: 14px;">If you have already registered <a

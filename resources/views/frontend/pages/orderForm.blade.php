@@ -2,6 +2,11 @@
 @section('content')
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+@if(session()->has('success'))
+   <p class="alert alert-success">{{session()->get('success')}}</p>
+@endif
+
 <style>
     
     @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');

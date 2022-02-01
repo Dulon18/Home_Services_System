@@ -54,6 +54,9 @@ Route::post('order/orderinfo',[BookController::class,'storeOrders'])->name('Stor
 Route::get('order/cancel/{id}',[BookController::class,'orderCancel'])->name('admin.order.cancel');
 Route::get('orderform',[BookController::class,'orderInfo'])->name('home.orderform');
 
+//frontend provider order details
+Route::get('/assignorder/{id}',[HomeController::class,'providerOrderDetails'])->name('provider.assignorder');
+
 
 
 //payment
@@ -63,6 +66,8 @@ Route::get('payment',[PaymentController::class,'payment'])->name('home.payment')
 // registration & login
 
 Route::get('reg',[LoginController::class,'reg'])->name('customer.reg');
+Route::get('provider_registration',[LoginController::class,'providerRegistration'])->name('provider.registration');
+Route::post('provider/registration/post',[LoginController::class,'providerStore'])->name('provider.store');
 Route::post('user/reg/post',[LoginController::class,'regStore'])->name('reg.store');
 Route::get('customer/login',[LoginController::class,'login'])->name('customer.login');
 Route::post('user/do/login',[LoginController::class,'doLogin'])->name('user.dologin');
@@ -140,6 +145,12 @@ Route::group(['prefix'=>'/'],function (){
   Route::get('/change_status/{id}',[ServiceProviderController::class,'change_status'])->name('admin.sprovider.status');
 
 
+// Assign Provider
+
+Route::post('/assignProvider',[BookingController::class,'taskAssign'])->name('assignProvider');
+
+
+
 
 //services
 
@@ -168,7 +179,9 @@ Route::group(['prefix'=>'/'],function (){
  //booking
   Route::get('/booking',[BookingController::class,'booking'])->name('admin.booking');
   Route::get('/order',[BookingController::class,'order'])->name('admin.order');
-  Route::get('/orderDetails',[BookingController::class,'orderDetails'])->name('admin.orderDetails');
+  Route::get('/OrderInfo/{id}',[BookingController::class,'OrderDetails'])->name('admin.orderdetails');
+
+  
 
 //billing
 

@@ -19,7 +19,26 @@ class UsersTableSeeder extends Seeder
             'email'=>'admin@gmail.com',
             'phone'=>'01624781462',
             'password'=>bcrypt('18103319'),
-            'role'=>'admin'
+            'role'=>'admin',
+            
+        ]);
+
+        User::create([
+            'name'=>'Salam Mia',
+            'email'=>'s22@gmail.com',
+            'phone'=>'01624781462',
+            'password'=>bcrypt('1234'),
+            'role'=>'sprovider',
+            
+        ]);
+
+        User::create([
+            'name'=>'Shafiq Ahmed',
+            'email'=>'sa23@gmail.com',
+            'phone'=>'01624781462',
+            'password'=>bcrypt('1234'),
+            'role'=>'sprovider',
+            
         ]);
     }
 }

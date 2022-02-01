@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers\Frontend;
 use App\Models\Service;
+use App\Models\Booking;
+use App\Models\AssignProvider;
+use App\Models\Booking_Detail;
 use App\Models\ApplianceService;
 use App\Models\User;
 use App\Models\Service_provider;
@@ -45,13 +48,46 @@ class HomeController extends Controller
     {   
         return view('frontend.pages.service_details',compact('booking'));
     }
-    
+    // For Service Provider 
     public function profile()
     {
         $profile=Service_provider::all();
         $categories=Categories::all();
-        return view('frontend.pages.profile',compact('profile','categories'));
+        $assignList = AssignProvider::get(); 
+        $GetOrder=Booking_Detail::get();  
+
+        return view('frontend.pages.profile',
+        compact(
+            'profile','categories',
+            'assignList','GetOrder',
+
+
+        ));
     }
+    //Getting Order Details
+    public function providerOrderDetails($id)
+    {
+        $GetOrder=Booking_Detail::where('orderId',$id)->first();
+        $GetOrderitem=Booking::where('order_number',$id)->get();
+        $GetOrderitemById=Booking::where('order_number',$id)->first();  
+        $customerDetails=User::where('id',$GetOrder->customer_id)->first();
+        $services=Service::all();
+        $providers=User::where('role','sprovider')->get();
+        $Checkorder=AssignProvider::where('orderId',$id)->first();
+        $assignList = AssignProvider::get();    
+        $getAssignProvider=User::get();
+        
+        return view('admin.pages.booking.orderDetails',compact(
+                'GetOrder','GetOrderitem',
+                'services','GetOrderitemById',
+                'customerDetails','providers',
+                'Checkorder','assignList','getAssignProvider',
+          
+        ));
+    }
+
+
+
 
     public function userprofile()
     {
@@ -59,12 +95,18 @@ class HomeController extends Controller
         //  $userprofile=User::find($uid);
         //  return view('frontend.pages.userProfile',compact('userprofile'));
         $categories=Categories::all();
-        return view('frontend.pages.userProfile',compact('categories'));
+        $Customerorders=Booking_Detail::get();
+        $CustomerOrderDetails = Booking::get();
+        $Services = service::get();
+        // dd($Customerorders);
+        return view('frontend.pages.userProfile',compact('categories','Customerorders','CustomerOrderDetails','Services'));
     }
 
     public function allService()
     {
         return view('frontend.pages.allservice');
     }
+
+
    
 }

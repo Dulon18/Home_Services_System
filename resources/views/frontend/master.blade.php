@@ -15,6 +15,7 @@
     <link href="{{url('frontend/assets/css/dtb/jquery.dataTables.min.css')}}" rel="stylesheet" media="screen">
     <link href="{{url('frontend/assets/css/select2.min.css')}}" rel="stylesheet" media="screen">
     <link href="{{url('frontend/assets/css/toastr.min.css')}}" rel="stylesheet" media="screen"> 
+    
     <!-- CSS only -->
 
     <script type="text/javascript" src="{{url('frontend/assets/js/jquery.js')}}"></script>

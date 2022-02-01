@@ -106,7 +106,7 @@
               <div class="card card_border border-primary-top p-5">
                 <i class="lnr lnr-store"> </i>
                 <h3 class="text-danger number">{{$count['order']}}</h3>
-                <p class="stat-text">Todal Order</p>
+                <p class="stat-text">Total Booking</p>
               </div>
             </div>
             <!-- <div class="col-sm-6 pl-sm-1 statistics-grid">

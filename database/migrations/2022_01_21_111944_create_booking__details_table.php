@@ -16,10 +16,13 @@ class CreateBookingDetailsTable extends Migration
         Schema::create('booking__details', function (Blueprint $table) {
             $table->id();
             $table->integer('orderId');
+            $table->integer('customer_id');
+            $table->integer('total_price');
             $table->integer('Area');
             $table->integer('Sector');
             $table->string('address');
             $table->date('requestDate');
+            $table->integer('status')->default(0);
             $table->timestamps();
         });
     }

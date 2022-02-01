@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers\Backend;
 use App\Models\User;
-use App\Models\Order;
+use App\Models\Booking_Detail;
 use App\Models\Service;
+use App\Models\Booking;
 use App\Models\Service_provider;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -16,7 +17,7 @@ class AdminController extends Controller
 
         // total count in dashboard
         $count['service']=Service::all()->count();
-        $count['order']=Order::all()->count();
+        $count['order']=Booking_Detail::all()->count();
         $count['user']=User::all()->count();
         $count['sp']=Service_provider::all()->count();
 

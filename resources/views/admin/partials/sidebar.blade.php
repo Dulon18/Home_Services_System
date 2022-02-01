@@ -1,3 +1,4 @@
+@if(auth()->user()->role == 'admin')
 <!-- sidebar menu start -->
 <div class="sidebar-menu sticky-sidebar-menu">
 
@@ -17,6 +18,7 @@
   <ul class="nav nav-pills nav-stacked custom-nav">
     <li class="active"><a href="{{route('admin.dashboard')}}"><i class="fa fa-tachometer"></i><span> Dashboard</span></a>
     </li>
+    
     <li class="menu-list">
       <a href="{{route('admin.services')}}"><i class="fa fa-cogs"></i>
         <span>Services<i class="lnr lnr-chevron-right"></i></span> 
@@ -27,7 +29,7 @@
         <li><a href="{{route('admin.category')}}">Categories</a> </li>
       </ul>
     </li>
-    @if(auth()->user()->role == 'admin')
+   
     <li><a href="{{route('admin.customer')}}"><i class="fa fa-users"></i> <span>Customers</span></a></li>
     <li><a href="{{route('admin.serviceProvider.dashboard')}}"><i class="fa fa-user"></i> <span>Service Provider</span></a></li>
     <li class="menu-list">
@@ -36,12 +38,12 @@
       </a>
       <ul class="sub-menu-list">
       <li><a href="{{route('admin.order')}}">Order</a> </li>
-      <li><a href="{{route('admin.orderDetails')}}">Order Details</a></li>   
+
       </ul>
     </li>
     <li><a href="{{route('admin.bill')}}"><i class="fa fa-file-text"></i> <span>Billing</span></a></li>
     <li><a href="{{route('admin.rating')}}"><i class="fa fa-star"></i> <span>Rating</span></a></li>
-    @endif
+   
   </ul>
   <!-- //sidebar nav end -->
   <!-- toggle button start -->
@@ -52,4 +54,5 @@
   <!-- //toggle button end -->
 </div>
 </div>
+@endif
 <!-- //sidebar menu end -->

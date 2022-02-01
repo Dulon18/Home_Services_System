@@ -16,9 +16,11 @@ class CheckAdmin
      */
     public function handle(Request $request, Closure $next)
     {
-      if(auth()->user()->role =='admin' || auth()->user()->role =='sprovider' ){
+      if(auth()->user()->role =='admin'){
         return $next($request);
-    }else
+    }
+   
+    else
     {
         return redirect()->route('frontend.home')->with('error','Permission denied.');
     }

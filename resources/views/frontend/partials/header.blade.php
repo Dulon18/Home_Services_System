@@ -1,3 +1,9 @@
+<style>
+    .dropdown{
+        padding:10px;
+    }
+</style>
+
 <div class="info-head">
             <div class="container">
                 <div class="row">
@@ -77,8 +83,19 @@
                             </li> 
                         @endif
                    @else
-                    <li class="login-form"> <a href="{{route('customer.reg')}}" title="Register">Register</a></li>
+
+                    
                     <li class="login-form"> <a href="{{route('customer.login')}}" title="Login">Login</a></li>
+                    <li class="dropdown login-form">
+                        <div class=" dropdown-toggle" data-toggle="dropdown">
+                            Registater
+                        </div>
+                        <div class="dropdown-menu mr-4">
+                            <a class="dropdown-item text-center " href="{{route('customer.reg')}}">Customer</a>
+                            <a class="dropdown-item text-center " href="{{route('provider.registration')}}">Provider</a>
+                            
+                        </div>
+                    </li>
                     <li class="search-bar"></li>
                   @endif
                   

@@ -40,6 +40,7 @@
       <div class="main-content">
       @include('admin.partials.header')
   <!-- content -->
+  @if(auth()->user()->role == 'admin')
         <div class="container-fluid content-top-gap">
 
         <nav aria-label="breadcrumb">
@@ -48,6 +49,7 @@
             <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
           </ol>
         </nav>
+      @endif
     
 
     <!-- statistics data -->

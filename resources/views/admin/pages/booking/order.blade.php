@@ -1,37 +1,74 @@
 @extends('admin.index')
 @section('content')
+
+@if(session()->has('success'))
+   <p class="alert alert-success">{{session()->get('success')}}</p>
+@endif
 <table class="table">
   <thead>
       
     <tr>
-      <th scope="col">ID</th>
-      <th scope="col">User ID</th>
-      <th scope="col">User Name</th>
-      <th scope="col">Total Price</th>
+      <th scope="col">SL No.</th>
+      <th scope="col">Order Number</th>
+      <th scope="col">Request Date</th>
+      <th scope="col">Service</th>
+      <th scope="col">Total Amount</th>
       <th scope="col">Status</th>
       <th scope="col">Action</th>
       
     </tr>
   </thead>
   <tbody>
-  @foreach($book as $key=>$b)
+  @foreach($Customerorders as $key=>$items)
+    
     <tr>
       <th scope="row">{{$key+1}}</th>
-      <td>{{$b->user->id}}</td>
-      <td>{{$b->user->name}}</td>
-      <td>{{$b->total_price}}</td>
+      <td>{{$items->orderId}} </td>
       <td>
+      {{$items->requestDate}}
+      </td>
+      
+      <td>
+          @foreach($CustomerOrderDetails as $orderdetails)
+          @if($items->orderId==$orderdetails->order_number)
+                @foreach($Services as $services)
+                @if($orderdetails->serviceid==$services->id)
+                        <div class="services">
+                        <img style="width: 50px; height: 40px ; border-radius:4px;margin-right:10px; margin-bottom:5px;"  src="{{url('uploads/'.$services->Image)}}"  alt="AC Dry Servicing"
+                                                class="img-responsive">          
+                        <p>{{$services->name}}</p>
 
-                {{$b->status}}
+                        </div>
+                    @endif
+                @endforeach
 
-        </td>
-        <td>
-            @if($b->status!='cancel')
-            <a href="{{route('admin.order.cancel',$b->id)}}" class="btn btn-danger">Cancel</a>
             @endif
+          @endforeach
+      </td>
+      <td>{{$items->total_price}}</td>
+      
+      <td>
+        @if($items->status==0)
+        <button type="button" class="btn btn-primary">panding</button>
+        @elseif($items->status==1)
+        <button type="button" class="btn btn-success">Accepted</button>
+        @elseif($items->status==2)
+        <button type="button" class="btn btn-info">Completed</button>
+        @elseif($items->status==3)
+        <button type="button" class="btn btn-danger">Canceled</button>
+
+        @endif
+      </td>
+     
+        <td>
+
+
+            <a type="button" href="{{route('admin.orderdetails',$items->orderId)}}" class="btn btn-info">Details</a>
         </td>
+
     </tr>
   @endforeach
+
   </tbody>
 </table>
 @endsection

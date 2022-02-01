@@ -5,59 +5,233 @@
 @extends('frontend.master')
 @section('content')
 <style type="text/css">
-body{
-    margin-top:20px;
-    color: #1a202c;
-    text-align: left;
-    background-color: #e2e8f0;    
-}
-.main-body {
-    padding: 15px;
-}
-.card {
-    box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
-}
+  body{
+      margin-top:20px;
+      color: #1a202c;
+      text-align: left;
+      background-color: #e2e8f0;    
+  }
+  .main-body {
+      padding: 15px;
+  }
+  .card {
+      box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
+  }
 
-.card {
-    position: relative;
+  .card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      word-wrap: break-word;
+      background-color: #fff;
+      background-clip: border-box;
+      border: 0 solid rgba(0,0,0,.125);
+      border-radius: .25rem;
+  }
+
+  .card-body {
+      flex: 1 1 auto;
+      min-height: 1px;
+      padding: 1rem;
+  }
+
+  .gutters-sm {
+      margin-right: -8px;
+      margin-left: -8px;
+  }
+
+  .gutters-sm>.col, .gutters-sm>[class*=col-] {
+      padding-right: 8px;
+      padding-left: 8px;
+  }
+  .mb-3, .my-3 {
+      margin-bottom: 1rem!important;
+  }
+
+  .bg-gray-300 {
+      background-color: #e2e8f0;
+  }
+  .h-100 {
+      height: 100%!important;
+  }
+  .shadow-none {
+      box-shadow: none!important;
+  }
+  /* core styles for table */
+
+  .table{
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, .24);
+    background-color: var(--tableBgColor, #fff);
+  }
+
+  .table__thead{
+    background-color: var(--tableTitleBgColor);
+    color: var(--tableTitleTextColor);
+  }
+
+  .table__mobile-caption{
+    display: none;
+  }
+
+  .table__td, .table__th{
+    padding: var(--tableCellPadding, 20px);
+    box-sizing: border-box;
+  }
+
+  @media screen and (min-width: 769px){
+
+    .table__tr:hover{
+      background-color: var(--tableRowBgColorHover);
+    }
+
+    .table__td:first-child, .table__th:first-child{
+      width: 30%;
+      text-align: left;
+    }
+
+    .table__td, .table__th{
+      text-align: center;
+    }
+  }
+
+  @media screen and (max-width: 768px){
+
+    .table, .table__thead, .table__tbody, .table__tr{
+      display: block;
+    }
+
+    .table__td{
+      display: flex;
+    }
+
+    .table__head{
+      display: none;
+    }
+
+    .table__mobile-title{
+      background-color: var(--tableTitleBgColor);
+      color: var(--tableTitleTextColor);
+    }
+
+    .table__td{
+      border-bottom: 1px solid var(--tableSeparatorColor);
+    }
+
+    .table__td:last-of-type{
+      border-bottom: none;
+    }
+
+    .table__mobile-caption, .table__value{
+      display: block;
+      width: 50%;
+      box-sizing: border-box;
+    }
+
+    .table__mobile-caption{
+      padding-right: 2%;
+    }
+  }
+
+  /* demo styles for table */
+
+  .table{
+    --tableCellPadding: 2rem;
+    --tableTitleBgColor: #5668ca;
+    --tableTitleTextColor: #fff;
+    --tableRowBgColorHover: #f0f0f0;
+    --tableSeparatorColor: #eee;
+  }
+
+  /*
+  * demo page
+  */
+
+  @media screen and (min-width: 768px){
+
+    html{
+     
+    }
+  }
+
+  @media screen and (max-width: 767px){
+
+    html{
+      
+    }
+  }
+
+  body{
+  
+  }
+
+  a{
+    text-decoration: none;
+    color: #5668ca;
+  }
+
+  a:hover, a:focus{
+    text-decoration: underline;
+  }
+
+  .page{
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: #fff;
-    background-clip: border-box;
-    border: 0 solid rgba(0,0,0,.125);
-    border-radius: .25rem;
-}
+    justify-content: space-around;
+  }
 
-.card-body {
-    flex: 1 1 auto;
-    min-height: 1px;
-    padding: 1rem;
-}
+  .page__demo{
+    flex-grow: 1;
+  }
 
-.gutters-sm {
-    margin-right: -8px;
-    margin-left: -8px;
-}
+  .main-container{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    max-width: 1000px;
+    
+    margin-right: auto;
+    margin-left: auto;
+  }
 
-.gutters-sm>.col, .gutters-sm>[class*=col-] {
-    padding-right: 8px;
-    padding-left: 8px;
-}
-.mb-3, .my-3 {
-    margin-bottom: 1rem!important;
-}
+  .page__container{
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
 
-.bg-gray-300 {
-    background-color: #e2e8f0;
-}
-.h-100 {
-    height: 100%!important;
-}
-.shadow-none {
-    box-shadow: none!important;
-}
+  .footer{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: center;  
+    font-size: 1.4rem;
+  }
+
+  @media screen and (min-width: 641px){
+
+    .footer__container{
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .melnik909{
+      margin-left: 2rem;
+    }  
+  }
+
+  @media screen and (max-width: 640px){
+
+    .melnik909{
+      display: none;
+    } 
+  }
+
+
+
+
+  
 </style>
 <body>
 <div class="container">
@@ -154,8 +328,52 @@ body{
                   </div>
                 </div>
               </div>
-              
 
+              <table class="table">
+        <thead class="table__thead">
+          <tr class="table__head">
+            <th class="table__th">Order Number</th>
+            <th class="table__th">Request</th>
+            <th class="table__th">Task Status</th>
+            <th class="table__th">Action</th>
+          </tr>
+          </thead>
+          <tbody class="table__tbody">
+          @foreach($assignList as $items)
+                    @if($items->providerId == auth()->user()->id)
+                    <!-- Getting order -->
+                      @foreach($GetOrder as $orders)
+                        @if($orders->orderId==$items->orderId)
+                          <tr>
+                          <tr class="table__tr">
+                            <td class="table__td table__mobile-title">
+                              <span>#{{$orders->orderId}}</span>
+                            </td>
+                            <td class="table__td">
+
+                            </td>
+                            <td class="table__td">
+                              <select id="mounth">
+                                <option value="hide">Padding</option>
+                                <option value="january">Processing</option>
+                                <option value="february">Complete</option>
+                              </select> 
+                            </td>
+                            <td class="table__td">
+                              
+                              <span class="table__value"><a href="{{route('provider.assignorder',$orders->orderId)}}"> details </a> </span>
+                            </td>
+                          </tr>
+                            <!-- <td>{{$orders->orderId}} </td>
+                            <td>{{$orders->total_price}} </td>
+                            <td>{{$orders->customer_id}} </td> -->
+                        @endif
+                      @endforeach
+                    @endif
+                @endforeach
+          </tbody>
+      </table>
+              
               <!-- <div class="row gutters-sm">
                 <div class="col-sm-6 mb-3">
                   <div class="card h-100">
@@ -211,7 +429,8 @@ body{
                     </div>
                   </div>
                 </div>
-              </div> -->
+              </div>  -->
+              
             </div>
           </div>
         </div>
