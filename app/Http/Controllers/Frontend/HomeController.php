@@ -107,6 +107,40 @@ class HomeController extends Controller
         return view('frontend.pages.allservice');
     }
 
+    //provider Order Status
+
+    // public function providerOrderStatus($id)
+    // {
+        
+        
+    //     $getCurrentStatus =Booking_Detail::where('orderId',$id)->first();
+    //     return view('admin.pages.getOrderStatus',compact('getCurrentStatus'));
+    // }
+
+
+    public function getStatusform($id)
+    {
+        $categories=Categories::all();
+        $getCurrentStatus =Booking_Detail::where('orderId',$id)->first();
+      
+        return view('frontend.pages.providerOrderStatus',compact('getCurrentStatus','categories'));
+    }
+
+    public function statusUpdate(Request $request,$id)
+    {
+        dd($request);
+        \DB::table('booking__details')
+        ->where('orderId', $id)
+        ->update([
+            'status'     => $request->statusValue
+        ]);
+
+
+
+      return redirect()->back()->with('success','update successfully..');
+       
+    }
+
 
    
 }

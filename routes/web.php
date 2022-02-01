@@ -57,6 +57,10 @@ Route::get('orderform',[BookController::class,'orderInfo'])->name('home.orderfor
 //frontend provider order details
 Route::get('/assignorder/{id}',[HomeController::class,'providerOrderDetails'])->name('provider.assignorder');
 
+//provider status update form
+  Route::get('/providerOrderstatus/{id}',[HomeController::class,'getStatusform'])->name('providerUpdateStatus');
+  Route::put('/providerOrderstatus/update/{id}',[BookingController::class,'statusUpdate'])->name('providerstatus.update');
+
 
 
 //payment
@@ -148,7 +152,7 @@ Route::group(['prefix'=>'/'],function (){
 // Assign Provider
 
 Route::post('/assignProvider',[BookingController::class,'taskAssign'])->name('assignProvider');
-
+Route::get('/assignProvider/delete/{id}',[BookingController::class,'deleteTaskAssign'])->name('assignProvider.delete');
 
 
 
@@ -180,12 +184,20 @@ Route::post('/assignProvider',[BookingController::class,'taskAssign'])->name('as
   Route::get('/booking',[BookingController::class,'booking'])->name('admin.booking');
   Route::get('/order',[BookingController::class,'order'])->name('admin.order');
   Route::get('/OrderInfo/{id}',[BookingController::class,'OrderDetails'])->name('admin.orderdetails');
+  
+  //order status update
+
+  Route::get('/orderstatus/{id}',[BookingController::class,'getStatusform'])->name('admin.statusForm');
+  Route::put('/status/update/{id}',[BookingController::class,'statusUpdate'])->name('status.update');
+
 
   
 
-//billing
+//Report
 
  Route::get('/billing',[BillingController::class,'bill'])->name('admin.bill');
+//  Route::post('/report',[BillingController::class,'providerReport'])->name('admin.providerReport');
+
 
  //Customer
  Route::get('/customer',[CustomerController::class,'customer'])->name('admin.customer');

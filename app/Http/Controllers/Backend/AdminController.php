@@ -10,6 +10,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 
 class AdminController extends Controller
 {
@@ -18,12 +19,46 @@ class AdminController extends Controller
         // total count in dashboard
         $count['service']=Service::all()->count();
         $count['order']=Booking_Detail::all()->count();
-        $count['user']=User::all()->count();
-        $count['sp']=Service_provider::all()->count();
+        $count['user']=User::where('role','user')->get()->count();
+
+        $totalprovider=User::where('role','sprovider')->get()->count();
+
+        $totalComplateTask=Booking_Detail::where('status',2)->get()->count();
+        $totalpandingTask=Booking_Detail::where('status',0)->get()->count();
+        $totalcancelTask=Booking_Detail::where('status',3)->get()->count();
+        $totalacceptTask=Booking_Detail::where('status',1)->get()->count();
+
+        $today = \DB::table('booking__details')->select(\DB::raw('*'))->whereRaw('Date(created_at) = CURDATE()')->get()->count();
+        $yesterday = \DB::table('booking__details')->select(\DB::raw('*'))->whereRaw('Date(created_at) = SUBDATE(CURDATE(),1)')->get()->count();
+        $lastWeek =  \DB::table('booking__details')->select(\DB::raw('*'))->whereRaw('SUBDATE(CURDATE(),7) AND SUBDATE(CURDATE(),1)')->get();
 
 
-     return view('admin.pages.dashboard.AD_dashboard',compact('count'));
+     
+     
+    return view('admin.pages.dashboard.AD_dashboard',compact('count',
+     'totalComplateTask',
+     'totalpandingTask',
+     'totalcancelTask',
+     'totalacceptTask',
+     'totalprovider',
+     'today',
+     'yesterday',
+     'lastWeek'
+    ));
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     public function login()
     {

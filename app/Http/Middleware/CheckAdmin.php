@@ -19,7 +19,6 @@ class CheckAdmin
       if(auth()->user()->role =='admin'){
         return $next($request);
     }
-   
     else
     {
         return redirect()->route('frontend.home')->with('error','Permission denied.');

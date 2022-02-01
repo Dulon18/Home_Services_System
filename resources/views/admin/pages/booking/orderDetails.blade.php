@@ -57,7 +57,9 @@
                         <div class="col-sm-4"></div>
 
                         <div class="col-sm-4">
+                        @if($Checkorder!=null)
                         <h6 class="mb-3"><strong>Provider Details  </strong></h6>
+                        @endif
 
                             @foreach($assignList as $lists)
                                 @if($lists->orderId == $GetOrderitemById->order_number)
@@ -72,7 +74,14 @@
                                         
                                     @endforeach
                                 @endif
+
                             @endforeach
+                            @if(auth()->user()->role == 'admin')
+
+                            @if($Checkorder!=null)
+                            <a type="button" href="{{route('assignProvider.delete',$GetOrderitemById->order_number )}}" class="btn btn-danger">Cancle Provider</a>
+                            @endif
+                            @endif
                         </div>
                       
                         

@@ -353,11 +353,16 @@
 
                             </td>
                             <td class="table__td">
-                              <select id="mounth">
-                                <option value="hide">Padding</option>
-                                <option value="january">Processing</option>
-                                <option value="february">Complete</option>
-                              </select> 
+                            @if($orders->status==0)
+                                <a href="{{route('providerUpdateStatus',$orders->orderId)}}" type="button" class="btn btn-primary">panding</a>
+                                @elseif($orders->status==1)
+                                <a href="{{route('providerUpdateStatus',$orders->orderId)}}" type="button" class="btn btn-success">Accepted</a>
+                                @elseif($orders->status==2)
+                                <a href="{{route('providerUpdateStatus',$orders->orderId)}}" type="button" class="btn btn-info">Completed</a>
+                                @elseif($orders->status==3)
+                                <a href="{{route('providerUpdateStatus',$orders->orderId)}}" type="button" class="btn btn-danger">Canceled</a>
+
+                                @endif
                             </td>
                             <td class="table__td">
                               

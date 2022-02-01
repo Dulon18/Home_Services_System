@@ -13,10 +13,13 @@ class ChartController extends Controller
 {
     public function piechart()
     {
-        $result =Booking::select(DB::raw("select count(*) as total_order,
+        $result = Booking::select(DB::raw("select count(*) as total_order,
         id from bookings  group by id"));
         //dd($result);
         $chartdata="";
+
+        $totalComplateTask=Booking_Detail::where('status',2)->get()->count();
+        
         foreach($result as $list)
         {
             $chartdata.="['".$list->id."',  '".$list->total_order."']";

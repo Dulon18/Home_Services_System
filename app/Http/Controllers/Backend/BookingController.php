@@ -50,14 +50,6 @@ class BookingController extends Controller
         $assignList = AssignProvider::get();    
         $getAssignProvider=User::get();
 
-      
-        //dd($providerId);
-        
-
-        //dd($getAssignProvider);
-        //dd($providers);
-
-        //dd($customerDetails);
         
         return view('admin.pages.booking.orderDetails',compact(
                 'GetOrder','GetOrderitem',
@@ -90,11 +82,41 @@ class BookingController extends Controller
         return redirect()->back()->with('success','assign successfully');
         }
 
-       
-
-
 
     }
+    //Delete assignprovider
+
+    public function deleteTaskAssign($id)
+        {
+            //dd($id);
+        AssignProvider::where('orderId',$id)->delete();
+        return redirect()->back()->with('success','Services Deleted.');
+        }
+
+  // status update..
+
+    public function getStatusform($id)
+    {
+       $getCurrentStatus =Booking_Detail::where('orderId',$id)->first();
+      
+        return view('admin.pages.getOrderStatus',compact('getCurrentStatus'));
+    }
+
+    public function statusUpdate(Request $request,$id)
+    {
+        //dd($request);
+        \DB::table('booking__details')
+        ->where('orderId', $id)
+        ->update([
+            'status'     => $request->statusValue
+        ]);
+
+
+
+      return redirect()->back()->with('success','update successfully..');
+       
+    }
+
 
     
    

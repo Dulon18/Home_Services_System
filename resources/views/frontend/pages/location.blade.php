@@ -7,142 +7,142 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif
-}
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif
+    }
 
-p {
-    margin: 0
-}
+    p {
+        margin: 0
+    }
 
-.container3 {
-    max-width: 900px;
-    margin: 30px auto;
-    background-color: #e8eaf6;
-    padding: 35px
-}
+    .container3 {
+        max-width: 900px;
+        margin: 30px auto;
+        background-color: #e8eaf6;
+        padding: 35px
+    }
 
-.box-right1 {
-    padding: 30px 25px;
-    background-color: white;
-    border-radius: 15px
-}
+    .box-right1 {
+        padding: 30px 25px;
+        background-color: white;
+        border-radius: 15px
+    }
 
-.box-left2 {
-    padding: 20px 20px;
-    background-color: white;
-    border-radius: 15px
-}
+    .box-left2 {
+        padding: 20px 20px;
+        background-color: white;
+        border-radius: 15px
+    }
 
-.textmuted {
-    color: #7a7a7a
-}
+    .textmuted {
+        color: #7a7a7a
+    }
 
-.bg-green {
-    background-color: #d4f8f2;
-    color: #06e67a;
-    padding: 3px 0;
-    display: inline;
-    border-radius: 25px;
-    font-size: 11px
-}
-
-.p-blue {
-    font-size: 14px;
-    color: #1976d2
-}
-
-.fas.fa-circle {
-    font-size: 12px
-}
-
-.p-org {
-    font-size: 14px;
-    color: #fbc02d
-}
-
-.h7 {
-    font-size: 15px
-}
-
-.h8 {
-    font-size: 12px
-}
-
-.h9 {
-    font-size: 10px
-}
-
-.bg-blue {
-    background-color: #dfe9fc9c;
-    border-radius: 5px
-}
-
-.form-control {
-    box-shadow: none !important
-}
-
-.card input::placeholder {
-    font-size: 14px
-}
-
-::placeholder {
-    font-size: 14px
-}
-
-input.card {
-    position: relative
-}
-
-.far.fa-credit-card {
-    position: absolute;
-    top: 10px;
-    padding: 0 15px
-}
-
-.fas,
-.far {
-    cursor: pointer
-}
-
-.cursor {
-    cursor: pointer
-}
-
-.btn.btn-primary {
-    box-shadow: none;
-    height: 40px;
-    padding: 11px
-}
-
-.bg.btn.btn-primary {
-    background-color: transparent;
-    border: none;
-    color: #1976d2
-}
-
-.bg.btn.btn-primary:hover {
-    color: #539ee9
-}
-
-@media(max-width:320px) {
-    .h8 {
+    .bg-green {
+        background-color: #d4f8f2;
+        color: #06e67a;
+        padding: 3px 0;
+        display: inline;
+        border-radius: 25px;
         font-size: 11px
     }
 
+    .p-blue {
+        font-size: 14px;
+        color: #1976d2
+    }
+
+    .fas.fa-circle {
+        font-size: 12px
+    }
+
+    .p-org {
+        font-size: 14px;
+        color: #fbc02d
+    }
+
     .h7 {
-        font-size: 13px
+        font-size: 15px
+    }
+
+    .h8 {
+        font-size: 12px
+    }
+
+    .h9 {
+        font-size: 10px
+    }
+
+    .bg-blue {
+        background-color: #dfe9fc9c;
+        border-radius: 5px
+    }
+
+    .form-control {
+        box-shadow: none !important
+    }
+
+    .card input::placeholder {
+        font-size: 14px
     }
 
     ::placeholder {
-        font-size: 10px
+        font-size: 14px
     }
-}
+
+    input.card {
+        position: relative
+    }
+
+    .far.fa-credit-card {
+        position: absolute;
+        top: 10px;
+        padding: 0 15px
+    }
+
+    .fas,
+    .far {
+        cursor: pointer
+    }
+
+    .cursor {
+        cursor: pointer
+    }
+
+    .btn.btn-primary {
+        box-shadow: none;
+        height: 40px;
+        padding: 11px
+    }
+
+    .bg.btn.btn-primary {
+        background-color: transparent;
+        border: none;
+        color: #1976d2
+    }
+
+    .bg.btn.btn-primary:hover {
+        color: #539ee9
+    }
+
+    @media(max-width:320px) {
+        .h8 {
+            font-size: 11px
+        }
+
+        .h7 {
+            font-size: 13px
+        }
+
+        ::placeholder {
+            font-size: 10px
+        }
+    }
 </style>
 </head>
 

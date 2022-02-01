@@ -30,7 +30,7 @@
       
       <td>
           @foreach($CustomerOrderDetails as $orderdetails)
-          @if($items->orderId==$orderdetails->order_number)
+           @if($items->orderId==$orderdetails->order_number)
                 @foreach($Services as $services)
                 @if($orderdetails->serviceid==$services->id)
                         <div class="services">
@@ -43,19 +43,24 @@
                 @endforeach
 
             @endif
+
+            <!-- update modal -->
+             
+            <!-- end -->
           @endforeach
+          <!-- customer order details end foreach -->
       </td>
       <td>{{$items->total_price}}</td>
       
       <td>
         @if($items->status==0)
-        <button type="button" class="btn btn-primary">panding</button>
+        <a href="{{route('admin.statusForm',$items->orderId)}}" type="button" class="btn btn-primary">panding</a>
         @elseif($items->status==1)
-        <button type="button" class="btn btn-success">Accepted</button>
+        <a href="{{route('admin.statusForm',$items->orderId)}}" type="button" class="btn btn-success">Accepted</a>
         @elseif($items->status==2)
-        <button type="button" class="btn btn-info">Completed</button>
+        <a href="{{route('admin.statusForm',$items->orderId)}}" type="button" class="btn btn-info">Completed</a>
         @elseif($items->status==3)
-        <button type="button" class="btn btn-danger">Canceled</button>
+        <a href="{{route('admin.statusForm',$items->orderId)}}" type="button" class="btn btn-danger">Canceled</a>
 
         @endif
       </td>
@@ -67,8 +72,12 @@
         </td>
 
     </tr>
+
+  
   @endforeach
 
   </tbody>
 </table>
+
+
 @endsection

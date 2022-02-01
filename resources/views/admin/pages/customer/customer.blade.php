@@ -24,7 +24,7 @@
       <th scope="col">Name</th>
       <th scope="col">Email</th>
       <th scope="col">Phone Number</th>
-      <th scope="col">Password</th>
+      
       
 
     </tr>
@@ -36,7 +36,7 @@
       <td>{{$customer->name}}</td>
       <td>{{$customer->email}}</td>
       <td>{{$customer->phone}}</td>
-      <td>{{$customer->password}}</td>  
+      
     </tr>
     @endforeach
   </tbody>

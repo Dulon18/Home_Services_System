@@ -10,7 +10,8 @@ class CustomerController extends Controller
     public function customer()
 
     {
-        $customers=User::all();
+        $customers=User::where('role','user')->get();
+      
         return view('admin.pages.customer.customer',compact('customers'));
     }
 }
