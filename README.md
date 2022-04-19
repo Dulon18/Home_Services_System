@@ -9,3 +9,18 @@ Home Service System
 ## Login Page
 
 <p align="center"><img width="677" alt="login" src="https://user-images.githubusercontent.com/80118217/163915300-2bdcd2e9-7147-44c5-8aaf-366f01f38d44.png" width="200"></p>
+
+
+## Services
+<p align="center"><img width="608" alt="s1" src="https://user-images.githubusercontent.com/80118217/163915590-23f64472-29bf-477a-80d5-3711458a7301.png" width="200"></p>
+
+## Dashboard
+
+<p align="center"><img width="911" alt="Dashboard" src="https://user-images.githubusercontent.com/80118217/163915832-cca0177c-ccc2-476c-a40b-1ab9b9333afd.png" width="200"></p>
+
+## Services form
+
+<p align="center"> <img width="449" alt="service" src="https://user-images.githubusercontent.com/80118217/163916352-0ae0e749-8138-4101-8ad7-80837eb018e7.png" width="400"></p>
+
+## Provider Profile
+<p align="center"><img width="596" alt="provider" src="https://user-images.githubusercontent.com/80118217/163916550-3409c913-f739-4d54-a3d9-cc26eae5613b.png" width="200"></p>
