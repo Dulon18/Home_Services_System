@@ -1,5 +1,7 @@
-Laravel Project
-Home Service System
+<h1>Laravel 8 Project </h1>
+
+
+
 ## #Landing page
 <p align="center"><img width="910" alt="L1" src="https://user-images.githubusercontent.com/80118217/163914448-25b83b5d-5511-45ac-8b54-aeb7c002974b.png" width="200"></p>
 
