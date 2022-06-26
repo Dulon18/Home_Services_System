@@ -1,5 +1,5 @@
 <h1>Laravel 8 Project </h1>
-Check to visit website: https://dulon18.github.io/Home_Services_System/
+
 
 
 
