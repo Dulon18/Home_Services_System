@@ -28,9 +28,9 @@ class AdminController extends Controller
         $totalcancelTask=Booking_Detail::where('status',3)->get()->count();
         $totalacceptTask=Booking_Detail::where('status',1)->get()->count();
 
-        $today = \DB::table('booking__details')->select(\DB::raw('*'))->whereRaw('Date(created_at) = CURDATE()')->get()->count();
-        $yesterday = \DB::table('booking__details')->select(\DB::raw('*'))->whereRaw('Date(created_at) = SUBDATE(CURDATE(),1)')->get()->count();
-        $lastWeek =  \DB::table('booking__details')->select(\DB::raw('*'))->whereRaw('SUBDATE(CURDATE(),7) AND SUBDATE(CURDATE(),1)')->get();
+        $today = DB::table('booking__details')->select(DB::raw('*'))->whereRaw('Date(created_at) = CURDATE()')->get()->count();
+        $yesterday = DB::table('booking__details')->select(DB::raw('*'))->whereRaw('Date(created_at) = SUBDATE(CURDATE(),1)')->get()->count();
+        $lastWeek =  DB::table('booking__details')->select(DB::raw('*'))->whereRaw('SUBDATE(CURDATE(),7) AND SUBDATE(CURDATE(),1)')->get();
 
 
      
