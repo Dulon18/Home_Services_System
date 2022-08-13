@@ -64,7 +64,7 @@
                 <p class="stat-text">Yesterday Booking</p>
               </div>
           </div>
-          @php 
+        {{--  @php 
               $total = 0;
             @endphp
             @foreach($lastWeek as $item)
@@ -75,7 +75,7 @@
                 <i class="lnr lnr-store"> </i>
                 <h3 class="text-danger number">{{$total}}</h3>
                 <p class="stat-text">Last 7 Day order amount</p>
-              </div>
+              </div> --}}
           </div>
         
       </div>
