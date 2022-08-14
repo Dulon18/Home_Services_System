@@ -44,7 +44,37 @@ class CategoryController extends Controller
             'image'=>$filename,
 
         ]);
-        return redirect()->route('admin.category')->with('success','Service Add successfully..');
+        return redirect()->route('admin.category')->with('success','Category Add successfully..');
     }
 
+    public function edit($id)
+    {
+        $category=Categories::find($id);
+        return view('admin.pages.categories.edit',compact('category'));
+    }
+
+    public function update(Request $request,$id)
+    {
+        $category=Categories::find($id);
+        $logo=$category->image;
+        if($request->hasFile('image'))
+        {
+  
+            $logo= date('Ymdhms').'.'.$request->file('image')->getClientOriginalExtension();
+            $request->file('image')->storeAs('/uploads',$logo);
+        }
+        $category->update([
+            'name'=>$request->name,
+            'description'=>$request->description,
+            'image'=>$logo,
+
+        ]);
+        return redirect()->route('admin.category')->with('success','Update  successfully..');
+    }
+
+    public function remove($id)
+    {
+        Categories::find($id)->delete();
+        return redirect()->route('admin.category')->with('success','Deleted  successfully..');
+    }
 }

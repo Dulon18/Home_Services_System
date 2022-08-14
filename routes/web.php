@@ -179,7 +179,9 @@ Route::get('/assignProvider/delete/{id}',[BookingController::class,'deleteTaskAs
  Route::get('/category',[CategoryController::class,'categories'])->name('admin.category');
  Route::get('/add',[CategoryController::class,'add'])->name('admin.add');
  Route::post('/store',[CategoryController::class,'store'])->name('admin.store');
-
+ Route::get('/edit/{id}',[CategoryController::class,'edit'])->name('admin.edit');
+ Route::put('/update/{id}',[CategoryController::class,'update'])->name('admin.update');
+ Route::get('/delete/{id}',[CategoryController::class,'remove'])->name('admin.remove');
  //booking
   Route::get('/booking',[BookingController::class,'booking'])->name('admin.booking');
   Route::get('/order',[BookingController::class,'order'])->name('admin.order');
