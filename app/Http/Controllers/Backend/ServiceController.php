@@ -127,7 +127,7 @@ class ServiceController extends Controller
                 'price'=>$request->price,
                 'description'=>$request->description,
                 'category_id'=>$request->category,
-                'image'=>$service_image,
+                'Image'=>$service_image,
 
                ]);
               
