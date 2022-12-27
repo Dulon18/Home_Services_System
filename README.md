@@ -1,5 +1,6 @@
-<h1>Laravel 8 Project </h1>
-Home Services System
+<h1 align="center">Laravel 8 Project </h1>
+<h1  align="center">Home Services System </h1>
+
 
 
 
