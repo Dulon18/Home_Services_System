@@ -37,3 +37,5 @@ Home Services System
 - Run 'cp .env.example .env'
 - Run 'php artisan migrate --seed'
 - Run 'php artisan serve'
+
+<p align="center"><span style="color: red;">&hearts;</span> Thank You <span style="color:red;">&hearts;</span></p>
